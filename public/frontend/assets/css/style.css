@@ -6,7 +6,7 @@ Version: 1.0.0
 Text Domain: Cleeny
 Tags:   cleaning, cleaning booking, cleaning company, cleaning company html, cleaning services, commercial cleaning, pool cleaning, pool services, pools, renovation, renovation services, swimming, Swimming Pool Cleaning, swimming pools
 ================================================*/
-    
+
 /*TABLE OF CONTENTS*/
 /*=====================
 01. Cleeny header top section Css
@@ -149,7 +149,7 @@ Tags:   cleaning, cleaning booking, cleaning company, cleaning company html, cle
 }
 
 .phone-number p {
-    color: #fff;
+    color: #ffffff;
     font-size: 14px;
     font-weight: 500;
     margin: 0;
@@ -510,7 +510,7 @@ nav.cleeny_menu span {
 
 .hero-area {
     height: 814px;
-    background: url(assets/images/hero-bg.png);
+    background: url("/frontend/assets/images/hero-bg.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -801,7 +801,7 @@ p.section-title-descr {
     content: "";
     height: 100%;
     width: 100%;
-    background: url(assets/images/cleaning-shapes.png);
+    background: url("/frontend/assets/images/cleaning-shapes.png");
     background-repeat: no-repeat;
     left: 0;
     top: 29%;
@@ -812,7 +812,7 @@ p.section-title-descr {
     content: "";
     height: 100%;
     width: 100%;
-    background: url(assets/images/cleaning-shapes2.png);
+    background: url("/frontend/assets/images/cleaning-shapes2.png");
     background-repeat: no-repeat;
     left: 0;
     top: 29%;
@@ -853,7 +853,7 @@ h5.section-sub-title.style-two::before {
     content: "";
     height: 100%;
     width: 100%;
-    background: url(assets/images/cleaning-shapes.png);
+    background: url("/frontend/assets/images/cleaning-shapes.png");
     background-repeat: no-repeat;
     background-position: center;
     left: 86px;
@@ -865,7 +865,7 @@ h5.section-sub-title.style-two::after {
     content: "";
     height: 100%;
     width: 100%;
-    background: url(assets/images/cleaning-shapes.png);
+    background: url("/frontend/assets/images/cleaning-shapes.png");
     background-repeat: no-repeat;
     background-position: center;
     right: 86px;
@@ -877,7 +877,7 @@ h5.section-sub-title.style-two::after {
     content: "";
     height: 100%;
     width: 100%;
-    background: url(assets/images/cleaning-shapes2.png);
+    background: url("/frontend/assets/images/cleaning-shapes2.png");
     background-repeat: no-repeat;
     background-position: center;
     left: 86px;
@@ -889,7 +889,7 @@ h5.section-sub-title.style-two::after {
     content: "";
     height: 100%;
     width: 100%;
-    background: url(assets/images/cleaning-shapes2.png);
+    background: url("/frontend/assets/images/cleaning-shapes2.png");
     background-repeat: no-repeat;
     background-position: center;
     right: 86px;
@@ -1187,7 +1187,7 @@ p.counter-text {
 =======================================*/
 
 .service-area {
-    background: url(assets/images/service-bg.png);
+    background: url("/frontend/assets/images/service-bg.png");
     background-repeat: no-repeat;
     background-size: cover;
     padding: 108px 0 111px;
@@ -1304,7 +1304,7 @@ p.counter-text {
     content: "";
     height: 100%;
     width: 100%;
-    background: url(assets/images/service-shape.png);
+    background: url("/frontend/assets/images/service-shape.png");
     background-position: center;
     background-repeat: no-repeat;
     right: -30%;
@@ -1632,7 +1632,7 @@ p.work-description {
 =======================================*/
 
 .portfolio-area {
-    background: url(assets/images/portfolio-bg.png);
+    background: url("/frontend/assets/images/portfolio-bg.png");
     background-repeat: no-repeat;
     background-size: cover;
     padding: 110px 0 242px;
@@ -1820,7 +1820,7 @@ h4.portfolio-top-title:hover {
 }
 
 .row.address {
-    background: url(assets/images/address-bg.png);
+    background: url("/frontend/assets/images/address-bg.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -1878,7 +1878,7 @@ h1.address-title {
     content: "";
     height: 100%;
     width: 87%;
-    background: url(assets/images/counter-bg.html);
+    background: url("/frontend/assets/images/counter-bg.html");
     z-index: -1;
     background-repeat: no-repeat;
     background-position: center center;
@@ -2013,7 +2013,7 @@ span.counter-call i {
     content: "";
     height: 100%;
     width: 100%;
-    background: url(assets/images/pricing-shape.png);
+    background: url("/frontend/assets/images/pricing-shape.png");
     background-position: center;
     top: 0;
     background-repeat: no-repeat;
@@ -2235,7 +2235,7 @@ h3.pricing-title {
 =======================================*/
 
 .testimonial-area {
-    background: url(assets/images/testi-bg.png);
+    background: url("/frontend/assets/images/testi-bg.png");
     padding: 111px 0 109px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -2257,7 +2257,7 @@ h3.pricing-title {
     content: "";
     height: 100%;
     width: 100%;
-    background: url(assets/images/testi-icon.png);
+    background: url("/frontend/assets/images/testi-icon.png");
     background-repeat: no-repeat;
     background-position: center;
     top: -26%;
@@ -2407,7 +2407,7 @@ p.blog-text {
     margin: 0;
     transition: .5s;
 }
- 
+
 .blog-thumb img {
     width: 100%;
     transform: scale(1);
@@ -2528,7 +2528,7 @@ p.blog-description {
 =======================================*/
 
 .row.subscribe {
-    background: url(assets/images/subscribe-bg.png);
+    background: url("/frontend/assets/images/subscribe-bg.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -2615,7 +2615,7 @@ h3.subscribe-title {
 =======================================*/
 
 .footer-area {
-    background: url(assets/images/footer-bg.png);
+    background: url("/frontend/assets/images/footer-bg.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -2971,7 +2971,7 @@ li.upper::before {
     content: "";
     height: 100%;
     width: 100%;
-    background: url(assets/images/cleeny-shape.png);
+    background: url("/frontend/assets/images/cleeny-shape.png");
     background-repeat: no-repeat;
     background-position: center;
     left: -46%;
@@ -3041,7 +3041,7 @@ li.upper::before {
 }
 
 .slider-area {
-    background: url(assets/images/slider-bg.png);
+    background: url("/frontend/assets/images/slider-bg.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -3049,7 +3049,7 @@ li.upper::before {
 }
 
 .slider-area.style-two {
-    background: url(assets/images/slider-bg2.png);
+    background: url("/frontend/assets/images/slider-bg2.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -3245,7 +3245,7 @@ li.upper::before {
 /*<---start about-area.style-two-css---------->*/
 
 .about-area.style-two {
-    background: url(assets/images/about-bg.png);
+    background: url("/frontend/assets/images/about-bg.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -3283,7 +3283,7 @@ li.upper::before {
 <---start service-area.style-two-css---------->
 =======================================*/
 .service-area.style-two {
-    background: url(assets/images/service-bg2.png);
+    background: url("/frontend/assets/images/service-bg2.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -3335,7 +3335,7 @@ li.upper::before {
     content: "";
     height: 100%;
     width: 100%;
-    background: url(assets/images/service-shape.png);
+    background: url("/frontend/assets/images/service-shape.png");
     background-position: center;
     background-repeat: no-repeat;
     right: -26%;
@@ -3440,7 +3440,7 @@ li.upper::before {
 =======================================*/
 
 .contact-area {
-    background: url(assets/images/contact-bg.png);
+    background: url("/frontend/assets/images/contact-bg.png");
     padding: 118px 0 113px;
     position: relative;
     z-index: 1;
@@ -3584,7 +3584,7 @@ p.contact-text {
 
 .team-area {
     padding: 110px 0 90px;
-    background: url(assets/images/team-bg.png);
+    background: url("/frontend/assets/images/team-bg.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -3622,7 +3622,7 @@ p.contact-text {
     content: "";
     height: 100%;
     width: 100%;
-    background: url(assets/images/team-shape.png);
+    background: url("/frontend/assets/images/team-shape.png");
     top: 13%;
     left: -1%;
     background-repeat: no-repeat;
@@ -3758,7 +3758,7 @@ p.team-text {
 /*<---staet testimonial-area.style-two-css----->*/
 
 .testimonial-area.style-two {
-    background: url(assets/images/testi-bg2.png);
+    background: url("/frontend/assets/images/testi-bg2.png");
     padding: 110px 0 88px;
 }
 
@@ -3797,7 +3797,7 @@ p.team-text {
 }
 
 .testimonial-area.style-two .testi-single-box::before {
-    background: url(assets/images/testi-icon2.png);
+    background: url("/frontend/assets/images/testi-icon2.png");
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -3814,7 +3814,7 @@ p.team-text {
     margin: 0;
     position: relative;
     z-index: 1;
-    background: url(assets/images/address-bg.png);
+    background: url("/frontend/assets/images/address-bg.png");
     border-radius: 0;
     background-repeat: no-repeat;
     background-size: cover;
@@ -3965,7 +3965,7 @@ p.team-text {
 =======================================*/
 
 .hero-area.style-three {
-    background: url(assets/images/hero-bg-2.png);
+    background: url("/frontend/assets/images/hero-bg-2.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -3992,7 +3992,7 @@ p.team-text {
     content: "";
     height: 100%;
     width: 100%;
-    background: url(assets/images/cleaning-shapes2.png);
+    background: url("/frontend/assets/images/cleaning-shapes2.png");
     left: 0;
     background-repeat: no-repeat;
     top: 40%;
@@ -4048,7 +4048,7 @@ p.team-text {
 .hero-area.style-three .cleeny-btn a {
     text-transform: uppercase;
 }
-  
+
 
 @-webkit-keyframes MOVE-BG {
     from {
@@ -4202,7 +4202,7 @@ p.about-text {
 /*<---start-service-area.style-three-css----->*/
 
 .service-area.style-three {
-    background: url(assets/images/service-bg3.png);
+    background: url("/frontend/assets/images/service-bg3.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -4218,7 +4218,7 @@ p.about-text {
     content: "";
     height: 100%;
     width: 100%;
-    background: url(assets/images/cleaning-shapes2.png);
+    background: url("/frontend/assets/images/cleaning-shapes2.png");
     background-repeat: no-repeat;
     left: 0;
     top: 29%;
@@ -4345,7 +4345,7 @@ h3.service-title-tow {
 }
 
 .service-single-box-tow:hover .service-icon-tow img{
-    filter: brightness(1) invert(0); 
+    filter: brightness(1) invert(0);
 }
 
 .service-single-box-tow:hover .service-icon-tow{
@@ -4558,7 +4558,7 @@ p.team-text-two {
 .portfolio-area.style-three .portfolio-single-box:hover .portfolio-content {
     width: 86%;
     opacity: 1;
-} 
+}
 
 .portfolio-area.style-three .owl-item.active.center .portfolio-content{
     transform: scale(1);
@@ -4570,7 +4570,7 @@ p.team-text-two {
 
 
 .testimonial-area.style-three {
-    background: url(assets/images/testi-bg3.png);
+    background: url("/frontend/assets/images/testi-bg3.png");
     padding: 111px 0 88px;
     overflow: hidden;
     position: relative;
@@ -4612,7 +4612,7 @@ p.team-text-two {
     content: "";
     height: 100%;
     width: 100%;
-    background: url(assets/images/testi-shape3.png);
+    background: url("/frontend/assets/images/testi-shape3.png");
     background-repeat: no-repeat;
     top: 29%;
     right: -35%;
@@ -4688,7 +4688,7 @@ p.testi-text-three::before {
 }
 
 .testi-single-box-three:hover:after {
-    background: url(assets/images/testi-shape4.png);
+    background: url("/frontend/assets/images/testi-shape4.png");
     background-repeat: no-repeat;
     top: 29%;
     right: -35%;
@@ -4920,7 +4920,7 @@ h3.blog-title-two a {
 
 
 .contact-area.style-three {
-    background: url(assets/images/contact-bg2.png);
+    background: url("/frontend/assets/images/contact-bg2.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -5036,7 +5036,7 @@ h3.blog-title-two a {
 =======================================*/
 
 .breatcome-area {
-    background: url(assets/images/breatcome-bg.png);
+    background: url("/frontend/assets/images/breatcome-bg.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -5530,7 +5530,7 @@ a.active {
 
 
 .testimonial-area.style-four {
-    background: url(assets/images/testimonial-bg-four.png);
+    background: url("/frontend/assets/images/testimonial-bg-four.png");
     padding: 110px 0 88px;
     overflow: hidden;
     position: relative;
@@ -5857,7 +5857,7 @@ h3.project-title a::before {
 }
 
 .widget-categories-box.upper {
-    background: url(assets/images/widget-thumb.png);
+    background: url("/frontend/assets/images/widget-thumb.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -6028,7 +6028,7 @@ p.sidber-text {
     display: flex;
 }
 .service-details-area .wrapper .image-1 {
-    background: url(assets/images/sidber-img.png);
+    background: url("/frontend/assets/images/sidber-img.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -6036,7 +6036,7 @@ p.sidber-text {
     height: 100%;
 }
 .service-details-area .wrapper .image-2 {
-    background: url(assets/images/sidber-img2.png);
+    background: url("/frontend/assets/images/sidber-img2.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -6997,7 +6997,7 @@ p.blog-det-text {
     visibility: hidden;
     -webkit-transition: all 0.9s ease-out 0s;
     -moz-transition: all 0.9s ease-out 0s;
-    border-radius: 10px; 
+    border-radius: 10px;
 }
 
 .scroll-area .go-top i {
@@ -7016,7 +7016,7 @@ p.blog-det-text {
 .scroll-area .go-top i:last-child {
     opacity: 0;
     visibility: hidden;
-    top: 60%; 
+    top: 60%;
 }
 
 .scroll-area .go-top::before {
@@ -7037,12 +7037,12 @@ p.blog-det-text {
 }
 
 .scroll-area .go-top:focus, .scroll-area .go-top:hover {
-      color: #fff; 
+      color: #fff;
   }
 
 .scroll-area .go-top:focus::before, .scroll-area .go-top:hover::before {
         opacity: 1;
-        visibility: visible; 
+        visibility: visible;
 }
 
 .scroll-area .go-top:focus i:first-child, .scroll-area .go-top:hover i:first-child {
@@ -7054,7 +7054,7 @@ p.blog-det-text {
 .scroll-area .go-top:focus i:last-child, .scroll-area .go-top:hover i:last-child {
         opacity: 1;
         visibility: visible;
-        top: 50%; 
+        top: 50%;
 }
 
 .scroll-area .go-top.active {
@@ -7069,7 +7069,7 @@ p.blog-det-text {
 }
 
 .top-wrap {
-  position: relative; 
+  position: relative;
 }
 
 .top-wrap .go-top-button {
@@ -7109,9 +7109,9 @@ p.blog-det-text {
 
 .top-wrap .go-top-button:hover {
       background-color: #222;
-      color: #fff; 
+      color: #fff;
   }
-  
+
 .scroll-area.home-two .top-wrap .go-top-button {
     background: #00AFF5;
 }
@@ -7220,7 +7220,7 @@ p.blog-det-text {
   100% {
     transform: rotate(-360deg);
   }
-} 
+}
 
 /*/ Here comes the Magic /*/
 
@@ -7497,7 +7497,7 @@ p.blog-det-text {
     transform: translateY(-20px); }
   100% {
     -webkit-transform: translateY(-40px);
-    transform: translateY(-40px); } }   
+    transform: translateY(-40px); } }
 @-webkit-keyframes movebounce {
   0% {
     -webkit-transform: translateY(0px);
@@ -7643,7 +7643,7 @@ p.blog-det-text {
 
 
 
-/*** 
+/***
 ====================================================================
    Cleeny Search Popup
 ====================================================================
@@ -7728,7 +7728,7 @@ p.blog-det-text {
 }
 .search-popup .form-group{
     position:relative;
-    margin:0px; 
+    margin:0px;
     overflow: hidden;
 }
 .search-popup .form-group input[type="text"], .search-popup .form-group input[type="search"] {
