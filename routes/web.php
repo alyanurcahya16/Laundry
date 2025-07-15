@@ -17,8 +17,11 @@ use App\Http\Controllers\OrderController;
 |
 */
 
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 Route::get('/', function () {
-    return view('welcome');
+    return view('frontend.home');
 });
 
 Route::get('/dashboard', function () {

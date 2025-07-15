@@ -9,14 +9,14 @@
 			$('body').removeClass('search-active');
 		});
 	}
-	
+
 	// Mobile Menu
     $('.mobile-menu nav').meanmenu({
         meanScreenWidth: "991",
         meanMenuContainer: ".mobile-menu",
         meanMenuOpen: "<span></span> <span></span> <span></span>",
         onePage: false,
-    });	
+    });
 
     // sticky
     var wind = $(window);
@@ -72,7 +72,7 @@
                     items: 1
                 }
             }
-        }) 
+        })
 
      // service Active
      $('.service_list').owlCarousel({
@@ -101,7 +101,7 @@
                 items: 3
             }
         }
-    }) 
+    })
 
      // portfolio Active
      $('.portfolio_list').owlCarousel({
@@ -131,7 +131,7 @@
                 items: 3
             }
         }
-    }) 
+    })
 
 
     // testimonial Active
@@ -161,7 +161,7 @@
                 items: 2
             }
         }
-    })  
+    })
 
       // testimonial Active
       $('.testimonial_list2').owlCarousel({
@@ -190,7 +190,7 @@
                 items: 3
             }
         }
-    }) 
+    })
 
 // testimonial Active
     $('.brand_list').owlCarousel({
@@ -224,14 +224,14 @@
                 items: 5
             }
         }
-    })  
+    })
 
-  
+
 /*---------------------
-    WOW active js 
+    WOW active js
     --------------------- */
     new WOW().init();
- 
+
 
 
     //curseer animation
@@ -249,7 +249,7 @@ document.addEventListener("mousemove", function(e){
         delay: 10,
         time: 1000
     });
-	
+
 	/*  Cart Plus Minus Button
     /*----------------------------------------*/
     $('.ctnbutton').on('click', function () {
@@ -268,7 +268,7 @@ document.addEventListener("mousemove", function(e){
         $button.parent().find('input').val(newVal);
     });
 
-	
+
 	 // Venubox
 
     $('.venobox').venobox({
@@ -322,7 +322,7 @@ document.addEventListener("mousemove", function(e){
         $('#bar3').barfiller({ duration: 7000 });
         });
 
-        
+
         $(window).on('scroll', function () {
             var scrolled = $(window).scrollTop();
             if (scrolled > 300) $('.go-top').addClass('active');
@@ -336,27 +336,27 @@ document.addEventListener("mousemove", function(e){
         });
 
         // table tabs
-        
-        $(document).ready(function() { 
 
-        (function ($) { 
+        $(document).ready(function() {
+
+        (function ($) {
             $('.tab ul.tabs').addClass('active').find('> li:eq(0)').addClass('current');
-            
-            $('.tab ul.tabs li a').click(function (g) { 
-                var tab = $(this).closest('.tab'), 
+
+            $('.tab ul.tabs li a').click(function (g) {
+                var tab = $(this).closest('.tab'),
                     index = $(this).closest('li').index();
-                
+
                 tab.find('ul.tabs > li').removeClass('current');
                 $(this).closest('li').addClass('current');
-                
+
                 tab.find('.tab_content').find('div.tabs_item').not('div.tabs_item:eq(' + index + ')').slideUp();
                 tab.find('.tab_content').find('div.tabs_item:eq(' + index + ')').slideDown();
-                
+
                 g.preventDefault();
             } );
         })(jQuery);
 
     });
-    
+
 })(jQuery);
 
