@@ -9,15 +9,16 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up(): void
+  public function up()
 {
     Schema::create('orders', function (Blueprint $table) {
         $table->id();
         $table->string('nama');
-        $table->string('email');
         $table->string('telepon');
         $table->text('alamat');
         $table->string('layanan');
+        $table->string('item');
+        $table->integer('quantity')->nullable();
         $table->text('catatan')->nullable();
         $table->timestamps();
     });
@@ -31,4 +32,5 @@ return new class extends Migration
     {
         Schema::dropIfExists('orders');
     }
+    
 };

@@ -29,7 +29,17 @@
             padding: 0;
             box-sizing: border-box;
         }
-
+        .background-image {
+    position: fixed;
+    top: 0;
+    left: 20vh;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('/images/2.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+}
         body { 
             background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -683,6 +693,8 @@
     </style>
 </head>
 <body>
+    <div class="background-image"></div>
+
     <!-- Animated background particles -->
     <div class="particles">
         <div class="particle"></div>
@@ -695,56 +707,60 @@
     <!-- Sidebar overlay for mobile -->
     <div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
 
-    <div class="sidebar" id="sidebar">
-        <div class="sidebar-header">
-            <h4>Admin Panel</h4>
-            <div class="admin-badge">
-                <i class="fas fa-crown"></i> Administrator
-            </div>
+    <div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
+
+<div class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+        <h4>Admin Panel</h4>
+        <div class="admin-badge">
+            <i class="fas fa-crown"></i> Administrator
         </div>
-        
-        <div class="sidebar-menu">
-            <a href="/admin/dashboard" class="active">
-                <i class="fas fa-tachometer-alt"></i>
-                Dashboard
-            </a>
-            <a href="/admin/settings" class="">
-                <i class="fas fa-cog"></i>
-                Settings
-            </a>
-            <a href="/admin/banners">
-                <i class="fas fa-image"></i>
-                Banners
-            </a>
-            <a href="/admin/about">
-                <i class="fas fa-info-circle"></i>
-                About Us
-            </a>
-            <a href="/admin/appointments">
-                <i class="fas fa-calendar-check"></i>
-                Appointments
-            </a>
-            <a href="/admin/services">
-                <i class="fas fa-concierge-bell"></i>
-                Services
-            </a>
-            <a href="/admin/workingprocess">
-                <i class="fas fa-tasks"></i>
-                Working Process
-            </a>
-            <a href="/admin/porto">
-                <i class="fas fa-briefcase"></i>
-                Portfolio
-            </a>
-            <a href="/admin/testimoni">
-                <i class="fas fa-comments"></i>
-                Testimonials
-            </a>
-            <a href="/admin/sponsor">
-                <i class="fas fa-handshake"></i>
-                Sponsors
-            </a>
+    </div>
+
+    <div class="sidebar-menu">
+        @php
+    $layoutActive = request()->is('admin/settings') ||
+                    request()->is('admin/banners') ||
+                    request()->is('admin/about') ||
+                    request()->is('admin/appointments') ||
+                    request()->is('admin/services') ||
+                    request()->is('admin/workingprocess') ||
+                    request()->is('admin/porto') ||
+                    request()->is('admin/testimoni') ||
+                    request()->is('admin/sponsor');
+@endphp
+
+        <!-- Dashboard -->
+        <a href="/admin/dashboard">
+            <i class="fas fa-home"></i> Dashboard
+        </a>
+
+        <!-- Pesanan -->
+        <a href="/admin/orders">
+            <i class="fas fa-concierge-bell"></i> Pesanan
+        </a>
+
+        <!-- Layout (dropdown) -->
+       <a href="javascript:void(0)" onclick="toggleLayoutMenu()" class="{{ $layoutActive ? 'active' : '' }}">
+    <i class="fas fa-layer-group"></i> Layout <i class="fas fa-chevron-down float-end"></i>
+</a>
+
+
+        <!-- Submenu: Layout children -->
+        <div id="layoutSubmenu" style="display: '{{ $layoutActive ? 'block' : 'none' }}'; padding-left: 20px;">
+            <a href="/admin/settings"><i class="fas fa-sliders-h"></i> Settings</a>
+            <a href="/admin/banners"><i class="fas fa-image"></i> Banners</a>
+            <a href="/admin/about"><i class="fas fa-info-circle"></i> About Us</a>
+            <a href="/admin/appointments"><i class="fas fa-calendar-check"></i> Appointments</a>
+            <a href="/admin/services"><i class="fas fa-cog"></i> Services</a>
+            <a href="/admin/workingprocess"><i class="fas fa-tasks"></i> Working Process</a>
+            <a href="/admin/porto"><i class="fas fa-briefcase"></i> Portfolio</a>
+            <a href="/admin/testimoni"><i class="fas fa-comments"></i> Testimonials</a>
+            <a href="/admin/sponsor"><i class="fas fa-handshake"></i> Sponsors</a>
         </div>
+    </div>
+</div>
+
 
         
     </div>
@@ -754,23 +770,23 @@
             <button class="mobile-toggle" onclick="toggleSidebar()">
                 <i class="fas fa-bars"></i>
             </button>
-            <h5>@yield('title', 'Dashboard')</h5>
+            <h5>Royal Laundres</h5>
         </div>
         <div class="topbar-right">
-            <div class="search-box">
-                <i class="fas fa-search"></i>
-                <input type="text" placeholder="Search anything...">
-            </div>
-            
-            <div class="notification-icon">
-                <i class="fas fa-bell"></i>
-                <span class="notification-badge">3</span>
-            </div>
-            
-            <div class="notification-icon">
-                <i class="fas fa-envelope"></i>
-                <span class="notification-badge">5</span>
-            </div>
+        
+
+    <form method="GET" action="{{ route('admin.orders.index') }}" class="search-box">
+        <div class="input-group">
+            <input type="text" name="q" class="form-control" placeholder="Cari pesanan..." value="{{ request('q') }}">
+            <button class="btn btn-outline-light px-3 py-2" type="submit" style="backdrop-filter: blur(8px); background-color: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.3); color: white; font-weight: bold;">
+    Cari
+</button>
+
+        </div>
+    </form>
+
+
+
             
             <div class="user-profile">
                 <div class="user-avatar">
@@ -781,14 +797,12 @@
                     <div class="user-role">Admin</div>
                 </div>
             </div>
-
             <form action="/logout" method="POST">
                 @csrf
                 <button class="btn w-100">
                     <i class="fas fa-sign-out-alt"></i> Logout
                 </button>
             </form>
-        
         </div>
     </div>
 
@@ -805,15 +819,14 @@
         <div>
             <i class="fas fa-heart" style="color: #ef4444; margin: 0 0.5rem;"></i>
             &copy; Di buat dengan penuh semangat | 
-            <strong>PT Belanja Bulanan Online</strong>
+            <strong>Royal Laundres</strong>
         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        function toggleSidebar() {
-            const sidebar = document.getElementById('sidebar');
-            const overlay = document.getElementById('sidebarOverlay');
-            
-            sidebar.classList.toggle('active');
-            overlay.classList.toggle('active');
+   <script>
+    function toggleLayoutMenu() {
+        var submenu = document.getElementById('layoutSubmenu');
+        submenu.style.display = (submenu.style.display === 'none' || submenu.style.display === '') ? 'block' : 'none';
+    }
+</script>
