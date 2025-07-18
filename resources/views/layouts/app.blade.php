@@ -1,5 +1,3 @@
-html
-
 <!DOCTYPE HTML>
 <html lang="en-US">
 
@@ -11,7 +9,7 @@ html
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->
     <link rel="icon" type="{{ asset('image/png') }}" sizes="56x56"
-        href="{{ asset('frontend/assets/images/royal-logo3.png') }}">
+        href="{{ asset('frontend/public/frontend/assets/images/fav-icon/icon.png') }}">
 
     <!-- bootstrap CSS -->
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/bootstrap.min.css') }}" type="text/css" media="all">
@@ -45,8 +43,9 @@ html
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/owl.transitions.css') }}" type="text/css"
         media="all">
 
-    <!-- venobox CSS -->
-    <link rel="stylesheet" href="{{ asset('frontend/venobox/venobox.js') }}" type="text/css" media="all">
+    <!-- Venobox CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/venobox@2.0.7/dist/venobox.min.css">
+
 
     <!-- responsive CSS -->
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/responsive.css') }}" type="text/css" media="all">
@@ -128,6 +127,14 @@ html
                     <nav class="cleeny_menu">
                         <ul class="nav_scroll">
                             <li><a href="index.html">Home</a>
+                                {{-- <ul class="sub-menu">
+                                    <li><a href="index.html">Home Version 01</a></li>
+                                    <li><a href="index-two.html">Home Version 02</a></li>
+                                    <li><a href="index-three.html">Home Version 03</a></li>
+                                    <li><a href="index-four.html">Home Landing 01</a></li>
+                                    <li><a href="index-five.html">Home Landing 02</a></li>
+                                    <li><a href="index-six.html">Home Landing 03 </a></li>
+                                </ul> --}}
                             </li>
                             <li><a href="about-us.html">About Us</a></li>
                             <li><a href="#">Service <i class="bi bi-chevron-down"></i></a>
@@ -143,9 +150,17 @@ html
                                     <li><a href="testimonial.html">Testimonials</a></li>
                                     <li><a href="project.html">Project</a></li>
                                     <li><a href="project-details.html">Project Details</a></li>
+                                    {{-- <li><a href="priching.html">Pricing</a></li> --}}
                                     <li><a href="appoinment.html">Appoinment</a></li>
                                 </ul>
                             </li>
+                            {{-- <li><a href="#">Blog <i class="bi bi-chevron-down"></i></a>
+                                <ul class="sub-menu">
+                                    <li><a href="blog-grid.html">Blog Grid</a></li>
+                                    <li><a href="blog-list.html">Blog List</a></li>
+                                    <li><a href="blog-details.html">Blog Details</a></li>
+                                </ul>
+                            </li> --}}
                             <li><a href="contact.html">Contact</a></li>
                         </ul>
                         <div class="header-search-btn">
@@ -167,6 +182,16 @@ html
         <div class="mobile-menu">
             <nav class="cleeny_menu">
                 <ul class="nav_scroll">
+                    <li><a href="index.html">Home <i class="bi bi-chevron-down"></i></a>
+                        <ul class="sub-menu">
+                            <li><a href="index.html">Home Version 01</a></li>
+                            <li><a href="index-two.html">Home Version 02</a></li>
+                            <li><a href="index-three.html">Home Version 03</a></li>
+                            <li><a href="index-four.html">Home Landing 01</a></li>
+                            <li><a href="index-five.html">Home Landing 02</a></li>
+                            <li><a href="index-six.html">Home Landing 03 </a></li>
+                        </ul>
+                    </li>
                     <li><a href="about-us.html">About Us</a></li>
                     <li><a href="#">Service <i class="bi bi-chevron-down"></i></a>
                         <ul class="sub-menu">
@@ -181,7 +206,15 @@ html
                             <li><a href="testimonial.html">Testimonials</a></li>
                             <li><a href="project.html">Project</a></li>
                             <li><a href="project-details.html">Project Details</a></li>
+                            <li><a href="priching.html">Pricing</a></li>
                             <li><a href="appoinment.html">Appoinment</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Blog <i class="bi bi-chevron-down"></i></a>
+                        <ul class="sub-menu">
+                            <li><a href="blog-grid.html">Blog Grid</a></li>
+                            <li><a href="blog-list.html">Blog List</a></li>
+                            <li><a href="blog-details.html">Blog Details</a></li>
                         </ul>
                     </li>
                     <li><a href="contact.html">Contact</a></li>
@@ -203,11 +236,112 @@ html
     <!-- Ends Curser Section Here -->
     <!--==================================================-->
 
-
-
-    <main>
+<div class="container my-5">
         @yield('content')
-    </main>
+    </div>
+
+
+    <!--==================================================-->
+    <!-- start cleeny-brand Area -->
+    <!--==================================================-->
+
+
+    <div class="brand-area">
+        <div class="container">
+            <div class="row">
+                <div class="brand_list owl-carousel">
+                    <div class="col-lg-12">
+                        <div class="brand-box">
+                            <div class="brand-thumb">
+                                <img src="{{ asset('frontend/assets/images/brand-img.png') }}" alt="brand img">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="brand-box">
+                            <div class="brand-thumb">
+                                <img src="{{ asset('frontend/assets/images/brand-img2.png') }}" alt="brand img">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="brand-box">
+                            <div class="brand-thumb">
+                                <img src="{{ asset('frontend/assets/images/brand-img3.png') }}" alt="brand img">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="brand-box">
+                            <div class="brand-thumb">
+                                <img src="{{ asset('frontend/assets/images/brand-img4.png') }}" alt="brand img">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="brand-box">
+                            <div class="brand-thumb">
+                                <img src="{{ asset('frontend/assets/images/brand-img5.png') }}" alt="brand img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--==================================================-->
+    <!-- end cleeny-brand Area -->
+    <!--==================================================-->
+
+
+
+
+    <!--==================================================-->
+    <!-- Start cleeny subscribe Area -->
+    <!--==================================================-->
+
+
+    <div class="subscribe-area">
+        <div class="container">
+            <div class="row subscribe align-items-center">
+                <div class="col-lg-5 col-md-6">
+                    <div class="subscribe-single-box d-flex align-items-center">
+                        <div class="subscribe-icon">
+                            <img src="{{ asset('frontend/assets/images/subscribe-icon.png') }}" alt="subscribe-icon">
+                        </div>
+                        <div class="subscribe-content">
+                            <h4 class="subscribe-text">Call Us Now</h4>
+                            <span class="subscribe-number"> +62 812 9220 4477</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="subscribe-title">Subscribe Now</h3>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="subscribe-form">
+                        <form>
+                            <div class="form-field">
+                                <input type="email" name="EMAIL" placeholder="Enter E-Mail*" required="">
+                                <button class="subscribe-button" type="submit">Subscribe</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--==================================================-->
+    <!-- end cleeny subscribe Area -->
+    <!--==================================================-->
+
+
 
     <!--==================================================-->
     <!-- Start cleeny Footer Area -->
@@ -222,7 +356,7 @@ html
                             <a href="index.html"><img src="{{ asset('frontend/assets/images/royal-logo4.png') }}"
                                     alt="footer-logo"></a>
                         </div>
-                        <p class="footer-widget-text">"Menyelesaikan masalah tanpa lelah" karena kebersihan Anda, tanggung jawab kami.</p>
+                        <p class="footer-widget-text">Memberikan layanan laundry yang bersih dan efisien secara profesional untuk mendukung gaya hidup modern Anda.</p>
                         <div class="footer-social">
                             <div class="footer-widget-social">
                                 <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -243,36 +377,9 @@ html
                             <li><a href="about-us.html"> <i class="bi bi-chevron-right"></i> About Us</a></li>
                             <li><a href="service.html"> <i class="bi bi-chevron-right"></i> Our Services</a></li>
                             <li><a href="team.html"> <i class="bi bi-chevron-right"></i> Meet Our Team</a></li>
-                            {{-- <li><a href="blog-grid.html"> <i class="bi bi-chevron-right"></i> Latest Blog</a></li> --}}
                         </ul>
                     </div>
                 </div>
-                {{-- <div class="col-lg-3 col-md-6">
-                    <div class="footer-resent-post">
-                        <div class="widget-title">
-                            <h2>Latest Blog</h2>
-                        </div>
-                        <div class="single-recent-post-box d-flex align-items-center">
-                            <div class="post-thumb">
-                                <img src="{{ asset('frontend/assets/images/footer-thumb.png') }}" alt="footer thumb">
-                            </div>
-                            <div class="post-content-text">
-                                <h4><a href="blog-details.html">10 Most Popular Clean Tips for Housey</a></h4>
-                                <span>Nov 16, 2024</span>
-                            </div>
-                        </div>
-                        <div class="single-recent-post-box d-flex align-items-center">
-                            <div class="post-thumb">
-                                <img src="{{ asset('frontend/assets/images/footer-thumb2.png') }}"
-                                    alt="footer thumb2">
-                            </div>
-                            <div class="post-content-text">
-                                <h4><a href="blog-details.html">Floor cleeny and Washing New...</a></h4>
-                                <span>Nov 18, 2024</span>
-                            </div>
-                        </div>
-                    </div>
-                </div> --}}
                 <div class="col-lg-3 col-md-6">
                     <div class="footer-widget right">
                         <div class="widget-title">
@@ -284,7 +391,7 @@ html
                             </div>
                             <div class="footer-content">
                                 <h3 class="footer-title">Address</h3>
-                                <p class="footer-title">Jl. Raya Tajur No 58 Kota Bogor</p>
+                                <p class="footer-title"> Jl. Raya Tajur No 58 Kota Bogor </p>
                             </div>
                         </div>
                         <div class="footer-contact-box d-flex">
@@ -293,7 +400,7 @@ html
                             </div>
                             <div class="footer-content">
                                 <h3 class="footer-title">Call Us</h3>
-                                <p class="footer-title">+62 812 9220 4477</p>
+                                <p class="footer-title">+880 123 (4567) 890</p>
                             </div>
                         </div>
                         <div class="footer-contact-box d-flex">
@@ -333,7 +440,7 @@ html
             <div class="row copyright">
                 <div class="col-lg-12 col-md-12">
                     <div class="footer-copyright-text">
-                        <p>© Copyrights 2025 Royal Laundress All rights reserved by <span>Dream IT </span></p>
+                        <p>© Copyrights 2024 Cleeny All rights reserved by <span>Dream IT </span></p>
                     </div>
                 </div>
             </div>
@@ -345,5 +452,93 @@ html
     <!-- end cleeny copyright Area -->
     <!--==================================================-->
 
+
+    <!--==================================================-->
+    <!-- Start scrollup section Area -->
+    <!--==================================================-->
+    <!-- scrollup section -->
+    <div class="scroll-area">
+        <div class="top-wrap">
+            <div class="go-top-btn-wraper">
+                <div class="go-top go-top-button">
+                    <i class="fas fa-arrow-up"></i>
+                    <i class="fas fa-arrow-up"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--==================================================-->
+    <!-- Start scrollup section Area -->
+    <!--==================================================-->
+
+    <!--==================================================-->
+    <!-- Start Search Popup Area -->
+    <!--==================================================-->
+    <div class="search-popup">
+        <button class="close-search style-two"><span class="flaticon-multiply"><i
+                    class="far fa-times-circle"></i></span></button>
+        <button class="close-search"><i class="bi bi-arrow-up-short"></i></button>
+        <form method="post" action="#">
+            <div class="form-group">
+                <input type="search" name="search-field" value="" placeholder="Search Here" required="">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </div>
+        </form>
+    </div>
+    <!--==================================================-->
+    <!-- Start Search Popup Area -->
+    <!--==================================================-->
+
+
+
+    <!-- jquery js -->
+    <script src="{{ asset('frontend/assets/js/vendor/jquery-3.6.2.min.js') }}"></script>
+    <!-- bootstrap js -->
+    <script src="{{ asset('frontend/assets/js/bootstrap.min.js') }}"></script>
+    <!-- carousel js -->
+    <script src="{{ asset('frontend/assets/js/owl.carousel.min.js') }}"></script>
+    <!-- counterup js -->
+    <script src="{{ asset('frontend/assets/js/jquery.counterup.min.js') }}"></script>
+    <!-- waypoints js -->
+    <script src="{{ asset('frontend/assets/js/waypoints.min.js') }}"></script>
+    <!-- wow js -->
+    <script src="{{ asset('frontend/assets/js/wow.js') }}"></script>
+    <!-- imagesloaded js -->
+    <script src="{{ asset('frontend/assets/js/imagesloaded.pkgd.min.js') }}"></script>
+    <!-- venobox js -->
+    <script src="{{ asset('frontend/venobox/venobox.js') }}"></script>
+    <!--  animated-text js -->
+    <script src="{{ asset('frontend/assets/js/animated-text.js') }}"></script>
+    <!-- venobox min js -->
+    <script src="{{ asset('frontend/venobox/venobox.min.js') }}"></script>
+    <!-- isotope js -->
+    <script src="{{ asset('frontend/assets/js/isotope.pkgd.min.js') }}"></script>
+    <!-- jquery meanmenu js -->
+    <script src="{{ asset('frontend/assets/js/jquery.meanmenu.js') }}"></script>
+    <!-- jquery scrollup js -->
+    <script src="{{ asset('frontend/assets/js/jquery.scrollUp.js') }}"></script>
+    <!-- theme js -->
+    <script src="{{ asset('frontend/assets/js/theme.js') }}"></script>
+    <script src="{{ asset('frontend/assets/js/jquery.barfiller.js') }}"></script>
+    <script src="{{ asset('frontend/assets/js/typed.js') }}"></script>
+    <!-- jquery js -->
+    <script src="https://unpkg.com/aos@3.0.0-beta.6/dist/aos.js"></script>
+    <script src="{{ asset('frontend/assets/js/vanilla-tilt.min.js') }}"></script>
+    <!-- partial -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <!--type-js-->
+    <script>
+        var typed = new Typed('.type', {
+            strings: ['Help Line', 'Call Us', ],
+            typeSpeed: 90,
+            backSpeed: 90,
+            loop: true
+        });
+    </script>
 </body>
+
+<!-- Mirrored from html.ditsolution.net/cleeny/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 08 Jul 2025 06:17:52 GMT -->
+
 </html>
+

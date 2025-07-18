@@ -829,7 +829,7 @@
             </div>
             <div class="row">
                 <div class="portfolio_list owl-carousel">
-                    <div class="col-lg-12 col-md-12">
+                    {{-- <div class="col-lg-12 col-md-12">
                         <div class="portfolio-single-box">
                             <div class="portfolio-thumb">
                                 <img src="{{ asset('frontend/assets/images/portfolio-img.png') }}"
@@ -847,11 +847,11 @@
                                 <h4 class="portfolio-top-title">cleeny</h4>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                     <div class="col-lg-12 col-md-12">
                         <div class="portfolio-single-box">
                             <div class="portfolio-thumb">
-                                <img src="{{ asset('frontend/assets/images/portfolio-img2.png') }}"
+                                <img src="{{ asset('frontend/assets/images/royal-laundry7.png') }}"
                                     alt="portfolio-img">
                                 <div class="portfolio-content">
                                     <div class="portfolio-content2">
@@ -870,7 +870,7 @@
                     <div class="col-lg-12 col-md-12">
                         <div class="portfolio-single-box">
                             <div class="portfolio-thumb">
-                                <img src="{{ asset('frontend/assets/images/portfolio-img.png') }}"
+                                <img src="{{ asset('frontend/assets/images/royal-laundry5.png') }}"
                                     alt="portfolio-img">
                                 <div class="portfolio-content">
                                     <div class="portfolio-content2">
@@ -889,7 +889,7 @@
                     <div class="col-lg-12 col-md-12">
                         <div class="portfolio-single-box">
                             <div class="portfolio-thumb">
-                                <img src="{{ asset('frontend/assets/images/portfolio-img3.png') }}"
+                                <img src="{{ asset('frontend/assets/images/royal-laundry6.png') }}"
                                     alt="portfolio-img">
                                 <div class="portfolio-content">
                                     <div class="portfolio-content2">
@@ -1208,7 +1208,7 @@
     <!--==================================================-->
     <!-- Start cleeny subscribe Area -->
     <!--==================================================-->
-
+{{--
 
     <div class="subscribe-area">
         <div class="container">
@@ -1240,7 +1240,7 @@
             </div>
         </div>
     </div>
-
+ --}}
 
 
     <!--==================================================-->

@@ -12,48 +12,6 @@
 
   <form action="{{ route('order.store') }}" method="POST">
     @csrf
-
-    <div class="mb-3">
-      <label for="nama" class="form-label">Nama</label>
-      <input type="text" class="form-control" id="nama" name="nama" required>
-    </div>
-
-    <div class="mb-3">
-      <label for="telepon" class="form-label">Nomor HP</label>
-      <input type="tel" class="form-control" id="telepon" name="telepon" required>
-    </div>
-
-    <div class="mb-3">
-      <label for="alamat" class="form-label">Alamat</label>
-      <textarea class="form-control" id="alamat" name="alamat" rows="3" required></textarea>
-    </div>
-
-    <div class="mb-3">
-      <label for="layanan" class="form-label">Pilih Layanan</label>
-      <select class="form-select" name="layanan" id="category" required>
-        <option value="">-- Pilih --</option>
-        <option value="linen">Linen</option>
-        <option value="uniform">Uniform</option>
-        <option value="satuan">Satuan</option>
-        <option value="beddings">Beddings</option>
-        <option value="other">Other Items</option>
-        <option value="kiloan">Daily Kiloan</option>
-        <option value="tas_sepatu">Tas & Sepatu</option>
-        <option value="membership">Membership Packages</option>
-      </select>
-    </div>
-
-    <div class="mb-3">
-      <label for="item" class="form-label">Pilih Item</label>
-      <select class="form-select" id="item" name="item" required>
-        <option value="">-- Pilih kategori dulu --</option>
-      </select>
-    </div>
-
-    <div class="mb-3 d-none" id="quantity-group">
-      <label for="quantity" class="form-label">Jumlah</label>
-      <input type="number" class="form-control" name="quantity" id="quantity" min="1" value="1">
-
     <!-- Data Pelanggan -->
     <div class="card mb-4">
       <div class="card-header bg-light">
@@ -124,7 +82,6 @@
           <i class="fas fa-plus"></i> Tambah Pesanan Lain
         </button>
       </div>
-
     </div>
 
     <!-- Catatan & Submit -->
@@ -133,11 +90,6 @@
         <i class="fas fa-paper-plane"></i> Kirim Semua Pesanan
       </button>
     </div>
-
-
-    <button type="submit" class="btn btn-primary">Kirim Pesanan</button>
-
-
   </form>
 
   <!-- Daftar Harga Accordion -->
@@ -452,14 +404,6 @@
     'Cuci Kering', 'Setrika Kiloan', 'Sepatu', 'Tas', 'Marquis', 'Prince', 'Duke', 'King'
   ];
 
-
-  function updateItems() {
-    const category = document.getElementById('category').value;
-    const itemSelect = document.getElementById('item');
-    const quantityGroup = document.getElementById('quantity-group');
-
-    // Reset item select
-
   // Counter untuk pesanan
   let orderCounter = 1;
 
@@ -524,7 +468,6 @@
     const itemSelect = selectElement.closest('.row').querySelector('.item-select');
     const quantityGroup = selectElement.closest('.row').querySelector('.quantity-group');
 
-
     itemSelect.innerHTML = '<option value="">-- Pilih Item --</option>';
     quantityGroup.classList.add('d-none');
 
@@ -536,30 +479,6 @@
         itemSelect.appendChild(option);
       });
     }
-
-
-  function checkQuantityRequired() {
-    const itemSelect = document.getElementById('item');
-    const quantityGroup = document.getElementById('quantity-group');
-    const selectedItem = itemSelect.value;
-
-    const showQty = itemsNeedQuantity.some(keyword => selectedItem.includes(keyword));
-    if (showQty) {
-      quantityGroup.classList.remove('d-none');
-    } else {
-      quantityGroup.classList.add('d-none');
-    }
-  }
-
-  document.addEventListener('DOMContentLoaded', function() {
-    // Initialize category change event
-    document.getElementById('category').addEventListener('change', updateItems);
-
-    // Initialize item change event
-    document.getElementById('item').addEventListener('change', checkQuantityRequired);
-  });
-</script>
-@endsection
 
     // Event listener ketika item berubah
     itemSelect.onchange = function() {
@@ -575,4 +494,3 @@
 </script>
 
 @endsection
-
