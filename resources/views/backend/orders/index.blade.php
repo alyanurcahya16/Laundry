@@ -25,6 +25,11 @@
         padding: 20px;
         transition: transform 0.3s ease;
     }
+    .card-body {
+    max-height: 80vh; /* atau 600px */
+    overflow-y: auto;
+    padding-right: 10px;
+}
 
     .order-card:hover {
         transform: translateY(-5px);
@@ -326,7 +331,8 @@
                 </a>
             </div>
         </div>
-        <div class="card-body">
+        <div class="card-body" style="max-height: 80vh; overflow-y: auto;">
+
             @if(session('success'))
                 <div class="alert alert-success">
                     {{ session('success') }}
@@ -337,14 +343,15 @@
             <div class="orders-grid">
                 @foreach($orders as $order)
                 @php
-                    $total = 0;
-                    if(preg_match_all('/Rp\s?([\d.,]+)/', $order->item, $matches)) {
-                        foreach($matches[1] as $match) {
-                            $total += (int) str_replace(['.', ','], '', $match);
-                        }
-                    }
-                    $total *= ($order->quantity ?? 1);
-                @endphp
+$total = 0;
+if(preg_match_all('/(\d+)x\s.*?Rp\s?([\d.,]+)/', $order->item, $matches)) {
+    foreach($matches[1] as $i => $qty) {
+        $harga = (int) str_replace(['.', ','], '', $matches[2][$i]);
+        $total += ((int) $qty) * $harga;
+    }
+}
+@endphp
+
                 <div class="order-card">
                     <div class="order-card-header">
                         <h5 class="order-card-title">{{ $order->nama }}</h5>
@@ -376,12 +383,16 @@
                             <i class="fas fa-eye"></i> Detail
                         </button>
                         <div class="dropdown" id="dropdown-{{ $order->id }}">
-                            <button class="btn btn-secondary dropdown-toggle" 
-                                    onclick="toggleDropdown('dropdown-{{ $order->id }}')"
-                                    aria-expanded="false">
+                           <button class="btn btn-secondary dropdown-toggle" 
+        type="button"
+        onclick="toggleDropdown('dropdown-{{ $order->id }}')"
+        aria-expanded="false">
+
                                 <i class="fas fa-cog"></i> Aksi
                             </button>
-                            <div class="dropdown-menu">
+                            <div class="dropdown-menu" id="dropdown-menu-{{ $order->id }}">
+
+
                                 <form action="{{ route('admin.orders.updateStatus', $order->id) }}" method="POST">
                                     @csrf
                                     @method('PUT')
@@ -483,19 +494,20 @@
 <script>
     // Toggle dropdown
     function toggleDropdown(id) {
-        const dropdown = document.getElementById(id);
-        dropdown.classList.toggle('show');
-        
-        // Close other dropdowns when opening a new one
-        document.querySelectorAll('.dropdown').forEach(el => {
-            if (el.id !== id && el.classList.contains('show')) {
-                el.classList.remove('show');
-            }
-        });
-        
-        // Stop propagation to prevent immediate closing
-        event.stopPropagation();
-    }
+    const dropdown = document.getElementById(id);
+    const menu = dropdown.querySelector('.dropdown-menu');
+    menu.classList.toggle('show');
+
+    // Tutup dropdown lain
+    document.querySelectorAll('.dropdown').forEach(el => {
+        if (el.id !== id) {
+            const otherMenu = el.querySelector('.dropdown-menu');
+            otherMenu?.classList.remove('show');
+        }
+    });
+
+    event.stopPropagation(); // supaya klik di tombol tidak langsung menutup dropdown
+}
 
     // Close dropdowns when clicking outside
     document.addEventListener('click', function(e) {

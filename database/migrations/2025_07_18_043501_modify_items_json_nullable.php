@@ -9,18 +9,19 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up()
+   public function up()
 {
     Schema::table('orders', function (Blueprint $table) {
-        $table->boolean('is_history')->default(false);
+        $table->json('items_json')->nullable()->change();
     });
 }
-
-
-public function down(): void
-{
-    Schema::table('orders', function (Blueprint $table) {
-        $table->dropColumn('is_history');
-    });
-}
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::table('orders', function (Blueprint $table) {
+            //
+        });
+    }
 };
