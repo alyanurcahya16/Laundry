@@ -22,6 +22,8 @@ return new class extends Migration
         $table->integer('quantity')->nullable();
         $table->text('catatan')->nullable();
         $table->timestamps();
+        $table->softDeletes();
+
     });
 }
 

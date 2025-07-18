@@ -740,6 +740,12 @@
             <i class="fas fa-concierge-bell"></i> Pesanan
         </a>
 
+         <a href="{{ route('admin.orders.history') }}">
+                    <i class="fas fa-history"></i>History
+                </a>
+            
+        <a href="/admin/testimoni"><i class="fas fa-comments"></i> Testimonials</a>
+
         <!-- Layout (dropdown) -->
        <a href="javascript:void(0)" onclick="toggleLayoutMenu()" class="{{ $layoutActive ? 'active' : '' }}">
     <i class="fas fa-layer-group"></i> Layout <i class="fas fa-chevron-down float-end"></i>
@@ -755,7 +761,7 @@
             <a href="/admin/services"><i class="fas fa-cog"></i> Services</a>
             <a href="/admin/workingprocess"><i class="fas fa-tasks"></i> Working Process</a>
             <a href="/admin/porto"><i class="fas fa-briefcase"></i> Portfolio</a>
-            <a href="/admin/testimoni"><i class="fas fa-comments"></i> Testimonials</a>
+            
             <a href="/admin/sponsor"><i class="fas fa-handshake"></i> Sponsors</a>
         </div>
     </div>

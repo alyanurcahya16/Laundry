@@ -9,8 +9,8 @@ class TestimoniController extends Controller
 {
     public function index()
     {
-        $testimonis = Testimoni::latest()->get();
-        return view('admin.testimoni.index', compact('testimonis'));
+        $data = Testimoni::latest()->get();
+        return view('admin.testimoni.index', compact('data'));
     }
 
     public function create()

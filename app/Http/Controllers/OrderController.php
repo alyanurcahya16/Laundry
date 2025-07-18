@@ -14,7 +14,7 @@ class OrderController extends Controller
 }
     public function history()
 {
-    $orders = Order::where('is_history', true)->get();
+   $orders = Order::onlyTrashed()->latest()->get(); // ini penting
     return view('backend.orders.history', compact('orders'));
 }
     public function moveToHistory($id)
@@ -91,4 +91,16 @@ class OrderController extends Controller
 
         return redirect()->back()->with('success', 'Status pemesanan berhasil diperbarui.');
     }
+    public function destroy($id)
+{
+    $order = \App\Models\Order::withTrashed()->findOrFail($id);
+
+    if ($order->trashed()) {
+        $order->forceDelete(); // hapus permanen dari history
+    } else {
+        $order->delete(); // soft delete
+    }
+
+    return back()->with('success', 'Pesanan berhasil dihapus.');
+}
 }
