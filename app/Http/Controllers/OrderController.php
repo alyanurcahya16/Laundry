@@ -61,7 +61,9 @@ class OrderController extends Controller
             'item' => $itemsDescription, // Simpan semua item sebagai text
             'quantity' => count($validated['orders']), // Jumlah total item
             'catatan' => 'Lihat detail item', // Catatan umum
-            'status' => 'pending'
+            'status' => 'pending',
+            'is_history' => false,
+            
         ]);
 
         return redirect()->route('order.success', $order->id)
