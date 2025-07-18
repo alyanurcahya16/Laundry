@@ -23,7 +23,6 @@ class PesananController extends Controller
     // 👉 Menyimpan data pesanan dari user (frontend)
     public function store(Request $request)
     {
-        logger('STORE DIPANGGIL'); 
         $validated = $request->validate([
             'nama' => 'required|string|max:255',
             'kategori' => 'required|string',

@@ -822,6 +822,9 @@
             <strong>Royal Laundres</strong>
         </div>
     </footer>
+    <!-- Bootstrap Bundle JS (WAJIB untuk modal) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
    <script>
@@ -829,4 +832,5 @@
         var submenu = document.getElementById('layoutSubmenu');
         submenu.style.display = (submenu.style.display === 'none' || submenu.style.display === '') ? 'block' : 'none';
     }
+    
 </script>
