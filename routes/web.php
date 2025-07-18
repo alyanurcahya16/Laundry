@@ -34,7 +34,13 @@ Route::middleware('auth')->group(function () {
 });
 
 
-
+// Order routes
+Route::prefix('admin/orders')->group(function() {
+    Route::get('/', [OrderController::class, 'index'])->name('admin.orders.index');
+    Route::get('/history', [OrderController::class, 'history'])->name('admin.orders.history');
+    Route::post('/{order}/move-to-history', [OrderController::class, 'moveToHistory'])->name('admin.orders.moveToHistory');
+    Route::put('/{order}/status', [OrderController::class, 'updateStatus'])->name('admin.orders.updateStatus');
+});
 Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
     Route::get('/dashboard', [\App\Http\Controllers\DashboardController::class, 'index'])->name('admin.dashboard');
     Route::get('/order', [OrderController::class, 'index'])->name('admin.order.index');

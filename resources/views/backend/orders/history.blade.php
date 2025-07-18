@@ -68,7 +68,7 @@
 
     .order-card-footer {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-end;
         align-items: center;
         margin-top: 15px;
     }
@@ -87,21 +87,6 @@
         color: white;
     }
 
-    .bg-info {
-        background-color: #0dcaf0;
-        color: black;
-    }
-
-    .bg-warning {
-        background-color: #ffc107;
-        color: black;
-    }
-
-    .bg-secondary {
-        background-color: #6c757d;
-        color: white;
-    }
-
     /* Button Styles */
     .btn {
         display: inline-flex;
@@ -114,11 +99,6 @@
         cursor: pointer;
         border: none;
         transition: all 0.2s ease;
-    }
-
-    .btn-sm {
-        padding: 6px 10px;
-        font-size: 0.75rem;
     }
 
     .btn-primary {
@@ -137,65 +117,6 @@
 
     .btn-secondary:hover {
         background-color: #5c636a;
-    }
-
-    /* Dropdown Styles */
-    .dropdown {
-        position: relative;
-        display: inline-block;
-    }
-
-    .dropdown-menu {
-        position: absolute;
-        right: 0;
-        top: 100%;
-        z-index: 1000;
-        display: none;
-        min-width: 160px;
-        padding: 5px 0;
-        background-color: white;
-        border: 1px solid rgba(0,0,0,0.15);
-        border-radius: 4px;
-        box-shadow: 0 6px 12px rgba(0,0,0,0.175);
-    }
-
-    .dropdown.show .dropdown-menu {
-        display: block;
-    }
-
-    .dropdown-item {
-        display: block;
-        padding: 8px 20px;
-        clear: both;
-        font-weight: 400;
-        color: #212529;
-        text-decoration: none;
-        white-space: nowrap;
-        background-color: transparent;
-        border: none;
-        width: 100%;
-        text-align: left;
-        cursor: pointer;
-        transition: background-color 0.2s;
-    }
-
-    .dropdown-item:hover {
-        background-color: #f8f9fa;
-    }
-
-    .move-to-history-btn {
-        margin-top: 10px;
-        background-color: #28a745;
-        color: white;
-        width: 100%;
-        text-align: left;
-        padding: 8px 20px;
-        border: none;
-        border-radius: 0 0 4px 4px;
-    }
-
-    .move-to-history-btn:hover {
-        background-color: #218838;
     }
 
     /* Modal Styles */
@@ -319,10 +240,10 @@
 <div class="container-xxl">
     <div class="card">
         <div class="card-header">
-            <h4 class="card-title">Data Pemesanan Laundry</h4>
+            <h4 class="card-title">History Pemesanan Laundry</h4>
             <div>
-                <a href="{{ route('admin.orders.history') }}" class="btn btn-secondary">
-                    <i class="fas fa-history"></i> Lihat History
+                <a href="{{ route('admin.orders.index') }}" class="btn btn-primary">
+                    <i class="fas fa-arrow-left"></i> Kembali ke Pesanan Aktif
                 </a>
             </div>
         </div>
@@ -348,10 +269,7 @@
                 <div class="order-card">
                     <div class="order-card-header">
                         <h5 class="order-card-title">{{ $order->nama }}</h5>
-                        <span class="badge bg-{{ 
-                            $order->status == 'Selesai' ? 'success' :
-                            ($order->status == 'Diantar' ? 'info' :
-                            ($order->status == 'Diproses' ? 'warning' : 'secondary')) }}">
+                        <span class="badge bg-success">
                             {{ $order->status }}
                         </span>
                     </div>
@@ -368,6 +286,10 @@
                             <span class="order-card-label">Tanggal:</span>
                             <span class="order-card-value">{{ $order->created_at->format('d M Y') }}</span>
                         </div>
+                        <div class="order-card-detail">
+                            <span class="order-card-label">Dipindahkan:</span>
+                            <span class="order-card-value">{{ $order->updated_at->format('d M Y H:i') }}</span>
+                        </div>
                     </div>
                     <div class="order-card-footer">
                         <button class="btn btn-primary btn-view-item" 
@@ -375,42 +297,6 @@
                                 data-order-data="{{ json_encode($order) }}">
                             <i class="fas fa-eye"></i> Detail
                         </button>
-                        <div class="dropdown" id="dropdown-{{ $order->id }}">
-                            <button class="btn btn-secondary dropdown-toggle" 
-                                    onclick="toggleDropdown('dropdown-{{ $order->id }}')"
-                                    aria-expanded="false">
-                                <i class="fas fa-cog"></i> Aksi
-                            </button>
-                            <div class="dropdown-menu">
-                                <form action="{{ route('admin.orders.updateStatus', $order->id) }}" method="POST">
-                                    @csrf
-                                    @method('PUT')
-                                    <input type="hidden" name="status" value="Diproses">
-                                    <button type="submit" class="dropdown-item">Set Diproses</button>
-                                </form>
-                                <form action="{{ route('admin.orders.updateStatus', $order->id) }}" method="POST">
-                                    @csrf
-                                    @method('PUT')
-                                    <input type="hidden" name="status" value="Diantar">
-                                    <button type="submit" class="dropdown-item">Set Diantar</button>
-                                </form>
-                                <form action="{{ route('admin.orders.updateStatus', $order->id) }}" method="POST">
-                                    @csrf
-                                    @method('PUT')
-                                    <input type="hidden" name="status" value="Selesai">
-                                    <button type="submit" class="dropdown-item">Set Selesai</button>
-                                </form>
-                                
-                                @if($order->status == 'Selesai')
-                                <form action="{{ route('admin.orders.moveToHistory', $order->id) }}" method="POST">
-    @csrf
-    <button type="submit" class="move-to-history-btn">
-        <i class="fas fa-archive"></i> Pindahkan ke History
-    </button>
-</form>
-                                @endif
-                            </div>
-                        </div>
                     </div>
                 </div>
                 @endforeach
@@ -453,6 +339,10 @@
                     <div class="detail-value" id="detailTanggal"></div>
                 </div>
                 <div class="detail-row">
+                    <div class="detail-label">Dipindahkan:</div>
+                    <div class="detail-value" id="detailUpdated"></div>
+                </div>
+                <div class="detail-row">
                     <div class="detail-label">Jumlah:</div>
                     <div class="detail-value" id="detailQuantity"></div>
                 </div>
@@ -481,38 +371,6 @@
 </div>
 
 <script>
-    // Toggle dropdown
-    function toggleDropdown(id) {
-        const dropdown = document.getElementById(id);
-        dropdown.classList.toggle('show');
-        
-        // Close other dropdowns when opening a new one
-        document.querySelectorAll('.dropdown').forEach(el => {
-            if (el.id !== id && el.classList.contains('show')) {
-                el.classList.remove('show');
-            }
-        });
-        
-        // Stop propagation to prevent immediate closing
-        event.stopPropagation();
-    }
-
-    // Close dropdowns when clicking outside
-    document.addEventListener('click', function(e) {
-        if (!e.target.closest('.dropdown')) {
-            document.querySelectorAll('.dropdown').forEach(el => {
-                el.classList.remove('show');
-            });
-        }
-    });
-
-    // Prevent dropdown from closing when clicking inside
-    document.querySelectorAll('.dropdown-menu').forEach(menu => {
-        menu.addEventListener('click', function(e) {
-            e.stopPropagation();
-        });
-    });
-
     // Modal functions
     function openModal() {
         document.getElementById('orderDetailModal').classList.add('show');
@@ -545,12 +403,9 @@
                 document.getElementById('detailTelepon').textContent = orderData.telepon || '-';
                 document.getElementById('detailAlamat').textContent = orderData.alamat || '-';
                 document.getElementById('detailTanggal').textContent = orderData.created_at ? new Date(orderData.created_at).toLocaleString('id-ID') : '-';
+                document.getElementById('detailUpdated').textContent = orderData.updated_at ? new Date(orderData.updated_at).toLocaleString('id-ID') : '-';
                 document.getElementById('detailLayanan').textContent = orderData.layanan ? orderData.layanan.charAt(0).toUpperCase() + orderData.layanan.slice(1) : '-';
-                document.getElementById('detailStatus').innerHTML = `<span class="badge bg-${
-                    orderData.status == 'Selesai' ? 'success' :
-                    orderData.status == 'Diantar' ? 'info' :
-                    orderData.status == 'Diproses' ? 'warning' : 'secondary'
-                }">${orderData.status || '-'}</span>`;
+                document.getElementById('detailStatus').innerHTML = `<span class="badge bg-success">${orderData.status || '-'}</span>`;
                 document.getElementById('detailCatatan').textContent = orderData.catatan || 'Tidak ada catatan';
                 document.getElementById('detailItem').textContent = orderData.item || 'Tidak ada item';
                 document.getElementById('detailQuantity').textContent = orderData.quantity || '1';
@@ -558,15 +413,6 @@
                 
                 // Show modal
                 openModal();
-            });
-        });
-
-        // Refresh page after status change to show/hide move to history button
-        document.querySelectorAll('.dropdown-item[type="submit"]').forEach(button => {
-            button.addEventListener('click', function() {
-                setTimeout(() => {
-                    window.location.reload();
-                }, 500);
             });
         });
     });

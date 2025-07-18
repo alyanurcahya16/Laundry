@@ -16,6 +16,8 @@ class Order extends Model
         'layanan',
         'item',
         'quantity',
-        'catatan'
+        'catatan',
+        'is_history'
     ];
+    
 }

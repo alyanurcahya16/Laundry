@@ -17,4 +17,5 @@ class Pesanan extends Model
         'catatan',
         'jumlah_kg',
     ];
+    
 }

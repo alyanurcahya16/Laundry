@@ -17,6 +17,7 @@ return new class extends Migration
         $table->string('telepon');
         $table->text('alamat');
         $table->string('layanan');
+        $table->json('items_json');
         $table->string('item');
         $table->integer('quantity')->nullable();
         $table->text('catatan')->nullable();
