@@ -1,12 +1,7 @@
-
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tentang Kami - Royal Laundress</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <style>
+@extends('layouts.app')
+@section('title', 'Tentang Kami - Royal Laundress')
+@section('content')
+<style>
         @keyframes fade-in {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
@@ -121,10 +116,5 @@
             </div>
         </div>
     </div>
-
-    <!-- JS (optional if needed) -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+@endsection
 
