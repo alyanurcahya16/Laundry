@@ -43,9 +43,9 @@
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/owl.transitions.css') }}" type="text/css"
         media="all">
 
-    <!-- venobox CSS -->
-    <link rel="stylesheet" href="{{ asset('frontend/venobox/venobox.js') }}" type="text/css"
-        media="all">
+    <!-- Venobox CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/venobox@2.0.7/dist/venobox.min.css">
+
 
     <!-- responsive CSS -->
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/responsive.css') }}" type="text/css" media="all">
@@ -75,7 +75,7 @@
             <div class="row align-items-center d-flex">
                 <div class="col-lg-6">
                     <div class="header-address-info">
-                        <p> <i class="bi bi-geo-alt"></i> 102/B New Market, Sandigo-USA <span> <i
+                        <p> <i class="bi bi-geo-alt"></i> Jl. Raya Tajur No 58 Kota Bogor <span> <i
                                     class="bi bi-envelope-open"></i> example@gmail.com </span></p>
                     </div>
                 </div>
@@ -84,12 +84,13 @@
                         <div class="hendrio-social-icon">
                             <ul>
                                 <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="https://www.instagram.com/royallaundress/"><i
+                                            class="fab fa-instagram"></i></a></li>
                                 <li><a href="#"><i class="fab fa-tiktok"></i></a></li>
                             </ul>
                         </div>
                         <div class="phone-number">
-                            <p> <i class="fas fa-phone-square-alt"></i> <span>Call :</span> +980 234 4567 </p>
+                            <p> <i class="fas fa-phone-square-alt"></i> <span>Call :</span> +62 812 9220 4477 </p>
                         </div>
                     </div>
                 </div>
@@ -111,27 +112,29 @@
         <div class="container">
             <div class="row d-flex align-items-center">
                 <div class="col-lg-3">
-                    <div class="logo">
+                    <div class="logo-container">
                         <a class="logo_img" href="index.html" title="cleeny">
-                            <img src="{{ asset('frontend/assets/images/logo.png') }}" alt="logo">
+                            <img src="{{ asset('frontend/assets/images/royal-logo2.png') }}" style="height: 90px; "
+                                alt="logo">
                         </a>
                         <a class="main_sticky" href="index.html" title="cleeny">
-                            <img src="{{ asset('frontend/assets/images/logo2.png') }}" alt="astute">
+                            <img src="{{ asset('frontend/assets/images/royal-logo4.png') }}" style="height: 90px; "
+                                alt="astute">
                         </a>
                     </div>
                 </div>
                 <div class="col-lg-9">
                     <nav class="cleeny_menu">
                         <ul class="nav_scroll">
-                            <li><a href="index.html">Home <i class="bi bi-chevron-down"></i></a>
-                                <ul class="sub-menu">
+                            <li><a href="index.html">Home</a>
+                                {{-- <ul class="sub-menu">
                                     <li><a href="index.html">Home Version 01</a></li>
                                     <li><a href="index-two.html">Home Version 02</a></li>
                                     <li><a href="index-three.html">Home Version 03</a></li>
                                     <li><a href="index-four.html">Home Landing 01</a></li>
                                     <li><a href="index-five.html">Home Landing 02</a></li>
                                     <li><a href="index-six.html">Home Landing 03 </a></li>
-                                </ul>
+                                </ul> --}}
                             </li>
                             <li><a href="about-us.html">About Us</a></li>
                             <li><a href="#">Service <i class="bi bi-chevron-down"></i></a>
@@ -147,17 +150,17 @@
                                     <li><a href="testimonial.html">Testimonials</a></li>
                                     <li><a href="project.html">Project</a></li>
                                     <li><a href="project-details.html">Project Details</a></li>
-                                    <li><a href="priching.html">Pricing</a></li>
+                                    {{-- <li><a href="priching.html">Pricing</a></li> --}}
                                     <li><a href="appoinment.html">Appoinment</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#">Blog <i class="bi bi-chevron-down"></i></a>
+                            {{-- <li><a href="#">Blog <i class="bi bi-chevron-down"></i></a>
                                 <ul class="sub-menu">
                                     <li><a href="blog-grid.html">Blog Grid</a></li>
                                     <li><a href="blog-list.html">Blog List</a></li>
                                     <li><a href="blog-details.html">Blog Details</a></li>
                                 </ul>
-                            </li>
+                            </li> --}}
                             <li><a href="contact.html">Contact</a></li>
                         </ul>
                         <div class="header-search-btn">
@@ -246,18 +249,19 @@
                 <div class="col-lg-6">
                     <div class="hero-contant">
                         {{-- <h5>Best cleeny Agency</h5> --}}
-                        <h1>Need cleeny?</h1>
-                        <h1>call <span>us today</span></h1>
-                        <p>Need Clean of your home or office? Just Feel Free to Contact us.
-                            We try to Help you as soon as possible.</p>
+                        <h1>Royal Laundress</h1>
+                        {{-- <h1>call <span>us today</span></h1> --}}
+                        <p>Royal Laundress merupakan UMKM yang bergerak dibidang jasa
+                            Loundry,Dry Cleaning dan cuci spring bed dengan Motto” MENYELASAIKAN
+                            MASALAH TANPA LELAH”</p>
                         <div class="cleeny-btn">
-                            <a href="appoinment.html">Get Started Now <i class="bi bi-arrow-right"></i></a>
+                            <a href="pesanan">Get Started Now <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="hero-thumb" data-tilt>
-                        <img src="{{ asset('frontend/assets/images/hero-thumb.png') }}" alt="hero-thumb">
+                        <img src="{{ asset('frontend/assets/images/work-shape3.png') }}" alt="hero-thumb">
                     </div>
                 </div>
             </div>
@@ -274,9 +278,9 @@
         </div>
         <div class="hero-contact">
             <div class="hero-text">
-                <h1 style="color:#e2bc13 !important;"><span class="type"></span></h1>
+                <h1 style="color:#ffffff !important; margin-left:-10px;"><span class="type"></span></h1>
+                <h3 class="hero-title"><i class="fas fa-phone-alt"></i> +62 812 9220 4477 </h3>
             </div>
-            <h3 class="hero-title"><i class="fas fa-phone-alt"></i> 246900</h3>
         </div>
     </div>
 
@@ -284,63 +288,81 @@
     <!-- end cleeny hero Area -->
     <!--==================================================-->
 
-
     <!--==================================================-->
-    <!-- Start cleeny feature Area -->
+    <!-- Start cleeny feature Area (Customized for Laundry) -->
     <!--==================================================-->
 
-    <div class="feature-section">
+    <div class="feature-section py-5">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="feature-single-box d-flex">
-                        <div class="feature-icon">
-                            <img src="{{ asset('frontend/assets/images/feature-icon.png') }}" alt="feature-icon">
+            <div class="row text-center mb-5">
+                <div class="col-lg-12">
+                    <h2 class="section-main-title fw-bold" style="font-size: 30px;">Mengapa Harus Royal Laundress?
+                    </h2>
+                    <p class="text-muted" style="font-size: 16px;">Royal Laundress adalah solusi laundry terpercaya
+                        yang mengutamakan kualitas, kebersihan, dan kenyamanan. Kami hadir dengan pelayanan profesional
+                        dan ramah lingkungan.</p>
+                </div>
+            </div>
+            <div class="row g-4 justify-content-center">
+
+                <!-- Feature 1 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-single-box text-center p-4 bg-white rounded-3 shadow-sm h-100">
+                        <div class="feature-icon mb-3">
+                            <img src="{{ asset('frontend/assets/images/icon-mesin.png') }}" alt="icon-efisiensi"
+                                width="50">
                         </div>
-                        <div class="feature-content">
-                            <h3 class="feature-title">House Cleaning</h3>
-                            <p class="feature-text">Competently repurpose clean conveniently target</p>
-                        </div>
+                        <h3 class="feature-title fs-5 fw-semibold">Efisiensi Waktu, Air & Listrik</h3>
+                        <p class="feature-text text-muted mt-2">Hemat waktu, air, dan listrik dengan proses cepat dan
+                            tepat.</p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="feature-single-box d-flex">
-                        <div class="feature-icon">
-                            <img src="{{ asset('frontend/assets/images/feature-icon2.png') }}" alt="feature-icon">
+
+                <!-- Feature 2 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-single-box text-center p-4 bg-white rounded-3 shadow-sm h-100">
+                        <div class="feature-icon mb-3">
+                            <img src="{{ asset('frontend/assets/images/icon-service4.png') }}" alt="icon-kualitas"
+                                width="50">
                         </div>
-                        <div class="feature-content">
-                            <h3 class="feature-title">Windwo Cleaning</h3>
-                            <p class="feature-text">Competently repurpose clean conveniently target</p>
-                        </div>
+                        <h3 class="feature-title fs-5 fw-semibold">Kualitas Terjamin</h3>
+                        <p class="feature-text text-muted mt-2">Cuci bersih maksimal dengan standar tinggi dan
+                            profesional.</p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="feature-single-box d-flex">
-                        <div class="feature-icon">
-                            <img src="{{ asset('frontend/assets/images/feature-icon3.png') }}" alt="feature-icon">
+
+                <!-- Feature 3 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-single-box text-center p-4 bg-white rounded-3 shadow-sm h-100">
+                        <div class="feature-icon mb-3">
+                            <img src="{{ asset('frontend/assets/images/icon-service3.png') }}" alt="icon-aman"
+                                width="50">
                         </div>
-                        <div class="feature-content">
-                            <h3 class="feature-title">Office Cleaning</h3>
-                            <p class="feature-text">Competently repurpose clean conveniently target</p>
-                        </div>
+                        <h3 class="feature-title fs-5 fw-semibold">Aman untuk Keluarga</h3>
+                        <p class="feature-text text-muted mt-2">Pakaian tidak dicampur, 1 mesin untuk 1 pelanggan.</p>
                     </div>
                 </div>
+
+                <!-- Feature 4 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-single-box text-center p-4 bg-white rounded-3 shadow-sm h-100">
+                        <div class="feature-icon mb-3">
+                            <img src="{{ asset('frontend/assets//images/icon-service2.png') }}" alt="icon-harga"
+                                width="50">
+                        </div>
+                        <h3 class="feature-title fs-5 fw-semibold">Harga Terjangkau</h3>
+                        <p class="feature-text text-muted mt-2">Pelayanan premium dengan harga yang ramah di kantong.
+                        </p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
 
-
-
-
     <!--==================================================-->
-    <!-- end cleeny feature Area -->
+    <!-- End cleeny feature Area -->
     <!--==================================================-->
-
-
-
-
-
-
 
     <!--==================================================-->
     <!-- Start cleeny about Area -->
@@ -351,45 +373,45 @@
             <div class="row about align-items-center">
                 <div class="col-lg-6">
                     <div class="about-thumb">
-                        <img src="{{ asset('frontend/assets/images/about-thumb.png') }}" alt="about-thumb">
+                        <img src="{{ asset('frontend/assets/images/royal-laundry5.png') }}" alt="about-thumb">
                         <div class="about-shape bounce-animate3">
                             <img src="{{ asset('frontend/assets/images/about-shape.png') }}" alt="about-shape">
                         </div>
                         <div class="video-icon">
-                            <a class="video-vemo-icon venobox vbox-item" data-vbtype="youtube" data-autoplay="true"
-                                href="https://www.youtube.com/watch?v=Wx48y_fOfiY"><i class="bi bi-play"></i></a>
+                            <a href="https://www.instagram.com/reel/DEEnewPzV7O/" target="_blank" rel="noopener noreferrer" class="video-vemo-icon">
+    <i class="bi bi-play"></i>
+</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="section-title text-left">
                         <h5 class="section-sub-title">ABOUT US</h5>
-                        <h1 class="section-main-title">Making Your House Clean</h1>
-                        <h1 class="section-main-title">For Looks As a New</h1>
-                        <p class="section-title-descr">Competently repurpose go forward benefits without goal-oriented
-                            ROI
-                            conveniently target e-business opportunities whereas parallel task
-                            multimedia based web services</p>
+                        <h1 class="section-main-title"> Bringing Back the Freshness</h1>
+                        <h1 class="section-main-title">Royal Laundress Style.</h1>
+                        <p class="section-title-descr">"Pelayanan terbaik datang dari pekerja terbaik, pekerja terbaik datang dari budaya perusahaan yang baik"</p>
                     </div>
                     <div class="about-box d-flex">
                         <ul class="about-list">
-                            <li><i class="bi bi-check-circle-fill"></i>Cleeny Your Home or Office</li>
-                            <li><i class="bi bi-check-circle-fill"></i>24/7 Emmergency Quality Services</li>
-                            <li><i class="bi bi-check-circle-fill"></i>Online Booking System available</li>
+                            <li><i class="bi bi-check-circle-fill"></i>Layanan jemput antar cepat</li>
+                            <li><i class="bi bi-check-circle-fill"></i>Mesin cuci teknologi terbaru</li>
+                            <li><i class="bi bi-check-circle-fill"></i>Detergen & softener ramah lingkungan</li>
+
                         </ul>
                         <div class="counter-single-box">
                             <div class="counter-icon">
                                 <img src="{{ asset('frontend/assets/images/counter-icon.png') }}" alt="">
                             </div>
                             <div class="counter-number">
-                                <h1 class="counter">12</h1>
+                                <h1 class="counter">6</h1>
                                 <h1>+</h1>
                             </div>
                             <p class="counter-text">Years Experience</p>
                         </div>
                     </div>
                     <div class="cleeny-btn">
-                        <a href="about-us.html">More About Us <i class="bi bi-arrow-right"></i></a>
+                        <a href="{{ route('about.us') }}">More About Us <i class="bi bi-arrow-right"></i></a>
+
                     </div>
                 </div>
             </div>
@@ -402,9 +424,6 @@
     <!--==================================================-->
     <!-- end cleeny about Area -->
     <!--==================================================-->
-
-
-
 
     <!--==================================================-->
     <!-- start cleeny service Area -->
@@ -467,146 +486,116 @@
                     <div class="col-lg-12 col-md-12">
                         <div class="service-single-box">
                             <div class="service-thumb">
-                                <img src="{{ asset('frontend/assets/images/service-img.png') }}" alt="service-img">
+                                <img src="https://i.pinimg.com/1200x/ce/d3/2f/ced32f9c9c16f323dc47f564d764bd51.jpg"
+                                    alt="daily-kiloan">
                             </div>
                             <div class="service-content">
-                                <h3 class="service-title">House Kitchen Cleaning</h3>
+                                <h3 class="service-title">Daily Kiloan</h3>
                                 <ul class="service-list">
-                                    <li><i class="bi bi-check-lg"></i> House Floor cleeny</li>
-                                    <li><i class="bi bi-check-lg"></i> Roof Clean & Wash</li>
+                                    <li><i class="bi bi-check-lg"></i> Cuci Kering Lipat</li>
+                                    <li><i class="bi bi-check-lg"></i> Cuci Kering Gosok 3 Hari</li>
+                                    <li><i class="bi bi-check-lg"></i> Cuci Kering Gosok 1 Hari</li>
+                                    <li><i class="bi bi-check-lg"></i> Cuci Kering Gosok 12 Jam</li>
+                                    <li><i class="bi bi-check-lg"></i> Cuci Kering Gosok 6 Jam</li>
+                                    <li><i class="bi bi-check-lg"></i> Setrika Kiloan Reguler 2 Hari</li>
+                                    <li><i class="bi bi-check-lg"></i> Setrika Kiloan Express 1 Hari</li>
                                 </ul>
                                 <div class="service-btn">
-                                    <a href="service-details.html">View Details <i class="bi bi-arrow-right"></i></a>
-                                </div>
-                                <div class="service-icon">
-                                    <img src="{{ asset('frontend/assets/images/service-icon.png') }}"
-                                        alt="service-icon">
+                                    <a href="{{ url('service-details/1') }}">View Details <i
+                                            class="bi bi-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                     <div class="col-lg-12 col-md-12">
                         <div class="service-single-box">
                             <div class="service-thumb">
-                                <img src="{{ asset('frontend/assets/images/service-img2.png') }}" alt="service-img">
+                                <img src="https://i.pinimg.com/736x/dd/af/eb/ddafeb32c64013d5c53ff6002843ded9.jpg"
+                                    alt="layanan-laundry" class="w-full h-auto rounded-md shadow-md">
+
                             </div>
                             <div class="service-content">
-                                <h3 class="service-title">Office Floor Cleaning</h3>
+                                <h3 class="service-title">Layanan Satuan</h3>
                                 <ul class="service-list">
-                                    <li><i class="bi bi-check-lg"></i> House Floor cleeny</li>
-                                    <li><i class="bi bi-check-lg"></i> Roof Clean & Wash</li>
+                                    <li><i class="bi bi-check-lg"></i> Atasan / Kemeja / Blouse</li>
+                                    <li><i class="bi bi-check-lg"></i> Bawahan / Celana</li>
+                                    <li><i class="bi bi-check-lg"></i> Luaran / Jaket</li>
+                                    <li><i class="bi bi-check-lg"></i> Jas / Jas Setelan</li>
+                                    <li><i class="bi bi-check-lg"></i> Dress / Gown</li>
+                                    <li><i class="bi bi-check-lg"></i> Alat Ibadah</li>
                                 </ul>
                                 <div class="service-btn">
-                                    <a href="service-details.html">View Details <i class="bi bi-arrow-right"></i></a>
-                                </div>
-                                <div class="service-icon">
-                                    <img src="{{ asset('frontend/assets/images/service-icon2.png') }}"
-                                        alt="service-icon">
+                                    <a href="{{ url('service-details/2') }}">View Details <i
+                                            class="bi bi-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                     <div class="col-lg-12 col-md-12">
                         <div class="service-single-box">
                             <div class="service-thumb">
-                                <img src="{{ asset('frontend/assets/images/service-img.png') }}" alt="service-img">
+                                <img src="https://i.pinimg.com/736x/de/cd/1d/decd1d0db77ce2e8525186bcdfd5d1db.jpg"
+                                    alt="beddings">
                             </div>
                             <div class="service-content">
-                                <h3 class="service-title">House Kitchen Cleaning</h3>
+                                <h3 class="service-title">Beddings</h3>
                                 <ul class="service-list">
-                                    <li><i class="bi bi-check-lg"></i> House Floor cleeny</li>
-                                    <li><i class="bi bi-check-lg"></i> Roof Clean & Wash</li>
+                                    <li><i class="bi bi-check-lg"></i> Pillow / Guling</li>
+                                    <li><i class="bi bi-check-lg"></i> Pillowcase / Sarung</li>
+                                    <li><i class="bi bi-check-lg"></i> Sprei Single/Double</li>
+                                    <li><i class="bi bi-check-lg"></i> Selimut / Bed Cover</li>
+                                    <li><i class="bi bi-check-lg"></i> Paket Bedding</li>
                                 </ul>
                                 <div class="service-btn">
-                                    <a href="service-details.html">View Details <i class="bi bi-arrow-right"></i></a>
-                                </div>
-                                <div class="service-icon">
-                                    <img src="{{ asset('frontend/assets/images/service-icon.png') }}"
-                                        alt="service-icon">
+                                    <a href="{{ url('service-details/3') }}">View Details <i
+                                            class="bi bi-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                     <div class="col-lg-12 col-md-12">
                         <div class="service-single-box">
                             <div class="service-thumb">
-                                <img src="{{ asset('frontend/assets/images/service-img3.png') }}" alt="service-img">
+                                <img src="https://i.pinimg.com/1200x/69/c7/0c/69c70ca20151c621aeff505e56b71aa5.jpg"
+                                    alt="other-items">
                             </div>
                             <div class="service-content">
-                                <h3 class="service-title">House Wash & Clean</h3>
+                                <h3 class="service-title">Other Items</h3>
                                 <ul class="service-list">
-                                    <li><i class="bi bi-check-lg"></i> House Floor cleeny</li>
-                                    <li><i class="bi bi-check-lg"></i> Roof Clean & Wash</li>
+                                    <li><i class="bi bi-check-lg"></i> Handuk</li>
+                                    <li><i class="bi bi-check-lg"></i> Dompet Non Leather Kecil</li>
+                                    <li><i class="bi bi-check-lg"></i> Dompet Non Leather Besar</li>
+                                    <li><i class="bi bi-check-lg"></i> Dompet Leather Kecil</li>
+                                    <li><i class="bi bi-check-lg"></i> Dompet Leather Besar</li>
                                 </ul>
                                 <div class="service-btn">
-                                    <a href="service-details.html">View Details <i class="bi bi-arrow-right"></i></a>
-                                </div>
-                                <div class="service-icon">
-                                    <img src="{{ asset('frontend/assets/images/service-icon3.png') }}"
-                                        alt="service-icon">
+                                    <a href="{{ url('service-details/4') }}">View Details <i
+                                            class="bi bi-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                     <div class="col-lg-12 col-md-12">
                         <div class="service-single-box">
                             <div class="service-thumb">
-                                <img src="{{ asset('frontend/assets/images/service-img.png') }}" alt="service-img">
+                                <img src="https://i.pinimg.com/1200x/f5/39/0b/f5390b634743638c0e4d567ff02cfa6c.jpg"
+                                    alt="tas-sepatu">
                             </div>
                             <div class="service-content">
-                                <h3 class="service-title">House Kitchen Cleaning</h3>
+                                <h3 class="service-title">Tas & Sepatu</h3>
                                 <ul class="service-list">
-                                    <li><i class="bi bi-check-lg"></i> House Floor cleeny</li>
-                                    <li><i class="bi bi-check-lg"></i> Roof Clean & Wash</li>
+                                    <li><i class="bi bi-check-lg"></i> Sepatu Putih / Kanvas / Wanita</li>
+                                    <li><i class="bi bi-check-lg"></i> Sepatu Suede / Leather</li>
+                                    <li><i class="bi bi-check-lg"></i> Tas Non Leather Kecil / Sedang</li>
+                                    <li><i class="bi bi-check-lg"></i> Tas Leather Kecil / Besar</li>
                                 </ul>
                                 <div class="service-btn">
-                                    <a href="service-details.html">View Details <i class="bi bi-arrow-right"></i></a>
-                                </div>
-                                <div class="service-icon">
-                                    <img src="{{ asset('frontend/assets/images/service-icon.png') }}"
-                                        alt="service-icon">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-12 col-md-12">
-                        <div class="service-single-box">
-                            <div class="service-thumb">
-                                <img src="{{ asset('frontend/assets/images/service-img2.png') }}" alt="service-img">
-                            </div>
-                            <div class="service-content">
-                                <h3 class="service-title">Office Floor Cleaning</h3>
-                                <ul class="service-list">
-                                    <li><i class="bi bi-check-lg"></i> House Floor cleeny</li>
-                                    <li><i class="bi bi-check-lg"></i> Roof Clean & Wash</li>
-                                </ul>
-                                <div class="service-btn">
-                                    <a href="service-details.html">View Details <i class="bi bi-arrow-right"></i></a>
-                                </div>
-                                <div class="service-icon">
-                                    <img src="{{ asset('frontend/assets/images/service-icon2.png') }}"
-                                        alt="service-icon">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-12 col-md-12">
-                        <div class="service-single-box">
-                            <div class="service-thumb">
-                                <img src="{{ asset('frontend/assets/images/service-img3.png') }}" alt="service-img">
-                            </div>
-                            <div class="service-content">
-                                <h3 class="service-title">House Wash & Clean</h3>
-                                <ul class="service-list">
-                                    <li><i class="bi bi-check-lg"></i> House Floor cleeny</li>
-                                    <li><i class="bi bi-check-lg"></i> Roof Clean & Wash</li>
-                                </ul>
-                                <div class="service-btn">
-                                    <a href="service-details.html">View Details <i class="bi bi-arrow-right"></i></a>
-                                </div>
-                                <div class="service-icon">
-                                    <img src="{{ asset('frontend/assets/images/service-icon3.png') }}"
-                                        alt="service-icon">
+                                    <a href="{{ url('service-details/5') }}">View Details <i
+                                            class="bi bi-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -628,7 +617,7 @@
 
 
     <!--==================================================-->
-    <!-- start cleeny work Area -->
+    <!-- start cleeny work Area - Proses Laundry -->
     <!--==================================================-->
 
     <div class="work-area">
@@ -636,56 +625,169 @@
             <div class="row work">
                 <div class="col-lg-12">
                     <div class="section-title text-center">
-                        <h5 class="section-sub-title">working process</h5>
-                        <h1 class="section-main-title">Easy Steps to Works</h1>
-                        <p class="section-title-descr">Competently repurpose go forward benefits without goal-oriented
-                            ROI
-                            conveniently target e-business opportunities whereas</p>
+                        <h5 class="section-sub-title">Proses Kerja</h5>
+                        <h1 class="section-main-title">Langkah Royal Laundress</h1>
+                        <p class="section-title-descr">Kami memastikan setiap tahap dikerjakan dengan standar tinggi
+                            untuk menjaga kualitas dan kebersihan pakaian Anda.</p>
                     </div>
                 </div>
+
+                <!-- Step 1 -->
                 <div class="col-lg-4 col-md-6">
                     <div class="work-single-box">
                         <div class="work-icon">
-                            <img src="{{ asset('frontend/assets/images/work-icon.png') }}" alt="work-icon">
-                            <div class="work-number">
-                                <span>1</span>
-                            </div>
+                            <i class="bi bi-truck fs-1 text-primary"></i>
+                            <div class="work-number"><span>1</span></div>
                         </div>
                         <div class="work-content">
-                            <h3 class="work-title">Find Us Online</h3>
-                            <p class="work-description">Repurpose go forward benefits more conveniently e-business</p>
+                            <h3 class="work-title">Item Collection</h3>
+                            <p class="work-description">Kurir kami menjemput pakaian Anda langsung ke lokasi.</p>
                         </div>
                     </div>
                 </div>
+
+                <!-- Step 2 -->
                 <div class="col-lg-4 col-md-6">
                     <div class="work-single-box">
                         <div class="work-icon">
-                            <img src="{{ asset('frontend/assets/images/work-icon2.png') }}" alt="work-icon">
-                            <div class="work-number">
-                                <span>2</span>
-                            </div>
+                            <i class="bi bi-file-earmark-text fs-1 text-primary"></i>
+                            <div class="work-number"><span>2</span></div>
                         </div>
                         <div class="work-content">
-                            <h3 class="work-title">Choose Services</h3>
-                            <p class="work-description">Repurpose go forward benefits more conveniently e-business</p>
+                            <h3 class="work-title">Documentation</h3>
+                            <p class="work-description">Pencatatan jenis dan jumlah pakaian secara detail.</p>
                         </div>
                     </div>
                 </div>
+
+                <!-- Step 3 -->
                 <div class="col-lg-4 col-md-6">
                     <div class="work-single-box">
                         <div class="work-icon">
-                            <img src="{{ asset('frontend/assets/images/work-icon3.png') }}" alt="work-icon">
-                            <div class="work-number">
-                                <span>3</span>
-                            </div>
+                            <i class="bi bi-search fs-1 text-primary"></i>
+                            <div class="work-number"><span>3</span></div>
                         </div>
                         <div class="work-content">
-                            <h3 class="work-title">Book Appoinment</h3>
-                            <p class="work-description">Repurpose go forward benefits more conveniently e-business</p>
+                            <h3 class="work-title">Inspection</h3>
+                            <p class="work-description">Cek kondisi dan bahan pakaian untuk perlakuan khusus.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="work-single-box">
+                        <div class="work-icon">
+                            <i class="bi bi-droplet fs-1 text-primary"></i>
+                            <div class="work-number"><span>4</span></div>
+                        </div>
+                        <div class="work-content">
+                            <h3 class="work-title">Spotting</h3>
+                            <p class="work-description">Noda membandel ditangani sebelum pencucian.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="work-single-box">
+                        <div class="work-icon">
+                            <i class="bi bi-wind fs-1 text-primary"></i>
+                            <div class="work-number"><span>5</span></div>
+                        </div>
+                        <div class="work-content">
+                            <h3 class="work-title">Washing</h3>
+                            <p class="work-description">Pencucian sesuai bahan dan standar kebersihan.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 6 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="work-single-box">
+                        <div class="work-icon">
+                            <i class="bi bi-sun fs-1 text-primary"></i>
+                            <div class="work-number"><span>6</span></div>
+                        </div>
+                        <div class="work-content">
+                            <h3 class="work-title">Drying</h3>
+                            <p class="work-description">Pengeringan yang aman agar pakaian tetap awet.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 7 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="work-single-box">
+                        <div class="work-icon">
+                            <i class="bi bi-steam fs-1 text-primary"></i>
+                            <div class="work-number"><span>7</span></div>
+                        </div>
+                        <div class="work-content">
+                            <h3 class="work-title">Pressing</h3>
+                            <p class="work-description">Proses setrika untuk hasil rapi dan licin.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 8 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="work-single-box">
+                        <div class="work-icon">
+                            <i class="bi bi-scissors fs-1 text-primary"></i>
+                            <div class="work-number"><span>8</span></div>
+                        </div>
+                        <div class="work-content">
+                            <h3 class="work-title">Hand Finishing</h3>
+                            <p class="work-description">Finishing manual untuk sentuhan akhir yang presisi.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 9 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="work-single-box">
+                        <div class="work-icon">
+                            <i class="bi bi-eye fs-1 text-primary"></i>
+                            <div class="work-number"><span>9</span></div>
+                        </div>
+                        <div class="work-content">
+                            <h3 class="work-title">Detailing</h3>
+                            <p class="work-description">Pemeriksaan menyeluruh sebelum dikemas.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 10 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="work-single-box">
+                        <div class="work-icon">
+                            <i class="bi bi-box-seam fs-1 text-primary"></i>
+                            <div class="work-number"><span>10</span></div>
+                        </div>
+                        <div class="work-content">
+                            <h3 class="work-title">Packaging</h3>
+                            <p class="work-description">Pakaian dikemas rapi dan higienis.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 11 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="work-single-box">
+                        <div class="work-icon">
+                            <i class="bi bi-truck-flatbed fs-1 text-primary"></i>
+                            <div class="work-number"><span>11</span></div>
+                        </div>
+                        <div class="work-content">
+                            <h3 class="work-title">Delivery</h3>
+                            <p class="work-description">Pesanan siap diantar kembali ke rumah Anda.</p>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!-- Optional background shapes (if needed) -->
             <div class="work-shape">
                 <img src="{{ asset('frontend/assets/images/work-shape.png') }}" alt="work-shape">
             </div>
@@ -696,18 +798,14 @@
                 <img src="{{ asset('frontend/assets/images/work-shape3.png') }}" alt="work-shape3">
             </div>
             <div class="work-shape4 bounce-animate5">
-                <img src="{{ asset('frontend/assets/images/work-shape4.png') }}" alt="work-shape4">
+                <img src="https://i.pinimg.com/736x/53/15/8d/53158d2bce2ecc06bacf136b66ce7c13.jpg" alt="work-shape4">
             </div>
         </div>
     </div>
 
-
-
     <!--==================================================-->
     <!-- end cleeny work Area -->
     <!--==================================================-->
-
-
 
     <!--==================================================-->
     <!-- Start cleeny portfolio Area -->
@@ -731,7 +829,7 @@
             </div>
             <div class="row">
                 <div class="portfolio_list owl-carousel">
-                    <div class="col-lg-12 col-md-12">
+                    {{-- <div class="col-lg-12 col-md-12">
                         <div class="portfolio-single-box">
                             <div class="portfolio-thumb">
                                 <img src="{{ asset('frontend/assets/images/portfolio-img.png') }}"
@@ -749,11 +847,11 @@
                                 <h4 class="portfolio-top-title">cleeny</h4>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                     <div class="col-lg-12 col-md-12">
                         <div class="portfolio-single-box">
                             <div class="portfolio-thumb">
-                                <img src="{{ asset('frontend/assets/images/portfolio-img2.png') }}"
+                                <img src="{{ asset('frontend/assets/images/royal-laundry7.png') }}"
                                     alt="portfolio-img">
                                 <div class="portfolio-content">
                                     <div class="portfolio-content2">
@@ -772,7 +870,7 @@
                     <div class="col-lg-12 col-md-12">
                         <div class="portfolio-single-box">
                             <div class="portfolio-thumb">
-                                <img src="{{ asset('frontend/assets/images/portfolio-img.png') }}"
+                                <img src="{{ asset('frontend/assets/images/royal-laundry5.png') }}"
                                     alt="portfolio-img">
                                 <div class="portfolio-content">
                                     <div class="portfolio-content2">
@@ -791,7 +889,7 @@
                     <div class="col-lg-12 col-md-12">
                         <div class="portfolio-single-box">
                             <div class="portfolio-thumb">
-                                <img src="{{ asset('frontend/assets/images/portfolio-img3.png') }}"
+                                <img src="{{ asset('frontend/assets/images/royal-laundry6.png') }}"
                                     alt="portfolio-img">
                                 <div class="portfolio-content">
                                     <div class="portfolio-content2">
@@ -820,22 +918,12 @@
     <!-- end cleeny portfolio Area -->
     <!--==================================================-->
 
-
-
-
-
-
-
-
-
-
-
     <!--==================================================-->
     <!-- Start cleeny address Area -->
     <!--==================================================-->
 
 
-    <div class="address-area">
+    {{-- <div class="address-area">
         <div class="container">
             <div class="row address align-items-center">
                 <div class="col-lg-5 col-md-6">
@@ -856,108 +944,12 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 
 
     <!--==================================================-->
     <!-- end cleeny address Area -->
     <!--==================================================-->
-
-
-
-    <!--==================================================-->
-    <!-- Start cleeny pricing Area -->
-    <!--==================================================-->
-
-
-    <div class="pricing-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-title text-center">
-                        <h5 class="section-sub-title">Pricing Plan</h5>
-                        <h1 class="section-main-title">Affordable Pricing Plan</h1>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="pricing-single-box">
-                        <div class="pricing-head">
-                            <h1 class="pricing-dollar">$<span>39</span></h1>
-                            <p class="pricing-monthly">Monthly</p>
-                        </div>
-                        <div class="pricing-body">
-                            <h3 class="pricing-title">Starter Plans</h3>
-                            <div class="pricing-list">
-                                <ul>
-                                    <li><i class="bi bi-check-lg"></i> 15% OFF All Service</li>
-                                    <li><i class="bi bi-check-lg"></i> Floor Wash & cleeny</li>
-                                    <li><i class="bi bi-check-lg"></i> Maintaince Equipment</li>
-                                    <li><i class="bi bi-check-lg"></i> Schedule Working</li>
-                                    <li><i class="bi bi-check-lg"></i> 24/7 Supports</li>
-                                </ul>
-                            </div>
-                            <div class="cleeny-btn">
-                                <a href="priching.html">Choose Plan <i class="bi bi-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="pricing-single-box active">
-                        <div class="pricing-head">
-                            <h1 class="pricing-dollar">$<span>49</span></h1>
-                            <p class="pricing-monthly">Monthly</p>
-                        </div>
-                        <div class="pricing-body">
-                            <h3 class="pricing-title">Standard Plans</h3>
-                            <div class="pricing-list">
-                                <ul>
-                                    <li><i class="bi bi-check-lg"></i> 15% OFF All Service</li>
-                                    <li><i class="bi bi-check-lg"></i> Floor Wash & cleeny</li>
-                                    <li><i class="bi bi-check-lg"></i> Maintaince Equipment</li>
-                                    <li><i class="bi bi-check-lg"></i> Schedule Working</li>
-                                    <li><i class="bi bi-check-lg"></i> 24/7 Supports</li>
-                                </ul>
-                            </div>
-                            <div class="cleeny-btn">
-                                <a href="priching.html">Choose Plan <i class="bi bi-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="pricing-single-box">
-                        <div class="pricing-head">
-                            <h1 class="pricing-dollar">$<span>89</span></h1>
-                            <p class="pricing-monthly">Monthly</p>
-                        </div>
-                        <div class="pricing-body">
-                            <h3 class="pricing-title">Premium Plans</h3>
-                            <div class="pricing-list">
-                                <ul>
-                                    <li><i class="bi bi-check-lg"></i> 15% OFF All Service</li>
-                                    <li><i class="bi bi-check-lg"></i> Floor Wash & cleeny</li>
-                                    <li><i class="bi bi-check-lg"></i> Maintaince Equipment</li>
-                                    <li><i class="bi bi-check-lg"></i> Schedule Working</li>
-                                    <li><i class="bi bi-check-lg"></i> 24/7 Supports</li>
-                                </ul>
-                            </div>
-                            <div class="cleeny-btn">
-                                <a href="priching.html">Choose Plan <i class="bi bi-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <!--==================================================-->
-    <!-- end cleeny pricing Area -->
-    <!--==================================================-->
-
-
 
     <!--==================================================-->
     <!-- Start cleeny testimonial Area -->
@@ -1156,99 +1148,6 @@
 
 
     <!--==================================================-->
-    <!-- Start cleeny blog Area -->
-    <!--==================================================-->
-
-
-    <div class="bolo-area">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-8">
-                    <div class="section-title text-left">
-                        <h5 class="section-sub-title">Latest Blog</h5>
-                        <h1 class="section-main-title">Learn about our Latest </h1>
-                        <h1 class="section-main-title">News from Blog</h1>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="cleeny-btn">
-                        <a href="blog-grid.html">View All Blog <i class="bi bi-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="blog-single-box">
-                        <div class="blog-thumb">
-                            <img src="{{ asset('frontend/assets/images/blog-thumb.png') }}" alt="blog-thumb">
-                            <div class="blog-year">
-                                <h1 class="blog-month">18</h1>
-                                <p class="blog-text">NOW</p>
-                            </div>
-                        </div>
-                        <div class="blog-content">
-                            <h3 class="blog-title"><a href="blog-details.html">Newest Cleaning Equipment for House
-                                    2024</a></h3>
-                            <p class="blog-description">Competently repurpose forward benefits conveniently target
-                                e-business</p>
-                            <div class="blog-btn">
-                                <a href="blog-details.html">Read More <i class="bi bi-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="blog-single-box">
-                        <div class="blog-thumb">
-                            <img src="{{ asset('frontend/assets/images/blog-thumb4.png') }}" alt="blog-thumb">
-                            <div class="blog-year">
-                                <h1 class="blog-month">20</h1>
-                                <p class="blog-text">NOW</p>
-                            </div>
-                        </div>
-                        <div class="blog-content">
-                            <h3 class="blog-title"><a href="blog-details.html">10 Most Popular Cleaning Tips for
-                                    House</a></h3>
-                            <p class="blog-description">Competently repurpose forward benefits conveniently target
-                                e-business</p>
-                            <div class="blog-btn">
-                                <a href="blog-details.html">Read More <i class="bi bi-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="blog-single-box">
-                        <div class="blog-thumb">
-                            <img src="{{ asset('frontend/assets/images/blog-thumb3.png') }}" alt="blog-thumb">
-                            <div class="blog-year">
-                                <h1 class="blog-month">24</h1>
-                                <p class="blog-text">NOW</p>
-                            </div>
-                        </div>
-                        <div class="blog-content">
-                            <h3 class="blog-title"><a href="blog-details.html">Floor Cleaning & WashingUse New
-                                    Equipment</a></h3>
-                            <p class="blog-description">Competently repurpose forward benefits conveniently target
-                                e-business</p>
-                            <div class="blog-btn">
-                                <a href="blog-details.html">Read More <i class="bi bi-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <!--==================================================-->
-    <!-- end cleeny blog Area -->
-    <!--==================================================-->
-
-
-
-
-
-    <!--==================================================-->
     <!-- start cleeny-brand Area -->
     <!--==================================================-->
 
@@ -1309,7 +1208,7 @@
     <!--==================================================-->
     <!-- Start cleeny subscribe Area -->
     <!--==================================================-->
-
+{{--
 
     <div class="subscribe-area">
         <div class="container">
@@ -1321,7 +1220,7 @@
                         </div>
                         <div class="subscribe-content">
                             <h4 class="subscribe-text">Call Us Now</h4>
-                            <span class="subscribe-number">+980 765 (546) 900</span>
+                            <span class="subscribe-number"> +62 812 9220 4477</span>
                         </div>
                     </div>
                 </div>
@@ -1341,7 +1240,7 @@
             </div>
         </div>
     </div>
-
+ --}}
 
 
     <!--==================================================-->
@@ -1362,11 +1261,10 @@
                 <div class="col-lg-3 col-md-6">
                     <div class="footer-widget">
                         <div class="footer-logo">
-                            <a href="index.html"><img src="{{ asset('frontend/assets/images/footer-logo.png') }}"
+                            <a href="index.html"><img src="{{ asset('frontend/assets/images/royal-logo4.png') }}"
                                     alt="footer-logo"></a>
                         </div>
-                        <p class="footer-widget-text">Competently repurpose forward conveniently target e-business
-                            multipurpose clean</p>
+                        <p class="footer-widget-text">Memberikan layanan laundry yang bersih dan efisien secara profesional untuk mendukung gaya hidup modern Anda.</p>
                         <div class="footer-social">
                             <div class="footer-widget-social">
                                 <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -1387,34 +1285,7 @@
                             <li><a href="about-us.html"> <i class="bi bi-chevron-right"></i> About Us</a></li>
                             <li><a href="service.html"> <i class="bi bi-chevron-right"></i> Our Services</a></li>
                             <li><a href="team.html"> <i class="bi bi-chevron-right"></i> Meet Our Team</a></li>
-                            <li><a href="blog-grid.html"> <i class="bi bi-chevron-right"></i> Latest Blog</a></li>
                         </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="footer-resent-post">
-                        <div class="widget-title">
-                            <h2>Latest Blog</h2>
-                        </div>
-                        <div class="single-recent-post-box d-flex align-items-center">
-                            <div class="post-thumb">
-                                <img src="{{ asset('frontend/assets/images/footer-thumb.png') }}" alt="footer thumb">
-                            </div>
-                            <div class="post-content-text">
-                                <h4><a href="blog-details.html">10 Most Popular Clean Tips for Housey</a></h4>
-                                <span>Nov 16, 2024</span>
-                            </div>
-                        </div>
-                        <div class="single-recent-post-box d-flex align-items-center">
-                            <div class="post-thumb">
-                                <img src="{{ asset('frontend/assets/images/footer-thumb2.png') }}"
-                                    alt="footer thumb2">
-                            </div>
-                            <div class="post-content-text">
-                                <h4><a href="blog-details.html">Floor cleeny and Washing New...</a></h4>
-                                <span>Nov 18, 2024</span>
-                            </div>
-                        </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
@@ -1428,7 +1299,7 @@
                             </div>
                             <div class="footer-content">
                                 <h3 class="footer-title">Address</h3>
-                                <p class="footer-title">102/B Philosophy Market Road California, USA</p>
+                                <p class="footer-title"> Jl. Raya Tajur No 58 Kota Bogor </p>
                             </div>
                         </div>
                         <div class="footer-contact-box d-flex">
@@ -1488,19 +1359,6 @@
     <!--==================================================-->
     <!-- end cleeny copyright Area -->
     <!--==================================================-->
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     <!--==================================================-->

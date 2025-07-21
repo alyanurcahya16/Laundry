@@ -10,23 +10,11 @@ use App\Models\Testimoni;
 use App\Http\Controllers\Frontend\TestimoniController as FrontendTestimoniController;
 use App\Http\Controllers\Frontend\TestimoniController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
-
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
 // 🏠 Halaman utama
 Route::get('/', fn () => view('frontend.home'));
+Route::get('/aboutus', function () {return view('frontend.aboutUs');})->name('about.us');
+Route::get('/details', function () {return view('frontend.detail');})->name('detail');
+Route::get('/kontak', function () {return view('frontend.contact');});
 
 // 🧾 Order (pakai model Order)
 Route::get('/form-pemesanan', [OrderController::class, 'create'])->name('order.create');
@@ -57,6 +45,7 @@ Route::prefix('testimoni')->name('frontend.testimoni.')->group(function () {
     Route::post('/', [TestimoniController::class, 'store'])->name('store');
     Route::get('/thanks', [TestimoniController::class, 'thanks'])->name('thanks');
 });
+
 // Order routes
 Route::prefix('admin/orders')->group(function() {
     Route::delete('/admin/orders/{order}', [OrderController::class, 'destroy'])->name('admin.orders.destroy');
@@ -65,7 +54,6 @@ Route::prefix('admin/orders')->group(function() {
     Route::post('/{order}/move-to-history', [OrderController::class, 'moveToHistory'])->name('admin.orders.moveToHistory');
     Route::put('/{order}/status', [OrderController::class, 'updateStatus'])->name('admin.orders.updateStatus');
 });
-
 Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
     Route::get('/dashboard', [\App\Http\Controllers\DashboardController::class, 'index'])->name('admin.dashboard');
     Route::get('/order', [OrderController::class, 'index'])->name('admin.order.index');
@@ -85,3 +73,4 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
