@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -40,7 +39,7 @@
             font-size: 2.5rem;
             font-weight: 700;
             margin-bottom: 10px;
-            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
 
         .header-section p {
@@ -52,7 +51,7 @@
         .form-container {
             background: white;
             border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
             padding: 40px;
             margin-bottom: 30px;
             backdrop-filter: blur(10px);
@@ -69,7 +68,7 @@
 
         .section-card:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
 
         .section-title {
@@ -84,8 +83,7 @@
             gap: 10px;
         }
 
-        .form-control,
-        .form-select {
+        .form-control, .form-select {
             border-radius: 10px;
             border: 2px solid #e9ecef;
             padding: 12px 15px;
@@ -94,8 +92,7 @@
             background: white;
         }
 
-        .form-control:focus,
-        .form-select:focus {
+        .form-control:focus, .form-select:focus {
             border-color: #667eea;
             box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
             background: white;
@@ -193,7 +190,7 @@
 
         .accordion-item:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
 
         .accordion-button {
@@ -243,7 +240,7 @@
             border-radius: 20px;
             padding: 30px;
             margin-top: 30px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
         }
 
         .price-section h3 {
@@ -347,15 +344,8 @@
         }
 
         @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         .order-counter {
@@ -376,7 +366,6 @@
         }
     </style>
 </head>
-
 <body>
     <div class="main-container">
         <!-- Header Section -->
@@ -427,37 +416,33 @@
                         <div class="order-item">
                             <div class="order-counter">1</div>
                             <div class="row">
-                                <div class="mb-3">
-                                    <label for="layanan" class="form-label">Pilih Layanan</label>
-                                    <select class="form-select" name="layanan" id="category" required>
-                                        <option value="">-- Pilih --</option>
-                                        <option value="linen">Linen</option>
-                                        <option value="uniform">Uniform</option>
-                                        <option value="satuan">Satuan</option>
-                                        <option value="beddings">Beddings</option>
-                                        <option value="other">Other Items</option>
-                                        <option value="kiloan">Daily Kiloan</option>
-                                        <option value="tas_sepatu">Tas & Sepatu</option>
-                                        <option value="membership">Membership Packages</option>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Pilih Layanan</label>
+                                    <select class="form-select" name="orders[0][layanan]" required onchange="updateItems(this)">
+                                        <option value="">-- Pilih Layanan --</option>
+                                        <option value="Linen">🛏️ Linen</option>
+                                        <option value="Uniform">👔 Uniform</option>
+                                        <option value="Satuan">👗 Satuan</option>
+                                        <option value="Beddings">🛏️ Beddings</option>
+                                        <option value="Other Items">🧸 Other Items</option>
+                                        <option value="Daily Kiloan">⚖️ Daily Kiloan</option>
+                                        <option value="Tas & Sepatu">👜 Tas & Sepatu</option>
+                                        <option value="Membership Packages">⭐ Membership Packages</option>
                                     </select>
                                 </div>
-
-                                <div class="mb-3">
-                                    <label for="item" class="form-label">Pilih Item</label>
-                                    <select class="form-select" id="item" name="item" required>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Pilih Item</label>
+                                    <select class="form-select item-select" name="orders[0][item]" required>
                                         <option value="">-- Pilih kategori dulu --</option>
                                     </select>
                                 </div>
-
-                                <div class="mb-3 d-none" id="quantity-group">
-                                    <label for="quantity" class="form-label">Jumlah</label>
-                                    <input type="number" class="form-control" name="quantity" id="quantity"
-                                        min="1" value="1">
+                                <div class="col-md-4 mb-3 quantity-group d-none">
+                                    <label class="form-label">Jumlah</label>
+                                    <input type="number" class="form-control" name="orders[0][quantity]" min="1" value="1">
                                 </div>
                                 <div class="col-md-8 mb-3">
                                     <label class="form-label">Catatan (Opsional)</label>
-                                    <input type="text" class="form-control" name="orders[0][catatan]"
-                                        placeholder="Contoh: Jangan pakai pewangi, cuci terpisah">
+                                    <input type="text" class="form-control" name="orders[0][catatan]" placeholder="Contoh: Jangan pakai pewangi, cuci terpisah">
                                 </div>
                             </div>
                         </div>
@@ -495,8 +480,7 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="accordion-item">
                         <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#linenCollapse">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#linenCollapse">
                                 🛏️ Linen
                             </button>
                         </h2>
@@ -521,8 +505,7 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="accordion-item">
                         <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#uniformCollapse">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#uniformCollapse">
                                 👔 Uniform
                             </button>
                         </h2>
@@ -542,8 +525,7 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="accordion-item">
                         <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#satuanCollapse">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#satuanCollapse">
                                 👗 Satuan
                             </button>
                         </h2>
@@ -569,8 +551,7 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="accordion-item">
                         <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#beddingsCollapse">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#beddingsCollapse">
                                 🛏️ Beddings
                             </button>
                         </h2>
@@ -590,8 +571,7 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="accordion-item">
                         <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#otherCollapse">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#otherCollapse">
                                 🧸 Other Items
                             </button>
                         </h2>
@@ -611,15 +591,13 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="accordion-item">
                         <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#kiloanCollapse">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#kiloanCollapse">
                                 ⚖️ Daily Kiloan
                             </button>
                         </h2>
                         <div id="kiloanCollapse" class="accordion-collapse collapse">
                             <div class="accordion-body">
-                                <p>Paket cuci harian per kilogram. Harga mulai dari <strong>Rp 7.000/kg</strong>
-                                    tergantung layanan.</p>
+                                <p>Paket cuci harian per kilogram. Harga mulai dari <strong>Rp 7.000/kg</strong> tergantung layanan.</p>
                             </div>
                         </div>
                     </div>
@@ -629,8 +607,7 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="accordion-item">
                         <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#tasCollapse">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tasCollapse">
                                 👜 Tas & Sepatu
                             </button>
                         </h2>
@@ -650,8 +627,7 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="accordion-item">
                         <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#membershipCollapse">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#membershipCollapse">
                                 ⭐ Membership
                             </button>
                         </h2>
@@ -673,8 +649,7 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="accordion-item">
                         <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#whyCollapse">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#whyCollapse">
                                 ✨ Mengapa Kami?
                             </button>
                         </h2>
@@ -704,10 +679,12 @@
         </div>
     </div>
 
-
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script>
+        // Data item laundry
         const itemOptions = {
-            linen: [
+            'linen': [
                 'Bed Sheet Double - Rp 2.500',
                 'Bed Sheet Single - Rp 2.400',
                 'Duvet Cover Double - Rp 5.000',
@@ -715,12 +692,12 @@
                 'Pillow Case - Rp 1.200',
                 'Bath Towel - Rp 2.500',
                 'Hand Towel - Rp 1.500',
-                'Face Towel - Rp 1.100',
+                'Face Towel - Rp 1.200',
                 'Pool Towel - Rp 3.000',
                 'Blanket Double - Rp 7.000',
                 'Treatment/Spotting (2x harga)'
             ],
-            uniform: [
+            'uniform': [
                 'Shirt - Rp 7.000',
                 'Trouser - Rp 7.000',
                 'Jas / Jacket - Rp 9.000',
@@ -733,7 +710,7 @@
                 'Safari Shirt - Rp 13.000',
                 'Treatment/Spotting (2x harga)'
             ],
-            satuan: [
+            'satuan': [
                 'Atasan (Kemeja/Blouse/Batik) - Rp 25.000',
                 'Bawahan (Rok/Jeans/Celana) - Rp 18.000',
                 'Luaran (Jaket/Hoodie) - Rp 30.000',
@@ -741,115 +718,4 @@
                 'Jas Setelan - Rp 70.000',
                 'Dress (Long Dress/Baju Muslim) - Rp 25.000',
                 'Gaun Panjang (Gaun Pesta/Variasi) - Rp 50.000',
-                'Kebaya - Rp 30.000',
-                'Alat Ibadah (Mukena/Sajadah) - Rp 25.000'
-            ],
-            beddings: [
-                'Pillow - Rp 20.000',
-                'Pillowcase - Rp 25.000',
-                'Sprei Single - Rp 15.000',
-                'Sprei Double - Rp 25.000',
-                'Selimut Single - Rp 15.000',
-                'Selimut Double - Rp 25.000',
-                'Bed Cover Single - Rp 23.000',
-                'Bed Cover Double - Rp 32.000',
-                'Paket Bedding Single - Rp 35.000',
-                'Paket Bedding Double - Rp 50.000'
-            ],
-            other: [
-                'Handuk - Rp 15.000',
-                'Dompet Non Leather Kecil - Rp 25.000',
-                'Dompet Non Leather Besar - Rp 40.000',
-                'Dompet Leather Kecil - Rp 30.000',
-                'Dompet Leather Besar - Rp 45.000',
-                'Atasan (Kemeja/Batik) - Rp 25.000',
-                'Bawahan (Rok/Jeans) - Rp 18.000',
-                'Luaran (Jaket/Hoodie) - Rp 30.000',
-                'Jas - Rp 50.000',
-                'Jas Setelan - Rp 70.000',
-                'Dress - Rp 25.000',
-                'Gaun Pesta - Rp 50.000',
-                'Kebaya - Rp 30.000',
-                'Alat Ibadah - Rp 25.000'
-            ],
-            kiloan: [
-                'Cuci Kering Lipat - Rp 7.000/kg',
-                'Cuci Kering Gosok (3 Hari) - Rp 9.000/kg',
-                'Cuci Kering Gosok (1 Hari) - Rp 12.000/kg',
-                'Cuci Kering Gosok (12 Jam) - Rp 18.000/kg',
-                'Cuci Kering Gosok (6 Jam) - Rp 22.000/kg',
-                'Setrika Kiloan Reguler (2 Hari) - Rp 7.000/kg',
-                'Setrika Kiloan Express (1 Hari) - Rp 9.000/kg'
-            ],
-            tas_sepatu: [
-                'Sepatu Nylon / Canvas - Rp 45.000',
-                'Sepatu Putih - Rp 55.000',
-                'Sepatu Wanita - Rp 45.000',
-                'Suede / Leather - Rp 100.000',
-                'Sandal - Rp 25.000',
-                'Unyellowing - Rp 120.000',
-                'Tas Non Leather Kecil - Rp 30.000',
-                'Tas Non Leather Sedang - Rp 40.000',
-                'Tas Non Leather Besar - Rp 50.000',
-                'Tas Leather Kecil - Rp 75.000',
-                'Tas Leather Sedang - Rp 100.000',
-                'Tas Leather Besar - Rp 150.000'
-            ],
-            membership: [
-                'Marquis - Rp 150.000',
-                'Prince - Rp 250.000',
-                'Duke - Rp 375.000',
-                'King - Rp 500.000'
-            ]
-        };
-
-        const itemsNeedQuantity = [
-            'Bed Sheet', 'Duvet Cover', 'Pillow Case', 'Bath Towel', 'Hand Towel', 'Face Towel', 'Pool Towel',
-            'Blanket',
-            'Shirt', 'Trouser', 'Jas', 'Skirt', 'Cook Jacket', 'Apron Kitchen', 'T-shirt', 'Neck Tie', 'Safari Shirt',
-            'Cuci Kering', 'Setrika Kiloan', 'Sepatu', 'Tas', 'Marquis', 'Prince', 'Duke', 'King'
-        ];
-
-        function updateItems() {
-            const category = document.getElementById('category').value;
-            const itemSelect = document.getElementById('item');
-            const quantityGroup = document.getElementById('quantity-group');
-
-            // Reset item select
-            itemSelect.innerHTML = '<option value="">-- Pilih Item --</option>';
-            quantityGroup.classList.add('d-none');
-
-            if (category && itemOptions[category]) {
-                itemOptions[category].forEach(item => {
-                    const option = document.createElement('option');
-                    option.value = item;
-                    option.textContent = item;
-                    itemSelect.appendChild(option);
-                });
-            }
-        }
-
-        function checkQuantityRequired() {
-            const itemSelect = document.getElementById('item');
-            const quantityGroup = document.getElementById('quantity-group');
-            const selectedItem = itemSelect.value;
-
-            const showQty = itemsNeedQuantity.some(keyword => selectedItem.includes(keyword));
-            if (showQty) {
-                quantityGroup.classList.remove('d-none');
-            } else {
-                quantityGroup.classList.add('d-none');
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', function() {
-            // Initialize category change event
-            document.getElementById('category').addEventListener('change', updateItems);
-
-            // Initialize item change event
-            document.getElementById('item').addEventListener('change', checkQuantityRequired);
-        });
-    </script>
-
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+                'Kebaya - Rp

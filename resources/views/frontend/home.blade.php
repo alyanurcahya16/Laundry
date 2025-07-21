@@ -255,7 +255,7 @@
                             Loundry,Dry Cleaning dan cuci spring bed dengan Motto” MENYELASAIKAN
                             MASALAH TANPA LELAH”</p>
                         <div class="cleeny-btn">
-                            <a href="appoinment.html">Get Started Now <i class="bi bi-arrow-right"></i></a>
+                            <a href="pesanan">Get Started Now <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>

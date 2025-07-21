@@ -241,11 +241,6 @@
     <div class="card">
         <div class="card-header">
             <h4 class="card-title">History Pemesanan Laundry</h4>
-            <div>
-                <a href="{{ route('admin.orders.index') }}" class="btn btn-primary">
-                    <i class="fas fa-arrow-left"></i> Kembali ke Pesanan Aktif
-                </a>
-            </div>
         </div>
         <div class="card-body">
             @if(session('success'))
@@ -291,12 +286,20 @@
                             <span class="order-card-value">{{ $order->updated_at->format('d M Y H:i') }}</span>
                         </div>
                     </div>
-                    <div class="order-card-footer">
+                   <div class="order-card-footer" style="gap: 10px;">
                         <button class="btn btn-primary btn-view-item" 
-                                data-order-id="{{ $order->id }}"
-                                data-order-data="{{ json_encode($order) }}">
+                            data-order-id="{{ $order->id }}"
+                            data-order-data="{{ json_encode($order) }}">
                             <i class="fas fa-eye"></i> Detail
                         </button>
+
+                        <form action="{{ route('admin.orders.destroy', $order->id) }}" method="POST" onsubmit="return confirm('Yakin mau hapus pesanan ini dari history?');">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-secondary">
+                                <i class="fas fa-trash-alt"></i> Hapus
+                            </button>
+                        </form>
                     </div>
                 </div>
                 @endforeach

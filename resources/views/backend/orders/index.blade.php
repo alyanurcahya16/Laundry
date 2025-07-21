@@ -2,7 +2,7 @@
 
 @section('content')
 <style>
-    /* Base Styles */
+
     .container-xxl {
         width: 100%;
         max-width: 1200px;
@@ -10,7 +10,7 @@
         padding: 0 15px;
     }
 
-    /* Card Grid Layout */
+ 
     .orders-grid {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -26,7 +26,7 @@
         transition: transform 0.3s ease;
     }
     .card-body {
-    max-height: 80vh; /* atau 600px */
+    max-height: 80vh; 
     overflow-y: auto;
     padding-right: 10px;
 }
@@ -78,7 +78,7 @@
         margin-top: 15px;
     }
 
-    /* Badge Styles */
+   
     .badge {
         display: inline-block;
         padding: 5px 10px;
@@ -107,7 +107,6 @@
         color: white;
     }
 
-    /* Button Styles */
     .btn {
         display: inline-flex;
         align-items: center;
@@ -144,7 +143,7 @@
         background-color: #5c636a;
     }
 
-    /* Dropdown Styles */
+
     .dropdown {
         position: relative;
         display: inline-block;
@@ -203,7 +202,7 @@
         background-color: #218838;
     }
 
-    /* Modal Styles */
+   
     .modal {
         position: fixed;
         top: 0;
@@ -266,7 +265,7 @@
         justify-content: flex-end;
     }
 
-    /* Detail View Styles */
+   
     .detail-row {
         display: flex;
         margin-bottom: 15px;
@@ -289,7 +288,7 @@
         margin-top: 10px;
     }
 
-    /* Alert Styles */
+    
     .alert {
         padding: 15px;
         border-radius: 4px;
@@ -313,7 +312,7 @@
         padding: 0;
     }
 
-    /* Responsive */
+   
     @media (max-width: 768px) {
         .orders-grid {
             grid-template-columns: 1fr;
@@ -325,11 +324,6 @@
     <div class="card">
         <div class="card-header">
             <h4 class="card-title">Data Pemesanan Laundry</h4>
-            <div>
-                <a href="{{ route('admin.orders.history') }}" class="btn btn-secondary">
-                    <i class="fas fa-history"></i> Lihat History
-                </a>
-            </div>
         </div>
         <div class="card-body" style="max-height: 80vh; overflow-y: auto;">
 
@@ -343,14 +337,14 @@
             <div class="orders-grid">
                 @foreach($orders as $order)
                 @php
-$total = 0;
-if(preg_match_all('/(\d+)x\s.*?Rp\s?([\d.,]+)/', $order->item, $matches)) {
-    foreach($matches[1] as $i => $qty) {
-        $harga = (int) str_replace(['.', ','], '', $matches[2][$i]);
-        $total += ((int) $qty) * $harga;
-    }
-}
-@endphp
+                $total = 0;
+                if(preg_match_all('/(\d+)x\s.*?Rp\s?([\d.,]+)/', $order->item, $matches)) {
+                    foreach($matches[1] as $i => $qty) {
+                        $harga = (int) str_replace(['.', ','], '', $matches[2][$i]);
+                        $total += ((int) $qty) * $harga;
+                    }
+                }
+                @endphp
 
                 <div class="order-card">
                     <div class="order-card-header">
@@ -383,11 +377,7 @@ if(preg_match_all('/(\d+)x\s.*?Rp\s?([\d.,]+)/', $order->item, $matches)) {
                             <i class="fas fa-eye"></i> Detail
                         </button>
                         <div class="dropdown" id="dropdown-{{ $order->id }}">
-                           <button class="btn btn-secondary dropdown-toggle" 
-        type="button"
-        onclick="toggleDropdown('dropdown-{{ $order->id }}')"
-        aria-expanded="false">
-
+                           <button class="btn btn-secondary dropdown-toggle" type="button"onclick="toggleDropdown('dropdown-{{ $order->id }}')"aria-expanded="false">
                                 <i class="fas fa-cog"></i> Aksi
                             </button>
                             <div class="dropdown-menu" id="dropdown-menu-{{ $order->id }}">
@@ -414,11 +404,18 @@ if(preg_match_all('/(\d+)x\s.*?Rp\s?([\d.,]+)/', $order->item, $matches)) {
                                 
                                 @if($order->status == 'Selesai')
                                 <form action="{{ route('admin.orders.moveToHistory', $order->id) }}" method="POST">
-    @csrf
-    <button type="submit" class="move-to-history-btn">
-        <i class="fas fa-archive"></i> Pindahkan ke History
-    </button>
-</form>
+                                    @csrf
+                                    <button type="submit" class="move-to-history-btn">
+                                        <i class="fas fa-archive"></i> Pindahkan ke History
+                                    </button>
+                                </form>
+                                <form action="{{ route('admin.orders.destroy', $order->id) }}" method="POST" onsubmit="return confirm('Yakin ingin menghapus pesanan ini?')">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="move-to-history-btn" style="background-color: #dc3545;">
+                                        <i class="fas fa-trash"></i> Hapus
+                                    </button>
+                                </form>
                                 @endif
                             </div>
                         </div>
@@ -430,7 +427,6 @@ if(preg_match_all('/(\d+)x\s.*?Rp\s?([\d.,]+)/', $order->item, $matches)) {
     </div>
 </div>
 
-<!-- Modal Structure -->
 <div class="modal" id="orderDetailModal">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -492,13 +488,13 @@ if(preg_match_all('/(\d+)x\s.*?Rp\s?([\d.,]+)/', $order->item, $matches)) {
 </div>
 
 <script>
-    // Toggle dropdown
+
     function toggleDropdown(id) {
     const dropdown = document.getElementById(id);
     const menu = dropdown.querySelector('.dropdown-menu');
     menu.classList.toggle('show');
 
-    // Tutup dropdown lain
+
     document.querySelectorAll('.dropdown').forEach(el => {
         if (el.id !== id) {
             const otherMenu = el.querySelector('.dropdown-menu');
@@ -506,10 +502,10 @@ if(preg_match_all('/(\d+)x\s.*?Rp\s?([\d.,]+)/', $order->item, $matches)) {
         }
     });
 
-    event.stopPropagation(); // supaya klik di tombol tidak langsung menutup dropdown
+    event.stopPropagation(); 
 }
 
-    // Close dropdowns when clicking outside
+
     document.addEventListener('click', function(e) {
         if (!e.target.closest('.dropdown')) {
             document.querySelectorAll('.dropdown').forEach(el => {
@@ -518,14 +514,13 @@ if(preg_match_all('/(\d+)x\s.*?Rp\s?([\d.,]+)/', $order->item, $matches)) {
         }
     });
 
-    // Prevent dropdown from closing when clicking inside
     document.querySelectorAll('.dropdown-menu').forEach(menu => {
         menu.addEventListener('click', function(e) {
             e.stopPropagation();
         });
     });
 
-    // Modal functions
+
     function openModal() {
         document.getElementById('orderDetailModal').classList.add('show');
     }
@@ -534,13 +529,13 @@ if(preg_match_all('/(\d+)x\s.*?Rp\s?([\d.,]+)/', $order->item, $matches)) {
         document.getElementById('orderDetailModal').classList.remove('show');
     }
 
-    // Handle view item button clicks
+    
     document.addEventListener('DOMContentLoaded', function() {
         document.querySelectorAll('.btn-view-item').forEach(button => {
             button.addEventListener('click', function() {
                 const orderData = JSON.parse(this.getAttribute('data-order-data'));
                 
-                // Calculate total
+             
                 let total = 0;
                 if(orderData.item) {
                     const matches = orderData.item.match(/Rp\s?([\d.,]+)/g);
@@ -552,7 +547,7 @@ if(preg_match_all('/(\d+)x\s.*?Rp\s?([\d.,]+)/', $order->item, $matches)) {
                 }
                 total *= (orderData.quantity || 1);
                 
-                // Populate modal
+               
                 document.getElementById('detailNama').textContent = orderData.nama || '-';
                 document.getElementById('detailTelepon').textContent = orderData.telepon || '-';
                 document.getElementById('detailAlamat').textContent = orderData.alamat || '-';
@@ -568,12 +563,12 @@ if(preg_match_all('/(\d+)x\s.*?Rp\s?([\d.,]+)/', $order->item, $matches)) {
                 document.getElementById('detailQuantity').textContent = orderData.quantity || '1';
                 document.getElementById('detailTotal').textContent = 'Rp ' + total.toLocaleString('id-ID');
                 
-                // Show modal
+              
                 openModal();
             });
         });
 
-        // Refresh page after status change to show/hide move to history button
+       
         document.querySelectorAll('.dropdown-item[type="submit"]').forEach(button => {
             button.addEventListener('click', function() {
                 setTimeout(() => {

@@ -6,7 +6,9 @@ use App\Http\Controllers\SettingController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\PesananController;
-
+use App\Models\Testimoni;
+use App\Http\Controllers\Frontend\TestimoniController as FrontendTestimoniController;
+use App\Http\Controllers\Frontend\TestimoniController;
 
 // 🏠 Halaman utama
 Route::get('/', fn () => view('frontend.home'));
@@ -33,9 +35,20 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+// Testimoni
+Route::get('/testimoni', function () {$testimoni = Testimoni::all();return view('frontend.testimoni.index', compact('testimoni'));})->name('frontend.testimoni');
+Route::get('/testimoni', [FrontendTestimoniController::class, 'index'])->name('frontend.testimoni.index');
+Route::post('/testimoni', [FrontendTestimoniController::class, 'store'])->name('frontend.testimoni.store');
+
+Route::prefix('testimoni')->name('frontend.testimoni.')->group(function () {
+    Route::get('/', [TestimoniController::class, 'index'])->name('index');
+    Route::post('/', [TestimoniController::class, 'store'])->name('store');
+    Route::get('/thanks', [TestimoniController::class, 'thanks'])->name('thanks');
+});
 
 // Order routes
 Route::prefix('admin/orders')->group(function() {
+    Route::delete('/admin/orders/{order}', [OrderController::class, 'destroy'])->name('admin.orders.destroy');
     Route::get('/', [OrderController::class, 'index'])->name('admin.orders.index');
     Route::get('/history', [OrderController::class, 'history'])->name('admin.orders.history');
     Route::post('/{order}/move-to-history', [OrderController::class, 'moveToHistory'])->name('admin.orders.moveToHistory');
