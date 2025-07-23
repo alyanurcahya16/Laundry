@@ -1176,6 +1176,7 @@ p.counter-text {
 .about-area .cleeny-btn {
     margin-left: 0;
     margin-top: -48px;
+    padding: 20px 0;
 }
 
 .about-area .cleeny-btn a i {
@@ -1184,6 +1185,7 @@ p.counter-text {
     position: relative;
     top: 2px;
     margin-left: 4px;
+
 }
 
 .about-area .cleeny-btn a {

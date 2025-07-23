@@ -157,7 +157,7 @@
 
 
     <!-- End cleeny feature Area -->
-
+<!-- Start patnership Area -->
     <section class="patnership-area py-20 bg-blue-900">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-12">
@@ -185,7 +185,7 @@
                         <li>Dukungan CS responsif dan profesional</li>
                     </ul>
                     <div class="mt-6">
-                        <a href="/kontak"
+                        <a href="/form-registrasi-hotel"
                             class="inline-block bg-blue-600 text-white px-6 py-3 rounded-full shadow hover:bg-blue-700 transition">
                             Ajukan Kerja Sama Sekarang
                         </a>
@@ -194,7 +194,7 @@
             </div>
         </div>
     </section>
-
+<!-- End patnership Area -->
 
 
     <!-- Start cleeny about Area -->

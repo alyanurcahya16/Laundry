@@ -6,15 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tentang Kami - Royal Laundress</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <style>
+<style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-html {
-    scroll-behavior: smooth;
-  }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
@@ -110,26 +112,26 @@ html {
     background-color: #007bff;
     color: #fff;
     font-weight: 600;
-    border-radius: 30px;
+     border-radius: 30px;
     text-decoration: none;
     font-size: 16px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     transition: background-color 0.3s ease, transform 0.2s ease;
-}
+    }
 
-.btn-back:hover {
-    background-color: #0056b3;
-    transform: scale(1.05);
-}
+    .btn-back:hover {
+        background-color: #0056b3;
+        transform: scale(1.05);
+    }
 
-.animate-fade-in {
-    animation: fadeIn 1.2s ease-in-out;
-}
+    .animate-fade-in {
+        animation: fadeIn 1.2s ease-in-out;
+    }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to   { opacity: 1; transform: translateY(0); }
-}
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to   { opacity: 1; transform: translateY(0); }
+    }
 
         /* Hero Section */
         .hero-section {
