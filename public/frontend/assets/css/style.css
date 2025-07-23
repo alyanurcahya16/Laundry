@@ -537,7 +537,7 @@ nav.cleeny_menu span {
     text-transform: uppercase;
     color: #ffc804;
     font-weight: 500;
-    font-family: "Inter";
+    font-family: "Poppins";
     margin-bottom: 10px;
 }
 
@@ -547,7 +547,7 @@ nav.cleeny_menu span {
     text-transform: uppercase;
     color: #ffffff;
     font-weight: 800;
-    font-family: "Inter";
+    font-family: "Poppins";
 }
 
 .hero-contant span {
@@ -634,7 +634,7 @@ nav.cleeny_menu span {
 .hero-text h1 {
     font-size: 16px;
     font-weight: 600;
-    font-family: "Inter";
+    font-family: "Poppins";
     margin-bottom: 0;
     display: inline-block;
     line-height: 34px;
@@ -644,7 +644,7 @@ h3.hero-title {
     font-size: 15px;
     color: #ffffff;
     /* font-weight: 600; */
-    font-family: "Inter";
+    font-family: "Poppins";
     line-height: 28px;
     align-items: center;
 }
@@ -672,7 +672,7 @@ h5.section-sub-title {
     text-transform: uppercase;
     color: #2f6eff;
     font-weight: 500;
-    font-family: "Inter";
+    font-family: "Poppins";
     margin-bottom: 10px;
     line-height: 28px;
 }
@@ -682,7 +682,7 @@ h1.section-main-title {
     line-height: 54px;
     color: #00197e;
     font-weight: 700;
-    font-family: "Inter";
+    font-family: "Poppins";
     margin: 0;
 }
 
@@ -1005,7 +1005,7 @@ h3.feature-title {
     font-size: 22px;
     color: #00197e;
     font-weight: 600;
-    font-family: "Inter";
+    font-family: "Poppins";
     margin-bottom: 0;
     transition: .5s;
 }
@@ -1032,7 +1032,13 @@ p.feature-text {
 /*=====================================
 <--  end cleeny feature Area Css -->
 =======================================*/
-
+.patnership-area {
+    background: url("/frontend/assets/images/testi-bg.png");
+    padding: 111px 0 109px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
 
 /*=====================================
 <--  Cleeny about Area Css -->
@@ -1130,7 +1136,7 @@ ul.about-list li {
     font-size: 16px;
     color: #00197e;
     font-weight: 400;
-    font-family: "Inter";
+    font-family: "Poppins";
 }
 
 ul.about-list li i {
@@ -1153,7 +1159,7 @@ ul.about-list li i {
     font-size: 36px;
     color: #00197e;
     font-weight: 700;
-    font-family: "Inter";
+    font-family: "Poppins";
     margin: 0;
     padding: 12px 0 0;
     display: inline-block;
@@ -1199,7 +1205,36 @@ p.counter-text {
 =======================================*/
 
 
+ .floating-icons {
+            position: fixed;
+            right: 20px;
+            top: 80%;
+            transform: translateY(-50%);
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
 
+        .floating-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #306EFF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .floating-icon:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+        }
 /*=====================================
 <--  Cleeny service Area Css -->
 =======================================*/
@@ -1347,7 +1382,7 @@ h3.service-title {
     font-size: 24px;
     color: #ffffff;
     font-weight: 600;
-    font-family: "Inter";
+    font-family: "Poppins";
     margin: 0;
     transition: .5s;
     text-transform: capitalize;
@@ -1374,7 +1409,7 @@ ul.service-list li {
     font-size: 16px;
     line-height: 28px;
     font-weight: 400;
-    font-family: "Inter";
+    font-family: "Poppins";
     padding-bottom: 8px;
     color: #B8B9D5;
     transition: .5s;
@@ -1406,7 +1441,7 @@ ul.service-list li i {
     font-size: 16px;
     color: #ffffff;
     font-weight: 500;
-    font-family: "Inter";
+    font-family: "Poppins";
     text-decoration: none;
 }
 
@@ -1520,8 +1555,77 @@ ul.service-list li i {
 /*=====================================
 <--  end cleeny service Area Css -->
 =======================================*/
+/* daftar harga */
+.price-section {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    margin-top: 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.price-section h3 {
+    text-align: center;
+    color: #495057;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.accordion-item {
+    border-radius: 15px !important;
+    border: 2px solid #e9ecef !important;
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.accordion-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.accordion-button {
+    background: white !important;
+    border: none !important;
+    font-weight: 600 !important;
+    font-size: 1rem !important;
+    padding: 20px !important;
+    color: #495057 !important;
+    border-radius: 15px !important;
+}
+
+.accordion-button:not(.collapsed) {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    color: white !important;
+}
+
+.accordion-body {
+    background: #f8f9fa;
+    padding: 20px;
+    text-align: center; /* isi teks di tengah */
+}
+
+.accordion-body ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.accordion-body li {
+    padding: 8px 0;
+    border-bottom: 1px solid #dee2e6;
+    display: block; /* ubah dari flex menjadi block */
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.accordion-body li:last-child {
+    border-bottom: none;
+}
 
 
+/* end daftar harga */
 
 /*=====================================
 <-- Cleeny work Area Css -->
@@ -1574,7 +1678,7 @@ h3.work-title {
     line-height: 42px;
     color: #00197e;
     font-weight: 600;
-    font-family: "Inter";
+    font-family: "Poppins";
     margin: 0;
     padding: 33px 0 35px;
     position: relative;
@@ -1613,7 +1717,7 @@ p.work-description {
     font-size: 14px;
     color: #00197e;
     font-weight: 600;
-    font-family: "Inter";
+    font-family: "Poppins";
     background: #FFC703;
     height: 26px;
     width: 26px;
@@ -1742,7 +1846,7 @@ p.portfolio-text {
     font-size: 14px;
     color: #ffffff;
     font-weight: 400;
-    font-family: "Inter";
+    font-family: "Poppins";
     margin: 0;
 }
 
@@ -1757,7 +1861,7 @@ h3.portfolio-title a {
     font-size: 24px;
     color: #ffffff;
     font-weight: 600;
-    font-family: "Inter";
+    font-family: "Poppins";
 }
 
 .portfolio-icon {
@@ -1785,7 +1889,7 @@ h4.portfolio-top-title {
     line-height: 24px;
     color: #00197e;
     font-weight: 500;
-    font-family: "Inter";
+    font-family: "Poppins";
     background: #FFC804;
     padding: 9px 21px 9px;
     border-radius: 30px;
@@ -1883,7 +1987,7 @@ h1.address-title {
     line-height: 48px;
     color: #ffffff;
     font-weight: 700;
-    font-family: "Inter";
+    font-family: "Poppins";
     margin: 0;
 }
 
@@ -1989,300 +2093,22 @@ span.counter-call i {
 <--  end cleeny couter-area Css -->
 =======================================*/
 
-
-
-/*=====================================
-<--  Cleeny pricing-area Css -->
-=======================================*/
-/*
-.pricing-area {
-    padding: 110px 0 88px;
-}
-
-.pricing-single-box {
-    background: #F3F4F8;
-    padding: 20px 24px 31px;
-    border-radius: 10px;
-    position: relative;
-    z-index: 1;
-    margin-bottom: 30px;
-}
-
-.pricing-single-box.active {
-    background: #2F6EFF;
-}
-
-.pricing-single-box.active .pricing-head:after {
-    background: #FFC704;
-    transform: scale(1);
-}
-
-.pricing-single-box.active .pricing-head::before {
-    border-bottom: 24px solid #BB9010;
-}
-
-.pricing-single-box.active h1.pricing-dollar {
-    color: #00197D;
-}
-
-.pricing-single-box.active h1.pricing-dollar span {
-    color: #00197D;
-}
-
-.pricing-single-box.active p.pricing-monthly {
-    color: #01177D;
-}
-
-.pricing-single-box.active .pricing-list ul li {
-    color: #fff;
-}
-
-.pricing-single-box.active .pricing-list ul li i {
-    color: #FFC704;
-}
-
-.pricing-single-box.active .cleeny-btn a {
-    background: #FFC703;
-    color: #01177D;
-}
-
-.pricing-single-box.active .cleeny-btn a::after {
-    background: transparent;
-}
-
-.pricing-single-box.active .cleeny-btn a::before {
-    background: transparent;
-}
-
-.pricing-single-box.active h3.pricing-title {
-    border-left: 3px solid #fff;
-}
-
-.pricing-single-box:after {
-    position: absolute;
-    content: "";
-    height: 100%;
-    width: 100%;
-    background: url("/frontend/assets/images/pricing-shape.png");
-    background-position: center;
-    top: 0;
-    background-repeat: no-repeat;
-    left: 0;
-}
-
-.pricing-single-box::before {
-    position: absolute;
-    content: "";
-    height: 100%;
-    width: 0;
-    background: #306EFF;
-    z-index: -1;
-    right: 0;
-    top: 0;
-    border-radius: 10PX;
-    transition: .5s;
-    opacity: 0;
-}
-
-.pricing-head {
-    text-align: center;
-    background: #2F6DFF;
-    height: 120px;
-    width: 120px;
-    margin: auto;
-    border-radius: 0 10px 10px;
-    padding: 38px 0 0;
-    margin-top: -44px;
-    position: relative;
-    z-index: 1;
-}
-
-.pricing-head:after {
-    position: absolute;
-    content: "";
-    height: 100%;
-    width: 100%;
-    background: #FFC704;
-    left: 0;
-    top: 0;
-    z-index: -1;
-    border-radius: 0 8px 8px;
-    transform: scale(0);
-    transition: .5s;
-}
-
-.pricing-head::before {
-    position: absolute;
-    content: "";
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
-    border-top: 26px solid transparent;
-    border-left: 24px solid transparent;
-    border-right: 0 solid transparent;
-    transition: .5s;
-    background: radial-gradient(black, transparent);
-    transition: .5s;
-    left: -12px;
-    top: -26px;
-    border-bottom: 24px solid #0740C1;
-    transition: .5s;
-}
-
-h1.pricing-dollar {
-    font-size: 20px;
-    color: #ffffff;
-    font-weight: 600;
-    font-family: "Inter";
-    line-height: 15px;
-    margin-bottom: 10px;
-    transition: .5s;
-}
-
-h1.pricing-dollar span {
-    display: inline-block;
-    font-size: 42px;
-    color: #ffffff;
-    font-weight: 700;
-    font-family: "Inter";
-    margin-left: 6px;
-    transition: .5s;
-}
-
-p.pricing-monthly {
-    font-size: 16px;
-    color: #ffffff;
-    font-weight: 400;
-    font-family: "Inter";
-    transition: .5s;
-}
-
-.pricing-body {
-    padding: 35px 0 0;
-}
-
-h3.pricing-title {
-    font-size: 22px;
-    color: #00197e;
-    font-weight: 600;
-    font-family: "Inter";
-    margin: 0;
-    background: #FFFFFF;
-    margin-left: -24px;
-    display: inline-block;
-    line-height: 28px;
-    border-left: 3px solid #2F6EFF;
-    padding: 11px 41px 11px 29px;
-    border-radius: 0 30px 30px  0;
-    transition: .5s;
-}
-
-.pricing-list {
-    padding: 27px 0 25px;
-}
-
-.pricing-list ul li {
-    list-style: none;
-    font-size: 15px;
-    color: #3a4268;
-    font-weight: 400;
-    font-family: "Poppins";
-    padding-bottom: 7px;
-    transition: .5s;
-    text-transform: capitalize;
-}
-
-.pricing-list ul li i {
-    display: inline-block;
-    color: #2F6DFF;
-    font-size: 23px;
-    position: relative;
-    top: 4px;
-    margin-right: 7px;
-    transition: .5s
-    ;
-}
-
-.pricing-area .cleeny-btn {
-    margin-left: 0;
-}
-
-.pricing-area .cleeny-btn a i {
-    display: inline-block;
-    font-size: 18px;
-    position: relative;
-    top: 2px;
-    margin-left: 5px;
-}
-
-.pricing-area .cleeny-btn a {
-    background: #2F6EFF;
-    padding: 11px 31px 11px;
-    color: #fff;
-}
-
-.pricing-area .cleeny-btn a:hover {
-   color: #01177D;
-}
-
-.pricing-single-box:hover .cleeny-btn a:before {
-    background: #FFC703 !important;
-    width: 100%;
-}
-
-.pricing-single-box:hover .cleeny-btn a:after {
-    background: #FFC703 !important;
-    width: 100%;
-}
-
-.pricing-single-box:hover .pricing-head:after {
-    transform: scale(1);
-}
-
-.pricing-single-box:hover .pricing-head::before{
-    border-bottom: 24px solid #BB9010;
-}
-
-.pricing-single-box:hover h1.pricing-dollar{
-    color: #01177D;
-}
-
-
-.pricing-single-box:hover h1.pricing-dollar span{
-    color: #01177D;
-}
-
-.pricing-single-box:hover p.pricing-monthly{
-    color: #01177D;
-}
-
-.pricing-single-box:hover::before {
-    opacity: 1;
-    left: 0;
-    width: 100%;
-}
-
-.pricing-single-box:hover h3.pricing-title {
-    background: #fff;
-    border-left: 3px solid #fff;
-}
-
-.pricing-single-box:hover .pricing-list ul li {
-    color: #fff;
-}
-
-.pricing-single-box:hover .pricing-list ul li i {
-    color: #FFC704;
-} */
-
-/*=====================================
-<--  end cleeny pricing-area Css -->
-=======================================*/
-
-
-
 /*=====================================
 <--  Cleeny testimonial-area Css -->
 =======================================*/
+.testi-single-box {
+    background-color: #fff;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.testi-rating i {
+    color: #fbbf24; /* warna kuning */
+}
 
 .testimonial-area {
     background: url("/frontend/assets/images/testi-bg.png");
@@ -2345,7 +2171,7 @@ h4.testi-title {
     font-size: 20px;
     color: #ffffff;
     font-weight: 500;
-    font-family: "Inter";
+    font-family: "Poppins";
     line-height: 28px;
     margin: 0;
     padding: 10px 0 6px;
@@ -2365,7 +2191,7 @@ h3.testi-title2 {
     line-height: 30px;
     color: #ffc804;
     font-weight: 500;
-    font-family: "Inter";
+    font-family: "Poppins";
     margin: 0;
     padding: 24px 0 15px;
 }
@@ -2444,7 +2270,7 @@ h1.blog-month {
     font-size: 24px;
     color: #00197e;
     font-weight: 600;
-    font-family: "Inter";
+    font-family: "Poppins";
     line-height: 6px;
     transition: .5s;
 }
@@ -2453,7 +2279,7 @@ p.blog-text {
     font-size: 14px;
     color: #00197e;
     font-weight: 400;
-    font-family: "Inter";
+    font-family: "Poppins";
     margin: 0;
     transition: .5s;
 }
@@ -2480,7 +2306,7 @@ h3.blog-title a {
     line-height: 30px;
     color: #00197e;
     font-weight: 600;
-    font-family: "Inter";
+    font-family: "Poppins";
     margin: 0;
     display: inline-block;
     text-transform: capitalize;
@@ -2504,7 +2330,7 @@ p.blog-description {
     font-size: 16px;
     color: #00197e;
     font-weight: 500;
-    font-family: "Inter";
+    font-family: "Poppins";
 }
 
 .blog-btn a i {
@@ -2555,8 +2381,8 @@ p.blog-description {
 =======================================*/
 
 .brand-area {
-    background: #F3F4F8;
-    padding: 200px 0 60px;
+    background: #5c79eb;
+    padding: 5px 0 60px;
 }
 
 .brand-box {
@@ -2610,7 +2436,7 @@ span.subscribe-number {
     font-size: 22px;
     color: #00197e;
     font-weight: 600;
-    font-family: "Inter";
+    font-family: "Poppins";
     margin: 0;
     line-height: 28px;
 }
@@ -2620,7 +2446,7 @@ h3.subscribe-title {
     font-size: 28px;
     color: #ffffff;
     font-weight: 600;
-    font-family: "Inter";
+    font-family: "Poppins";
     margin-left: 24px;
 }
 
@@ -2727,7 +2553,7 @@ p.footer-widget-text {
     font-size: 24px;
     color: #ffffff;
     font-weight: 600;
-    font-family: "Inter";
+    font-family: "Poppins";
     margin-bottom: 26px;
     line-height: 48px;
 }
@@ -2742,7 +2568,7 @@ p.footer-widget-text {
     font-size: 16px;
     color: #ffffff;
     font-weight: 400;
-    font-family: "Inter";
+    font-family: "Poppins";
     padding-bottom: 16px;
     transition: .5s;
 }
@@ -2774,7 +2600,7 @@ p.footer-widget-text {
     line-height: 26px;
     color: #ffffff;
     font-weight: 500;
-    font-family: "Inter";
+    font-family: "Poppins";
     transition: .5s;
 }
 
@@ -2810,7 +2636,7 @@ h3.footer-title {
     line-height: 26px;
     color: #ffffff;
     font-weight: 500;
-    font-family: "Inter";
+    font-family: "Poppins";
     margin: 0;
 }
 
@@ -2985,7 +2811,7 @@ li.upper::before {
     line-height: 42px;
     color: #00197e;
     font-weight: 500;
-    font-family: "Inter";
+    font-family: "Poppins";
     padding-left: 55px;
 }
 
@@ -3072,7 +2898,7 @@ li.upper::before {
     font-size: 16px;
     color: #ffffff;
     font-weight: 500;
-    font-family: "Inter";
+    font-family: "Poppins";
     text-decoration: none;
 }
 
@@ -3120,7 +2946,7 @@ li.upper::before {
     text-transform: uppercase;
     color: #ffc804;
     font-weight: 500;
-    font-family: "Inter";
+    font-family: "Poppins";
     margin-bottom: 11px;
 }
 
@@ -3129,7 +2955,7 @@ li.upper::before {
     line-height: 70px;
     color: #ffffff;
     font-weight: 700;
-    font-family: "Inter";
+    font-family: "Poppins";
     margin: 0;
 }
 
@@ -3409,7 +3235,7 @@ li.upper::before {
     font-size: 22px;
     color: #00197e;
     font-weight: 600;
-    font-family: "Inter";
+    font-family: "Poppins";
     margin: 0;
 }
 
@@ -3517,7 +3343,7 @@ li.upper::before {
     line-height: 54px;
     color: #ffffff;
     font-weight: 700;
-    font-family: "Inter";
+    font-family: "Poppins";
     text-align: center;
     margin-bottom: 32px;
 }
@@ -3564,7 +3390,7 @@ h3.contact-title {
     font-size: 22px;
     color: #ffffff;
     font-weight: 600;
-    font-family: "Inter";
+    font-family: "Poppins";
     margin: 0;
 }
 
@@ -3703,7 +3529,7 @@ h3.team-title {
     font-size: 22px;
     color: #00197e;
     font-weight: 600;
-    font-family: "Inter";
+    font-family: "Poppins";
     margin: 0;
     line-height: 28px;
     transition: .5s;
@@ -4058,7 +3884,7 @@ p.team-text {
     line-height: 70px;
     color: #ffffff;
     font-weight: 800;
-    font-family: "Inter";
+    font-family: "Poppins";
     text-transform: capitalize;
 }
 
@@ -4233,7 +4059,7 @@ h3.about-title {
     font-size: 20px;
     color: #00197e;
     font-weight: 600;
-    font-family: "Inter";
+    font-family: "Poppins";
     margin: 0;
     line-height: 51px;
 }
@@ -4319,7 +4145,7 @@ h3.service-title-tow {
     font-size: 22px;
     color: #ffffff;
     font-weight: 700;
-    font-family: "Inter";
+    font-family: "Poppins";
     margin: 0;
     line-height: 40px;
 }
@@ -4356,7 +4182,7 @@ h3.service-title-tow {
     font-size: 18px;
     color: #ffffff;
     font-weight: 600;
-    font-family: "Inter";
+    font-family: "Poppins";
     line-height: 45px;
 }
 
@@ -4528,7 +4354,7 @@ h3.team-title-two {
     font-size: 22px;
     color: #00197e;
     font-weight: 700;
-    font-family: "Inter";
+    font-family: "Poppins";
     line-height: 14px;
 }
 
@@ -4536,7 +4362,7 @@ p.team-text-two {
     font-size: 15px;
     color: #3a4268;
     font-weight: 400;
-    font-family: "Inter";
+    font-family: "Poppins";
 }
 
 .team-single-box-tow:hover .team-content-two::before {
@@ -4606,7 +4432,7 @@ p.team-text-two {
     font-size: 16px;
     color: #ffffff;
     font-weight: 500;
-    font-family: "Inter";
+    font-family: "Poppins";
     line-height: 8px;
 }
 
@@ -4709,7 +4535,7 @@ h4.testi-title-three {
     line-height: 28px;
     color: #ffffff;
     font-weight: 600;
-    font-family: "Inter";
+    font-family: "Poppins";
     margin: 0;
 }
 
@@ -4835,7 +4661,7 @@ p.testi-text-three::before {
     line-height: 56px;
     color: #ffffff;
     font-weight: 700;
-    font-family: "Inter";
+    font-family: "Poppins";
     margin: 0;
 }
 
@@ -4843,133 +4669,13 @@ p.counter-text-two {
     font-size: 15px;
     color: #ffffff;
     font-weight: 500;
-    font-family: "Inter";
+    font-family: "Poppins";
     margin: 0;
 }
 
 /*=====================================
 <---end-counter-area-css----->
 =======================================*/
-
-
-/*========================================
-<--- Cleeny blog-single css ----->
-==========================================*/
-/*
-
-.blog-single-box-tow {
-    margin-bottom: 30px;
-    transition: .5s;
-}
-
-.blog-thumb-tow {
-    position: relative;
-    z-index: 1;
-}
-
-.blog-thumb-tow img {
-    width: 100%;
-}
-
-h4.blog-text-two {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    margin: 0;
-    font-size: 15px;
-    line-height: 30px;
-    text-transform: uppercase;
-    color: #ffffff;
-    font-weight: 400;
-    font-family: "Inter";
-    background: #306EFF;
-    border-radius: 5px 0 0 0;
-    padding: 4px 23px 2px;
-}
-
-.blog-content-two {
-    background: #F3F4F8;
-    padding: 27px 30px 26px;
-    transition: .5s;
-}
-
-p.blog-year-two {
-    font-size: 15px;
-    letter-spacing: 2px;
-    color: #2f6eff;
-    font-weight: 300;
-    font-family: "Poppins";
-    margin: 0;
-}
-
-p.blog-year-two span {
-    display: inline-block;
-    padding-left: 34px;
-    position: relative;
-    z-index: 1;
-}
-
-p.blog-year-two span::before {
-    position: absolute;
-    content: "";
-    height: 1px;
-    width: 15px;
-    background: #306EFF;
-    left: 6px;
-    top: 13px;
-}
-
-h3.blog-title-two {
-    margin: 0;
-}
-
-h3.blog-title-two a {
-    display: inline-block;
-    font-size: 22px;
-    line-height: 30px;
-    color: #00197e;
-    font-weight: 700;
-    font-family: "Inter";
-    text-decoration: none;
-    padding: 9px 0 13px;
-}
-
-.blog-btn-two a {
-    display: inline-block;
-    font-size: 15px;
-    color: #2f6eff;
-    font-weight: 500;
-    font-family: "Poppins";
-    text-decoration: none;
-    transition: .5s;
-}
-
-.blog-btn-two a i {
-    display: inline-block;
-    font-size: 18px;
-    position: relative;
-    top: 2px;
-    margin-left: 5px;
-}
-
-.blog-single-box-tow:hover {
-    margin-top: -10px;
-}
-
-.blog-single-box-tow:hover h3.blog-title-two a {
-    color: #FFC704;
-}
-
-.blog-single-box-tow:hover .blog-content-two {
-    filter: drop-shadow(0px 20px 25px rgba(152,178,240,0.2));
-    background-color: #ffffff;
-} */
-
-/*=====================================
-<---end-blog-single-box-tow-css----->
-=======================================*/
-
-
 
 /*<---start-contact-area.style-three-css----->*/
 
@@ -5007,7 +4713,7 @@ h3.blog-title-two a {
     line-height: 56px;
     color: #001819;
     font-weight: 700;
-    font-family: "Inter";
+    font-family: "Poppins";
     margin-bottom: 47px;
 }
 
@@ -5110,7 +4816,7 @@ h3.blog-title-two a {
     font-size: 46px;
     color: #ffffff;
     font-weight: 700;
-    font-family: "Inter";
+    font-family: "Poppins";
     margin: 0;
 }
 
@@ -5121,7 +4827,7 @@ h3.blog-title-two a {
     line-height: 56px;
     color: #fff;
     font-weight: 400;
-    font-family: "Inter";
+    font-family: "Poppins";
     padding: 0 19px 0;
     position: relative;
 }
@@ -5147,7 +4853,7 @@ li.upper {
     line-height: 56px;
     color: #ffffff;
     font-weight: 400;
-    font-family: "Inter";
+    font-family: "Poppins";
 }
 
 .breatcome-text ul li a i {
@@ -5307,7 +5013,7 @@ h3.team-title-three {
     font-size: 22px;
     color: #00197e;
     font-weight: 600;
-    font-family: "Inter";
+    font-family: "Poppins";
     margin: 0;
     line-height: 28px;
 }
@@ -5478,7 +5184,7 @@ a.active {
     line-height: 30px;
     color: #00197e;
     font-weight: 600;
-    font-family: "Inter";
+    font-family: "Poppins";
 }
 
 /*accordion start*/
@@ -5712,7 +5418,7 @@ p.project-text i {
 p.project-text {
     color: #ffffff;
     font-weight: 400;
-    font-family: "Inter";
+    font-family: "Poppins";
     font-size: 14px;
     margin: 0;
     line-height: 21px;
@@ -5728,7 +5434,7 @@ h3.project-title a {
     font-size: 24px;
     color: #ffffff;
     font-weight: 600;
-    font-family: "Inter";
+    font-family: "Poppins";
     text-decoration: none;
     padding: 0 0 27px;
     position: relative;
@@ -5792,7 +5498,7 @@ h3.project-title a::before {
     line-height: 56px;
     color: #00197e;
     font-weight: 600;
-    font-family: "Inter";
+    font-family: "Poppins";
 }
 
 .categories-title h4:after {
@@ -5852,7 +5558,7 @@ h3.project-title a::before {
     font-size: 16px;
     color: #00197e;
     font-weight: 400;
-    font-family: "Inter";
+    font-family: "Poppins";
     text-decoration: none;
 }
 
@@ -5890,7 +5596,7 @@ h3.project-title a::before {
     font-size: 16px;
     color: #ffffff;
     font-weight: 400;
-    font-family: "Inter";
+    font-family: "Poppins";
     text-decoration: none;
     transition: .5s;
 }
@@ -5923,7 +5629,7 @@ p.widget-text {
     font-size: 18px;
     color: #ffffff;
     font-weight: 500;
-    font-family: "Inter";
+    font-family: "Poppins";
     margin: 0;
     padding: 27px 0 0px;
 }
@@ -5932,7 +5638,7 @@ h3.widget-number {
     font-size: 24px;
     color: #ffffff;
     font-weight: 600;
-    font-family: "Inter";
+    font-family: "Poppins";
     margin: 0;
 }
 
@@ -5940,7 +5646,7 @@ span.widget-gmail {
     font-size: 16px;
     color: #ffffff;
     font-weight: 400;
-    font-family: "Inter";
+    font-family: "Poppins";
     margin: 0;
 }
 
@@ -5958,7 +5664,7 @@ span.widget-gmail i {
     font-size: 16px;
     color: #ffffff;
     font-weight: 400;
-    font-family: "Inter";
+    font-family: "Poppins";
     text-decoration: none;
     background: #2F6EFF;
     padding: 16px 98px 15px;
@@ -5982,7 +5688,7 @@ h2.sidber-title {
     line-height: 56px;
     color: #00197e;
     font-weight: 700;
-    font-family: "Inter";
+    font-family: "Poppins";
     margin-bottom: 15px;
 }
 
@@ -6057,7 +5763,7 @@ h3.sidber-title {
     line-height: 48px;
     color: #00197e;
     font-weight: 600;
-    font-family: "Inter";
+    font-family: "Poppins";
     margin-bottom: 3px;
 }
 
@@ -6255,7 +5961,7 @@ h3.project-det-top-title {
     line-height: 56px;
     color: #ffffff;
     font-weight: 600;
-    font-family: "Inter";
+    font-family: "Poppins";
     background: #2F6EFF;
     padding: 9px 0 9px 35px;
     border-radius: 10px 10px 0 0;
@@ -6292,7 +5998,7 @@ ul.project-support li {
     font-size: 16px;
     color: #00197e;
     font-weight: 500;
-    font-family: "Inter";
+    font-family: "Poppins";
 }
 
 .project-det-team-box {
@@ -6312,7 +6018,7 @@ h3.project-det-team-title {
     font-size: 22px;
     color: #00197e;
     font-weight: 600;
-    font-family: "Inter";
+    font-family: "Poppins";
     margin: 0;
     line-height: 39px;
 }
@@ -6394,179 +6100,6 @@ p.project-det-team-text {
     background: #F3F4F8;
 }
 
-/*---blog-grid---*/
-
-/*
-.pagination-menu {
-    padding: 50px 0 30px;
-    text-align: center;
-}
-
-.pagination-menu ul li {
-    list-style: none;
-    display: inline-block;
-}
-
-.pagination-menu ul li a {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
-    text-align: center;
-    border-radius: 25px;
-    transition: 0.5s;
-    font-size: 16px;
-    color: #334798;
-    font-weight: 500;
-    margin: 0 3px 0;
-    border: 1px solid #EEEFF0;
-    text-decoration: none;
-    font-family: "Inter";
-}
-
-.pagination-menu ul li a:hover{
-    color:#fff;
-    background-color: #2F6EFF;
-} */
-
-/*---blog-details---*/
-
-/*
-.blog-details-area {
-    padding: 118px 0 118px;
-}
-
-.widget-right {
-    margin-left: 25px;
-}
-
-.blog-details-single-box {
-    margin-bottom: 30px;
-}
-
-.blog-det-thumb {
-    position: relative;
-    z-index: 1;
-}
-
-.blog-det-thumb img {
-    width: 100%;
-}
-
-p.blog-det-text2 {
-    position: absolute;
-    top: 6%;
-    left: 30px;
-    background: #306EFF;
-    font-size: 16px;
-    line-height: 26px;
-    color: #ffffff;
-    font-weight: 500;
-    font-family: "Inter";
-    padding: 7px 20px 7px;
-    border-radius: 5px;
-    transform: scale(0);
-    transition: .5s;
-}
-
-.blog-det-content {
-    border-left: 1px solid #E5E8E8;
-    border-right: 1px solid #E5E8E8;
-    border-bottom: 1px solid #E5E8E8;
-    padding: 0 34px 20px;
-    position: relative;
-    z-index: 1;
-}
-
-.blog-det-content::before {
-    position: absolute;
-    content: "";
-    height: 1px;
-    width: 100%;
-    background: #E5E8E8;
-    bottom: 21%;
-    left: 0;
-}
-
-.blog-date {
-    padding: 36px 0 10px;
-}
-
-li.blog-det-author {
-    padding-left: 30px;
-    position: relative;
-    z-index: 1;
-}
-
-li.blog-det-author::before {
-    position: absolute;
-    content: "";
-    height: 2px;
-    width: 20px;
-    background: #2F6EFF;
-    left: 0;
-    top: 12px;
-}
-
-.blog-date ul li {
-    list-style: none;
-    display: inline-block;
-    padding-right: 25px;
-    font-size: 16px;
-    line-height: 26px;
-    color: #3a4268;
-    font-weight: 300;
-    font-family: "Poppins";
-}
-
-.blog-date ul li i {
-    display: inline-block;
-    font-size: 14px;
-    color: #2D6EFE;
-    margin-right: 5px;
-}
-
-h3.blog-det-title {
-    margin: 0;
-}
-
-h3.blog-det-title a {
-    font-size: 30px;
-    line-height: 42px;
-    color: #00197e;
-    font-weight: 700;
-    font-family: "Inter";
-    margin: 0;
-    display: inline-block;
-    text-decoration: none;
-}
-
-p.blog-det-text {
-    font-size: 16px;
-    line-height: 26px;
-    color: #3a4268;
-    font-weight: 300;
-    font-family: "Poppins";
-    margin: 0;
-    padding: 10px 0 50px;
-}
-
-.blog-det-btn a {
-    display: inline-block;
-    font-size: 16px;
-    color: #00197e;
-    font-weight: 500;
-    font-family: "Inter";
-    text-decoration: none;
-    transition: .5s;
-}
-
-.blog-det-btn a i {
-    display: inline-block;
-    font-size: 18px;
-    position: relative;
-    top: 3px;
-} */
 
 .sidebar-search {
     background: #F3F4F8;
@@ -6635,7 +6168,7 @@ p.blog-det-text {
     line-height: 24px;
     color: #00197e;
     font-weight: 500;
-    font-family: "Inter";
+    font-family: "poppins";
     text-decoration: none;
 }
 
@@ -6645,7 +6178,7 @@ p.blog-det-text {
     line-height: 26px;
     color: #2f6eff;
     font-weight: 400;
-    font-family: "Inter";
+    font-family: "poppins";
     position: relative;
     top: -7px;
 }
@@ -6659,7 +6192,7 @@ p.blog-det-text {
     font-size: 14px;
     color: #00197e;
     font-weight: 400;
-    font-family: "Inter";
+    font-family: "poppins";
     text-decoration: none;
     border-radius: 5px;
 }

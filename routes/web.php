@@ -15,6 +15,7 @@ Route::get('/', fn () => view('frontend.home'));
 Route::get('/aboutus', function () {return view('frontend.aboutUs');})->name('about.us');
 Route::get('/details', function () {return view('frontend.detail');})->name('detail');
 Route::get('/kontak', function () {return view('frontend.contact');});
+Route::get('/daftarharga', function () {return view('frontend.pricelist');})->name('daftar.harga');
 
 // 🧾 Order (pakai model Order)
 Route::get('/form-pemesanan', [OrderController::class, 'create'])->name('order.create');

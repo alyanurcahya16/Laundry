@@ -144,8 +144,8 @@
 </div>
 
 <!-- start cleeny-brand Area -->
-    <div class="brand-area">
-        <div class="container">
+    <div class="brand-area ">
+        <div class="container py-40">
             <div class="row">
                 <div class="brand_list owl-carousel">
                     <div class="col-lg-12">
@@ -190,7 +190,7 @@
     <!-- end cleeny-brand Area -->
 
     <!-- Start cleeny subscribe Area -->
-    {{--
+{{--
 
     <div class="subscribe-area">
         <div class="container">
@@ -221,8 +221,8 @@
                 </div>
             </div>
         </div>
-    </div>
- --}}
+    </div> --}}
+
 
 
     <!-- end cleeny subscribe Area -->
