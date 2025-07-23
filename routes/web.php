@@ -9,6 +9,9 @@ use App\Http\Controllers\PesananController;
 use App\Models\Testimoni;
 use App\Http\Controllers\Frontend\TestimoniController as FrontendTestimoniController;
 use App\Http\Controllers\Frontend\TestimoniController;
+use App\Http\Controllers\Frontend\HotelFormController;
+use App\Http\Controllers\Backend\HotelRegistrasiController;
+
 
 // 🏠 Halaman utama
 Route::get('/', fn () => view('frontend.home'));
@@ -35,6 +38,11 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+// Hotel registrasi
+Route::get('/form-registrasi-hotel', [HotelFormController::class, 'create'])->name('hotel.form');
+Route::post('/form-registrasi-hotel', [HotelFormController::class, 'store'])->name('hotel.form.submit');
+Route::get('/registrasi-hotel/terima-kasih', function () {return view('frontend.hotel.thankyou');})->name('hotel.thankyou');
+
 // Testimoni
 Route::get('/testimoni', function () {$testimoni = Testimoni::all();return view('frontend.testimoni.index', compact('testimoni'));})->name('frontend.testimoni');
 Route::get('/testimoni', [FrontendTestimoniController::class, 'index'])->name('frontend.testimoni.index');
@@ -55,6 +63,8 @@ Route::prefix('admin/orders')->group(function() {
     Route::put('/{order}/status', [OrderController::class, 'updateStatus'])->name('admin.orders.updateStatus');
 });
 Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
+    Route::get('/registrasi-hotel', [HotelRegistrasiController::class, 'index'])->name('admin.registrasi.index');
+    Route::delete('/admin/registrasi-hotel/{id}', [HotelRegistrasiController::class, 'destroy'])->name('admin.registrasi.destroy');
     Route::get('/dashboard', [\App\Http\Controllers\DashboardController::class, 'index'])->name('admin.dashboard');
     Route::get('/order', [OrderController::class, 'index'])->name('admin.order.index');
     Route::get('/orders', [\App\Http\Controllers\Admin\OrderAdminController::class, 'index'])->name('admin.orders.index');

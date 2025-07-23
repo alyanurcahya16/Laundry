@@ -565,6 +565,11 @@ nav.cleeny_menu span {
     margin: 0;
     padding: 12px 0 34px;
 }
+.cleeny-btn {
+    margin-left: 80%;
+    padding : 0;
+
+}
 
 .hero-area .cleeny-btn {
     margin-left: 0;

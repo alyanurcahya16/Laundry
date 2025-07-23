@@ -10,51 +10,41 @@
     <!-- Favicon -->
     <link rel="icon" type="{{ asset('image/png') }}" sizes="56x56"
         href="{{ asset('frontend/public/frontend/assets/images/fav-icon/icon.png') }}">
-
     <!-- bootstrap CSS -->
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/bootstrap.min.css') }}" type="text/css" media="all">
-
     <!-- carousel CSS -->
-    <link rel="stylesheet" href="{{ asset('frontend/assets/css/owl.carousel.min.css') }}" type="text/css"
-        media="all">
-
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/owl.carousel.min.css') }}" type="text/css"media="all">
     <!-- animate CSS -->
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/animate.css') }}" type="text/css" media="all">
-
     <!-- animated-text CSS -->
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/animated-text.css') }}" type="text/css" media="all">
-
     <!-- font-awesome CSS -->
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/all.min.css') }}" type="text/css" media="all">
-
     <!-- font-flaticon CSS -->
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/flaticon.css') }}" type="text/css" media="all">
-
     <!-- theme-default CSS -->
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/theme-default.css') }}" type="text/css" media="all">
-
     <!-- meanmenu CSS -->
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/meanmenu.min.css') }}" type="text/css" media="all">
-
     <!-- Main Style CSS -->
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/style.css') }}" type="text/css" media="all">
-
     <!-- transitions CSS -->
-    <link rel="stylesheet" href="{{ asset('frontend/assets/css/owl.transitions.css') }}" type="text/css"
-        media="all">
-
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/owl.transitions.css') }}" type="text/css" media="all">
     <!-- Venobox CSS -->
     <link rel="stylesheet" href="https://unpkg.com/venobox@2.0.7/dist/venobox.min.css">
-
-
     <!-- responsive CSS -->
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/responsive.css') }}" type="text/css" media="all">
-
     <!-- modernizr js -->
     <script src="{{ asset('frontend/assets/js/vendor/modernizr-3.5.0.min.js') }}"></script>
-
     <!-- bootstrap icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 </head>
 
@@ -66,10 +56,7 @@
         <div class="loder-section right-section"></div>
     </div>
 
-    <!--==================================================-->
     <!-- Start cleeny header-top-section -->
-    <!--==================================================-->
-
     <div class="header-top-section">
         <div class="container">
             <div class="row align-items-center d-flex">
@@ -97,27 +84,19 @@
             </div>
         </div>
     </div>
-
-    <!--==================================================-->
     <!-- end cleeny header-top-section -->
-    <!--==================================================-->
 
-
-
-
-    <!--==================================================-->
     <!-- Start cleeny Main Menu Area -->
-    <!--==================================================-->
     <div id="sticky-header" class="cleeny_nav_manu">
         <div class="container">
             <div class="row d-flex align-items-center">
                 <div class="col-lg-3">
                     <div class="logo-container">
-                        <a class="logo_img" href="index.html" title="cleeny">
+                        <a class="logo_img" href="/" title="royal">
                             <img src="{{ asset('frontend/assets/images/royal-logo2.png') }}" style="height: 90px; "
                                 alt="logo">
                         </a>
-                        <a class="main_sticky" href="index.html" title="cleeny">
+                        <a class="main_sticky" href="/" title="royal">
                             <img src="{{ asset('frontend/assets/images/royal-logo4.png') }}" style="height: 90px; "
                                 alt="astute">
                         </a>
@@ -126,126 +105,45 @@
                 <div class="col-lg-9">
                     <nav class="cleeny_menu">
                         <ul class="nav_scroll">
-                            <li><a href="index.html">Home</a>
-                                {{-- <ul class="sub-menu">
-                                    <li><a href="index.html">Home Version 01</a></li>
-                                    <li><a href="index-two.html">Home Version 02</a></li>
-                                    <li><a href="index-three.html">Home Version 03</a></li>
-                                    <li><a href="index-four.html">Home Landing 01</a></li>
-                                    <li><a href="index-five.html">Home Landing 02</a></li>
-                                    <li><a href="index-six.html">Home Landing 03 </a></li>
-                                </ul> --}}
+                            <li><a href="/">Home</a>
                             </li>
-                            <li><a href="about-.html">About Us</a></li>
+                            <li><a href="aboutus">About Us</a></li>
                             <li><a href="#">Service <i class="bi bi-chevron-down"></i></a>
                                 <ul class="sub-menu">
-                                    <li><a href="service.html">Service</a></li>
-                                    <li><a href="service-details.html">Service Details</a></li>
+                                    <li><a href="pesanan">Service</a></li>
+                                    <li><a href="details">Service Details</a></li>
                                 </ul>
                             </li>
                             <li><a href="#">Pages <i class="bi bi-chevron-down"></i></a>
                                 <ul class="sub-menu">
-                                    <li><a href="about-us.html">About Us</a></li>
-                                    <li><a href="team.html">Our Team</a></li>
-                                    <li><a href="testimonial.html">Testimonials</a></li>
-                                    <li><a href="project.html">Project</a></li>
-                                    <li><a href="project-details.html">Project Details</a></li>
-                                    {{-- <li><a href="priching.html">Pricing</a></li> --}}
-                                    <li><a href="appoinment.html">Appoinment</a></li>
+                                    <li><a href="aboutus">About Us</a></li>
+                                    <li><a href="testimoni">Testimonials</a></li>
+                                    <li><a href="details">Details</a></li>
                                 </ul>
                             </li>
-                            {{-- <li><a href="#">Blog <i class="bi bi-chevron-down"></i></a>
-                                <ul class="sub-menu">
-                                    <li><a href="blog-grid.html">Blog Grid</a></li>
-                                    <li><a href="blog-list.html">Blog List</a></li>
-                                    <li><a href="blog-details.html">Blog Details</a></li>
-                                </ul>
-                            </li> --}}
-                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="kontak">Contact</a></li>
                         </ul>
                         <div class="header-search-btn">
                             <a class="search-box-btn search-box-outer" href="#"><i
                                     class="fas fa-search"></i></a>
-                        </div>
-                        <div class="cleeny-btn">
-                            <a href="contact.html">Get Free Quote</a>
                         </div>
                     </nav>
                 </div>
             </div>
         </div>
     </div>
-
-
-    <!-- cleeny Mobile Menu Area -->
-    <div class="mobile-menu-area sticky d-sm-block d-md-block d-lg-none ">
-        <div class="mobile-menu">
-            <nav class="cleeny_menu">
-                <ul class="nav_scroll">
-                    <li><a href="index.html">Home <i class="bi bi-chevron-down"></i></a>
-                        <ul class="sub-menu">
-                            <li><a href="index.html">Home Version 01</a></li>
-                            <li><a href="index-two.html">Home Version 02</a></li>
-                            <li><a href="index-three.html">Home Version 03</a></li>
-                            <li><a href="index-four.html">Home Landing 01</a></li>
-                            <li><a href="index-five.html">Home Landing 02</a></li>
-                            <li><a href="index-six.html">Home Landing 03 </a></li>
-                        </ul>
-                    </li>
-                    <li><a href="about-us.html">About Us</a></li>
-                    <li><a href="#">Service <i class="bi bi-chevron-down"></i></a>
-                        <ul class="sub-menu">
-                            <li><a href="service.html">Service</a></li>
-                            <li><a href="service-details.html">Service Details</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Pages <i class="bi bi-chevron-down"></i></a>
-                        <ul class="sub-menu">
-                            <li><a href="about-us.html">About Us</a></li>
-                            <li><a href="team.html">Our Team</a></li>
-                            <li><a href="testimonial.html">Testimonials</a></li>
-                            <li><a href="project.html">Project</a></li>
-                            <li><a href="project-details.html">Project Details</a></li>
-                            <li><a href="priching.html">Pricing</a></li>
-                            <li><a href="appoinment.html">Appoinment</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Blog <i class="bi bi-chevron-down"></i></a>
-                        <ul class="sub-menu">
-                            <li><a href="blog-grid.html">Blog Grid</a></li>
-                            <li><a href="blog-list.html">Blog List</a></li>
-                            <li><a href="blog-details.html">Blog Details</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </div>
-    <!--==================================================-->
     <!-- End cleeny Main Menu Area -->
-    <!--==================================================-->
 
-
-    <!--==================================================-->
     <!-- Start Curser Section Here -->
-    <!--==================================================-->
     <div class="curser"></div>
     <div class="curser2"></div>
-    <!--==================================================-->
     <!-- Ends Curser Section Here -->
-    <!--==================================================-->
 
-<div class="container my-5">
+<div class="w-full m-0 p-0">
         @yield('content')
-    </div>
+</div>
 
-
-    <!--==================================================-->
-    <!-- start cleeny-brand Area -->
-    <!--==================================================-->
-
-
+<!-- start cleeny-brand Area -->
     <div class="brand-area">
         <div class="container">
             <div class="row">
@@ -289,20 +187,10 @@
             </div>
         </div>
     </div>
-
-
-
-    <!--==================================================-->
     <!-- end cleeny-brand Area -->
-    <!--==================================================-->
 
-
-
-
-    <!--==================================================-->
     <!-- Start cleeny subscribe Area -->
-    <!--==================================================-->
-
+    {{--
 
     <div class="subscribe-area">
         <div class="container">
@@ -334,18 +222,12 @@
             </div>
         </div>
     </div>
+ --}}
 
 
-
-    <!--==================================================-->
     <!-- end cleeny subscribe Area -->
-    <!--==================================================-->
 
-
-
-    <!--==================================================-->
     <!-- Start cleeny Footer Area -->
-    <!--==================================================-->
 
     <div class="footer-area">
         <div class="container">
@@ -356,7 +238,8 @@
                             <a href="index.html"><img src="{{ asset('frontend/assets/images/royal-logo4.png') }}"
                                     alt="footer-logo"></a>
                         </div>
-                        <p class="footer-widget-text">Memberikan layanan laundry yang bersih dan efisien secara profesional untuk mendukung gaya hidup modern Anda.</p>
+                        <p class="footer-widget-text">Memberikan layanan laundry yang bersih dan efisien secara
+                            profesional untuk mendukung gaya hidup modern Anda.</p>
                         <div class="footer-social">
                             <div class="footer-widget-social">
                                 <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -373,9 +256,9 @@
                             <h2>Company</h2>
                         </div>
                         <ul>
-                            <li><a href="index.html"> <i class="bi bi-chevron-right"></i> Home</a></li>
-                            <li><a href="about-us.html"> <i class="bi bi-chevron-right"></i> About Us</a></li>
-                            <li><a href="service.html"> <i class="bi bi-chevron-right"></i> Our Services</a></li>
+                            <li><a href="/"> <i class="bi bi-chevron-right"></i> Home</a></li>
+                            <li><a href="aboutus"> <i class="bi bi-chevron-right"></i> About Us</a></li>
+                            <li><a href="pesanan"> <i class="bi bi-chevron-right"></i>Services</a></li>
                             <li><a href="team.html"> <i class="bi bi-chevron-right"></i> Meet Our Team</a></li>
                         </ul>
                     </div>
@@ -421,18 +304,9 @@
         </div>
     </div>
 
-    <!--==================================================-->
     <!-- end cleeny Footer Area -->
-    <!--==================================================-->
 
-
-
-
-
-
-    <!--==================================================-->
     <!-- Start cleeny copyright Area -->
-    <!--==================================================-->
 
 
     <div class="copyright-area">
@@ -448,14 +322,10 @@
     </div>
 
 
-    <!--==================================================-->
     <!-- end cleeny copyright Area -->
-    <!--==================================================-->
 
 
-    <!--==================================================-->
     <!-- Start scrollup section Area -->
-    <!--==================================================-->
     <!-- scrollup section -->
     <div class="scroll-area">
         <div class="top-wrap">
@@ -467,13 +337,9 @@
             </div>
         </div>
     </div>
-    <!--==================================================-->
     <!-- Start scrollup section Area -->
-    <!--==================================================-->
 
-    <!--==================================================-->
     <!-- Start Search Popup Area -->
-    <!--==================================================-->
     <div class="search-popup">
         <button class="close-search style-two"><span class="flaticon-multiply"><i
                     class="far fa-times-circle"></i></span></button>
@@ -485,9 +351,7 @@
             </div>
         </form>
     </div>
-    <!--==================================================-->
     <!-- Start Search Popup Area -->
-    <!--==================================================-->
 
 
 
@@ -526,6 +390,8 @@
     <script src="{{ asset('frontend/assets/js/vanilla-tilt.min.js') }}"></script>
     <!-- partial -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <!--type-js-->
     <script>
@@ -541,4 +407,3 @@
 <!-- Mirrored from html.ditsolution.net/cleeny/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 08 Jul 2025 06:17:52 GMT -->
 
 </html>
-

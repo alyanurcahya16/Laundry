@@ -746,6 +746,8 @@
             
         <a href="/admin/testimoni"><i class="fas fa-comments"></i> Testimonials</a>
 
+        <a href="/registrasi-hotel"><i class="fas fa-comments"></i> Registrasi Hotel</a>
+
         <!-- Layout (dropdown) -->
        <a href="javascript:void(0)" onclick="toggleLayoutMenu()" class="{{ $layoutActive ? 'active' : '' }}">
     <i class="fas fa-layer-group"></i> Layout <i class="fas fa-chevron-down float-end"></i>
