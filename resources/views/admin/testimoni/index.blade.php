@@ -10,6 +10,7 @@
                 <th>Deskripsi</th>
                 <th>Rate</th>
                 <th>Gambar</th>
+                <th>Aksi</th>
             </tr>
         </thead>
         <tbody>
@@ -24,6 +25,13 @@
                         @else
                             <span>Tidak ada gambar</span>
                         @endif
+                    </td>
+                    <td>
+                        <form action="{{ route('testimoni.destroy', $item->id) }}" method="POST" onsubmit="return confirm('Yakin ingin menghapus testimoni ini?')">
+                            @csrf
+                            @method('DELETE')
+                            <button class="btn btn-danger btn-sm">Hapus</button>
+                        </form>
                     </td>
                 </tr>
             @endforeach

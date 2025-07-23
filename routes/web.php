@@ -48,6 +48,7 @@ Route::get('/testimoni', function () {$testimoni = Testimoni::all();return view(
 Route::get('/testimoni', [FrontendTestimoniController::class, 'index'])->name('frontend.testimoni.index');
 Route::post('/testimoni', [FrontendTestimoniController::class, 'store'])->name('frontend.testimoni.store');
 
+
 Route::prefix('testimoni')->name('frontend.testimoni.')->group(function () {
     Route::get('/', [TestimoniController::class, 'index'])->name('index');
     Route::post('/', [TestimoniController::class, 'store'])->name('store');
