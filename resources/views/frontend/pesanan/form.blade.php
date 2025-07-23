@@ -374,16 +374,19 @@
             font-weight: 600;
             box-shadow: 0 2px 8px rgba(102, 126, 234, 0.4);
         }
+
     </style>
 </head>
 
 <body>
     <div class="main-container">
         <!-- Header Section -->
-        <div class="header-section fade-in">
-            <h1><i class="fas fa-tshirt"></i> Premium Laundry Service</h1>
-            <p>Layanan laundry terpercaya dengan kualitas terbaik</p>
-        </div>
+        <div class="header-section fade-in text-center">
+
+    <h1><img src="{{ asset('frontend/assets/images/royal-logo1.png') }}" alt="Logo Royal Laundry" class="header-logo mb-3" style="height: 100px;"></i> Premium Laundry Service</h1>
+    <p>Layanan laundry terpercaya dengan kualitas terbaik</p>
+</div>
+
 
         <!-- Form Container -->
         <div class="form-container fade-in">
@@ -486,220 +489,11 @@
                 </div>
             </form>
         </div>
-
-        <!-- Daftar Harga -->
-        <div class="price-section">
-            <h3><i class="fas fa-tags"></i> Daftar Harga & Layanan</h3>
-            <div class="row g-4">
-                <!-- LINEN -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#linenCollapse">
-                                🛏️ Linen
-                            </button>
-                        </h2>
-                        <div id="linenCollapse" class="accordion-collapse collapse">
-                            <div class="accordion-body">
-                                <ul>
-                                    <li>Bed Sheet Double <span class="fw-bold">Rp 2.500</span></li>
-                                    <li>Bed Sheet Single <span class="fw-bold">Rp 2.400</span></li>
-                                    <li>Duvet Cover Double <span class="fw-bold">Rp 5.000</span></li>
-                                    <li>Duvet Cover Single <span class="fw-bold">Rp 4.700</span></li>
-                                    <li>Pillow Case <span class="fw-bold">Rp 1.200</span></li>
-                                    <li>Bath Towel <span class="fw-bold">Rp 2.500</span></li>
-                                    <li>Hand Towel <span class="fw-bold">Rp 1.500</span></li>
-                                    <li>Face Towel <span class="fw-bold">Rp 1.200</span></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- UNIFORM -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#uniformCollapse">
-                                👔 Uniform
-                            </button>
-                        </h2>
-                        <div id="uniformCollapse" class="accordion-collapse collapse">
-                            <div class="accordion-body">
-                                <ul>
-                                    <li>Kemeja/Blouse <span class="fw-bold">Rp 5.000</span></li>
-                                    <li>Celana/Rok <span class="fw-bold">Rp 4.000</span></li>
-                                    <li>Batik/Seragam <span class="fw-bold">Rp 6.000</span></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- SATUAN -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#satuanCollapse">
-                                👗 Satuan
-                            </button>
-                        </h2>
-                        <div id="satuanCollapse" class="accordion-collapse collapse">
-                            <div class="accordion-body">
-                                <ul>
-                                    <li>Atasan (Kemeja/Blouse/Batik) <span class="fw-bold">Rp 25.000</span></li>
-                                    <li>Bawahan (Rok/Jeans/Celana) <span class="fw-bold">Rp 18.000</span></li>
-                                    <li>Luaran (Jaket/Hoodie) <span class="fw-bold">Rp 30.000</span></li>
-                                    <li>Jas (Blazer/Mantel) <span class="fw-bold">Rp 50.000</span></li>
-                                    <li>Jas Setelan <span class="fw-bold">Rp 70.000</span></li>
-                                    <li>Dress <span class="fw-bold">Rp 25.000</span></li>
-                                    <li>Gaun Panjang <span class="fw-bold">Rp 50.000</span></li>
-                                    <li>Kebaya <span class="fw-bold">Rp 30.000</span></li>
-                                    <li>Alat Ibadah <span class="fw-bold">Rp 25.000</span></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- BEDDINGS -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#beddingsCollapse">
-                                🛏️ Beddings
-                            </button>
-                        </h2>
-                        <div id="beddingsCollapse" class="accordion-collapse collapse">
-                            <div class="accordion-body">
-                                <ul>
-                                    <li>Selimut</li>
-                                    <li>Bed Cover</li>
-                                    <li>Spray Anti Tungau</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- OTHER ITEMS -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#otherCollapse">
-                                🧸 Other Items
-                            </button>
-                        </h2>
-                        <div id="otherCollapse" class="accordion-collapse collapse">
-                            <div class="accordion-body">
-                                <ul>
-                                    <li>Boneka</li>
-                                    <li>Gorden</li>
-                                    <li>Karpet</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- DAILY KILOAN -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#kiloanCollapse">
-                                ⚖️ Daily Kiloan
-                            </button>
-                        </h2>
-                        <div id="kiloanCollapse" class="accordion-collapse collapse">
-                            <div class="accordion-body">
-                                <p>Paket cuci harian per kilogram. Harga mulai dari <strong>Rp 7.000/kg</strong>
-                                    tergantung layanan.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- TAS & SEPATU -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#tasCollapse">
-                                👜 Tas & Sepatu
-                            </button>
-                        </h2>
-                        <div id="tasCollapse" class="accordion-collapse collapse">
-                            <div class="accordion-body">
-                                <ul>
-                                    <li>Cuci Sepatu <span class="fw-bold">Rp 45.000</span></li>
-                                    <li>Cuci Tas <span class="fw-bold">Rp 30.000</span></li>
-                                    <li>Deep Clean & Treatment</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- MEMBERSHIP -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#membershipCollapse">
-                                ⭐ Membership
-                            </button>
-                        </h2>
-                        <div id="membershipCollapse" class="accordion-collapse collapse">
-                            <div class="accordion-body">
-                                <p>Hemat dengan paket membership bulanan! Tersedia paket kiloan & satuan.</p>
-                                <ul>
-                                    <li>Marquis <span class="fw-bold">Rp 150.000</span></li>
-                                    <li>Prince <span class="fw-bold">Rp 250.000</span></li>
-                                    <li>Duke <span class="fw-bold">Rp 375.000</span></li>
-                                    <li>King <span class="fw-bold">Rp 500.000</span></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- MENGAPA KAMI -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#whyCollapse">
-                                ✨ Mengapa Kami?
-                            </button>
-                        </h2>
-                        <div id="whyCollapse" class="accordion-collapse collapse">
-                            <div class="accordion-body">
-                                <ul>
-                                    <li>100% Garansi Puas</li>
-                                    <li>Antar Jemput Gratis</li>
-                                    <li>Parfum Premium</li>
-                                    <li>Laundry Express 24 jam</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 
     <!-- Floating Icons -->
     <div class="floating-icons">
-        <div class="floating-icon" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
-            <i class="fas fa-arrow-up"></i>
-        </div>
-        <div class="floating-icon" onclick="window.open('https://wa.me/628123456789', '_blank')">
+        <div class="floating-icon" onclick="window.open('https://wa.me/+6281292204477', '_blank')">
             <i class="fab fa-whatsapp"></i>
         </div>
     </div>
