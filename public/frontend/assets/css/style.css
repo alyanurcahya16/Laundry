@@ -1,11 +1,3 @@
-/*===============================================
-Template Name: Cleeny - Cleaning Services HTML5 Template
-Author:  https://themeforest.net/user/dreamit-solution
-Description: Description
-Version: 1.0.0
-Text Domain: Cleeny
-Tags:   cleaning, cleaning booking, cleaning company, cleaning company html, cleaning services, commercial cleaning, pool cleaning, pool services, pools, renovation, renovation services, swimming, Swimming Pool Cleaning, swimming pools
-================================================*/
 
 /*TABLE OF CONTENTS*/
 /*=====================
@@ -47,7 +39,7 @@ Tags:   cleaning, cleaning booking, cleaning company, cleaning company html, cle
 /*===========================================
 <--  start Cleeny header top section Css -->
 =============================================*/
-
+/*
 .header-top-section {
     background: #2f6eff;
 }
@@ -165,7 +157,7 @@ Tags:   cleaning, cleaning booking, cleaning company, cleaning company html, cle
     font-size: 14px;
     padding: 0 4px 0 6px;
     font-weight: 300;
-}
+} */
 
 /*=====================================
 <--  end cleeny header-top-section Css -->
@@ -181,7 +173,7 @@ Tags:   cleaning, cleaning booking, cleaning company, cleaning company html, cle
 <--  Cleeny Nav Menu Area Css -->
 =======================================*/
 
-
+/*
 .cleeny_nav_manu {
     padding: 9px 100px 0;
 }
@@ -210,10 +202,10 @@ Tags:   cleaning, cleaning booking, cleaning company, cleaning company html, cle
 
 .sticky.cleeny_nav_manu:before {
     display: none;
-}
+} */
 
 /* cleeny Menu Css*/
-
+/*
 nav.cleeny_menu {
     align-items: center;
     display: inline-flex;
@@ -265,20 +257,20 @@ nav.cleeny_menu span {
     position: relative;
     top: 0;
     height: 5px !important;
-}
+} */
 /* .logo {
     position: relative;
     top: -3px;
     background-color: transparent;
     filter: brightness(1.1);
 } */
-
+/*
 .cleeny_menu > ul > li > a:hover {
     color: #306EFF;
-}
+} */
 
 /*** Sub Menu Style ***/
-.cleeny_menu ul .sub-menu {
+/* .cleeny_menu ul .sub-menu {
     position: absolute;
     left: 0;
     top: 150%;
@@ -330,10 +322,10 @@ nav.cleeny_menu span {
 .cleeny_menu ul .sub-menu .sub-menu .sub-menu .sub-menu li:hover>a {
      background:#2F6EFF;
      color: #fff !important;
-}
+} */
 
 /* sub menu 2 */
-
+/*
 .cleeny_menu ul .sub-menu .sub-menu {
      left: 100%;
      top: 130%;
@@ -347,10 +339,10 @@ nav.cleeny_menu span {
      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
      visibility: visible;
      top: 0%;
-}
+} */
 
 /* sub menu 3 */
-
+/*
 .cleeny_menu ul .sub-menu .sub-menu li {
     position: relative;
 }
@@ -369,10 +361,10 @@ nav.cleeny_menu span {
      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
      visibility: visible;
      top: 0%;
-}
+} */
 
 /* sub menu 4 */
-
+/*
 .cleeny_menu ul .sub-menu .sub-menu .sub-menu li {
     position: relative;
 }
@@ -421,7 +413,7 @@ nav.cleeny_menu span {
 
 .cleeny-search-btn {
     display: inline-block;
-}
+} */
 
 .cleeny-btn {
     margin-left: 60px;
@@ -1209,7 +1201,7 @@ p.counter-text {
 
  .floating-icons {
             position: fixed;
-            right: 20px;
+            right: 30px;
             top: 80%;
             transform: translateY(-50%);
             z-index: 1000;
@@ -1248,6 +1240,16 @@ p.counter-text {
     padding: 108px 0 111px;
     position: relative;
     z-index: 1;
+}
+.service-area .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.service-single-box {
+  flex: 1 1 calc(33.333% - 30px); /* untuk 3 kolom */
+  display: flex;
+  flex-direction: column;
 }
 
 .contact-from {
@@ -1346,13 +1348,14 @@ p.counter-text {
 
 .service-content {
     background: #0A2A99;
-    width: 90%;
+    width: 100%; /* Ubah dari 90% ke 100% */
     padding: 56px 31px 21px;
     position: relative;
     z-index: 1;
-    border-radius: 0 5px 5px 5px;
-    margin-top: -30px;
+    border-radius: 0 0 5px 5px; /* Ubah untuk melengkung di bawah saja */
+    margin-top: 0; /* Hapus -30px agar sejajar dengan gambar */
 }
+
 
 .service-content::before {
     position: absolute;
@@ -1969,7 +1972,7 @@ h4.portfolio-top-title:hover {
 /*=====================================
 <-- Cleeny address-area Css -->
 =======================================*/
-.address-area {
+/* .address-area {
     margin-top: -132px;
     position: relative;
     z-index: 1;
@@ -2012,7 +2015,7 @@ h1.address-title {
 
 .address-area .cleeny-btn a {
     padding: 15px 31px 15px;
-}
+} */
 
 /*=====================================
 <--  end cleeny address-area Css -->
@@ -2023,7 +2026,7 @@ h1.address-title {
 /*=====================================
 <--  Cleeny couter-area Css -->
 =======================================*/
-
+/*
 .counter-area {
     position: relative;
     z-index: 1;
@@ -2089,7 +2092,7 @@ span.counter-call i {
     font-weight: 500;
     font-family: "Arimo";
     text-align: center;
-}
+} */
 
 /*=====================================
 <--  end cleeny couter-area Css -->
@@ -2383,7 +2386,7 @@ p.blog-description {
 =======================================*/
 
 .brand-area {
-    background: #5c79eb;
+    background: #102c9c;
     padding: 5px 0 60px;
 }
 
@@ -2760,7 +2763,7 @@ p.footer-title {
 /*=====================================
 <---start header-top-area-css---------->
 =======================================*/
-
+/*
 .header-top-area {
     position: relative;
     z-index: 1;
@@ -2824,7 +2827,7 @@ li.upper::before {
     margin-right: 9px;
     position: relative;
     top: 2px;
-}
+} */
 
 
 /*=====================================
@@ -2832,7 +2835,7 @@ li.upper::before {
 =======================================*/
 
 
-
+/*
 .sticke-upper {
     float: right;
 }
@@ -2911,12 +2914,12 @@ li.upper::before {
     top: 2px;
     margin-left: 7px;
 }
-
+ */
 
 /*=====================================
 <--- Cleeny slider-area-css ---------->
 =======================================*/
-
+/*
 .slider_list {
     margin-top: -80px;
     position: relative;
@@ -3044,7 +3047,7 @@ li.upper::before {
 .slider-area .hero-shape2 {
     right: 49%;
     top: 19%;
-}
+} */
 
 /*=====================================
 <---end slider-area-css---------->
@@ -3464,7 +3467,7 @@ p.contact-text {
 /*=====================================
 <--- Cleeny team-area-css ---------->
 =======================================*/
-
+/*
 .team-area {
     padding: 110px 0 90px;
     background: url("/frontend/assets/images/team-bg.png");
@@ -3630,7 +3633,7 @@ p.team-text {
 
 .tean-single-box:hover .tema-content:after {
     transform: scale(1);
-}
+} */
 
 /*=====================================
 <---end team-area-css---------->
@@ -3691,7 +3694,7 @@ p.team-text {
 
 
 /*<---staet .address-area.style-two-css----->*/
-
+/*
 
 .address-area.style-two {
     margin: 0;
@@ -3708,7 +3711,7 @@ p.team-text {
     background: transparent;
     padding: 0;
 }
-
+ */
 
 /*<---staet .blog-area.style-two-css----->*/
 /*
@@ -3724,7 +3727,7 @@ p.team-text {
 
 
 /*<---start header-top-section.style-three-css----->*/
-
+/*
 .header-top-section.style-three {
     padding: 10px 0 10px;
 }
@@ -3755,11 +3758,11 @@ p.team-text {
     color: #fff;
     font-size: 14px;
     padding: 0 10px 0;
-}
+} */
 
 
 /*<---start header-top-section.style-three-css----->*/
-
+/*
 .cleeny_nav_manu.style-three .cleeny-btn a {
     background: #2F6EFF;
     text-transform: uppercase;
@@ -3783,12 +3786,12 @@ p.team-text {
 .cleeny_nav_manu.style-three .cleeny-btn a:hover {
     color: #00197E;
 }
-
+ */
 
 /*=====================================
 <--- home-three-btn----->
 =======================================*/
-
+/*
 
 .hero-area.style-three .cleeny-btn a {
     background: #306EFF;;
@@ -3840,13 +3843,13 @@ p.team-text {
     width: 100%;
     left: 0;
     transform: scale(1);
-}
+} */
 
 
 /*=====================================
 <--- Cleeny hero-area css ----->
 =======================================*/
-
+/*
 .hero-area.style-three {
     background: url("/frontend/assets/images/hero-bg-2.png");
     background-repeat: no-repeat;
@@ -3941,11 +3944,11 @@ p.team-text {
        transform: translateX(440px);
     }
   }
-
+ */
 
 
 /*<---start-feature-section.style-three-css----->*/
-
+/*
 
 .feature-section.style-three {
     margin: 0;
@@ -4002,11 +4005,11 @@ p.team-text {
 
 .feature-section.style-three .feature-single-box:hover p.feature-text {
     color: #fff;
- }
+ } */
 
 
 /*<---start-about-area.style-three-css----->*/
-
+/*
 .about-area.style-three {
     background: #F3F4F8;
     padding: 0 0 116px;
@@ -4079,11 +4082,11 @@ p.about-text {
 .about-area.style-three .cleeny-btn {
     margin-left: 0;
     margin-top: 43px;
-}
+} */
 
 
 /*<---start-service-area.style-three-css----->*/
-
+/*
 .service-area.style-three {
     background: url("/frontend/assets/images/service-bg3.png");
     background-repeat: no-repeat;
@@ -4238,7 +4241,7 @@ h3.service-title-tow {
 .service-single-box-tow:hover .service-number{
     background: #FFC704;
 }
-
+ */
 
 /*=====================================
 <--- Cleeny team-area style-two-css ----->
@@ -4450,7 +4453,7 @@ p.team-text-two {
 
 
 /*<---start-testimonial-area.style-three-css----->*/
-
+/*
 
 .testimonial-area.style-three {
     background: url("/frontend/assets/images/testi-bg3.png");
@@ -4630,12 +4633,12 @@ p.testi-text-three::before {
 	background: #FEC804;
 	color: #fff;
 }
-
+ */
 
 /*=====================================
 <--- Cleeny counter area css ----->
 =======================================*/
-
+/*
 .row.coun {
     padding: 118px 0 0;
 }
@@ -4673,7 +4676,7 @@ p.counter-text-two {
     font-weight: 500;
     font-family: "Poppins";
     margin: 0;
-}
+} */
 
 /*=====================================
 <---end-counter-area-css----->
@@ -4681,7 +4684,7 @@ p.counter-text-two {
 
 /*<---start-contact-area.style-three-css----->*/
 
-
+/*
 .contact-area.style-three {
     background: url("/frontend/assets/images/contact-bg2.png");
     background-repeat: no-repeat;
@@ -4791,13 +4794,13 @@ p.counter-text-two {
 
 .quote_button button:hover {
     color: #fff;
-}
+} */
 
 
 /*=====================================
 <--- Cleeny breatcome-area-css ----->
 =======================================*/
-
+/*
 .breatcome-area {
     background: url("/frontend/assets/images/breatcome-bg.png");
     background-repeat: no-repeat;
@@ -4886,7 +4889,7 @@ li.upper {
     width: 100%;
     height: 100%;
     z-index: -1;
-}
+} */
 
 /*=====================================
 <---end-breatcome-area-css----->
@@ -4895,16 +4898,16 @@ li.upper {
 
 /*<---start-address-area.style-three-css----->*/
 
-
+/*
 .address-area.style-three {
     margin-top: -231px;
     padding: 120px 0 0;
     position: relative;
     z-index: 1;
-}
+} */
 
 /*<---start-service-area.style-two.upper-css----->*/
-
+/*
 .service-area.style-two.upper {
     background: #F3F3F7;
     padding: 110px 0 259px;
@@ -4954,7 +4957,7 @@ li.upper {
 
 .service-area.style-two.upper .service-single-box:hover .service-icon {
     filter: brightness(0) invert(1);
-}
+} */
 
 
 /*<---start-team-area.style-three-css----->*/

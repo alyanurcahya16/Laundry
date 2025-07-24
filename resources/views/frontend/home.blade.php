@@ -49,7 +49,7 @@
 </head>
 
 <body>
-    <!-- Start cleeny hero Area -->
+<!-- Start cleeny hero Area -->
     <div class="hero-area d-flex align-items-center">
         <div class="container">
             <div class="row hero align-items-center">
@@ -80,7 +80,7 @@
             <img src="{{ asset('frontend/assets/images/hero-shape2.png') }}" alt="hero-shape2">
         </div>
     </div>
-    <!-- end cleeny hero Area -->
+<!-- end cleeny hero Area -->
 
 
     <!-- Start cleeny feature Area (Customized for Laundry) -->
@@ -256,8 +256,7 @@
 
     <!-- end cleeny about Area -->
 
-    <!-- start cleeny service Area -->
-
+<!-- start cleeny service Area -->
     <div class="service-area">
         <div class="container">
             <div class="row">
@@ -372,8 +371,7 @@
             </div>
         </div>
     </div>
-
-    <!-- end cleeny service Area -->
+<!-- end cleeny service Area -->
 
     <!-- Daftar Harga -->
     <div class="price-section">
