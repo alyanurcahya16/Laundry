@@ -39,6 +39,16 @@
                 </div>
             </div>
         </div>
+        <div class="col-md-3">
+    <div class="card shadow-sm border-start border-warning border-4">
+        <div class="card-body">
+            <h6 class="text-muted">Registrasi Hotel</h6>
+            <h3>{{ $totalRegistrasiHotel }}</h3>
+            <i class="fas fa-hotel text-warning fa-2x"></i>
+        </div>
+    </div>
+</div>
+
     </div>
 </div>
 @endsection

@@ -29,12 +29,15 @@
                         <td>{{ $item->alamat_hotel }}</td>
                         <td>{{ $item->jabatan_pic }}</td>
                         <td>
-                            <form action="{{ route('admin.registrasi.destroy', $item->id) }}" method="POST" onsubmit="return confirm('Yakin ingin menghapus data ini?')">
-                                @csrf
-                                @method('DELETE')
-                                <button class="btn btn-sm btn-danger">Hapus</button>
-                            </form>
-                        </td>
+    <div class="d-flex gap-2">
+        <a href="{{ route('admin.registrasi-hotel.edit', $item->id) }}" class="btn btn-sm btn-primary">Edit</a>
+        <form action="{{ route('admin.registrasi-hotel.destroy', $item->id) }}" method="POST" onsubmit="return confirm('Yakin ingin menghapus data ini?')">
+            @csrf
+            @method('DELETE')
+            <button class="btn btn-sm btn-danger">Hapus</button>
+        </form>
+    </div>
+</td>
                     </tr>
                     @endforeach
                 </tbody>
