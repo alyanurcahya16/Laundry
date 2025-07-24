@@ -46,6 +46,7 @@ Route::get('/testimoni', function () {$testimoni = Testimoni::all();return view(
 Route::get('/testimoni', [FrontendTestimoniController::class, 'index'])->name('frontend.testimoni.index');
 Route::post('/testimoni', [FrontendTestimoniController::class, 'store'])->name('frontend.testimoni.store');
 
+
 Route::prefix('testimoni')->name('frontend.testimoni.')->group(function () {
     Route::get('/', [TestimoniController::class, 'index'])->name('index');
     Route::post('/', [TestimoniController::class, 'store'])->name('store');
@@ -60,8 +61,9 @@ Route::prefix('admin/orders')->group(function() {
     Route::post('/{order}/move-to-history', [OrderController::class, 'moveToHistory'])->name('admin.orders.moveToHistory');
     Route::put('/{order}/status', [OrderController::class, 'updateStatus'])->name('admin.orders.updateStatus');
 });
-Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
+Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(function () {
     Route::get('/registrasi-hotel', [HotelRegistrasiController::class, 'index'])->name('admin.registrasi.index');
+    Route::resource('registrasi-hotel', HotelRegistrasiController::class);
     Route::delete('/admin/registrasi-hotel/{id}', [HotelRegistrasiController::class, 'destroy'])->name('admin.registrasi.destroy');
     Route::get('/dashboard', [\App\Http\Controllers\DashboardController::class, 'index'])->name('admin.dashboard');
     Route::get('/order', [OrderController::class, 'index'])->name('admin.order.index');

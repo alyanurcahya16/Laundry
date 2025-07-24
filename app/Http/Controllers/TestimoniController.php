@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Testimoni;
+use Illuminate\Support\Facades\Storage;
 
 class TestimoniController extends Controller
 {
@@ -63,8 +64,13 @@ class TestimoniController extends Controller
     }
 
     public function destroy(Testimoni $testimoni)
-    {
-        $testimoni->delete();
-        return redirect()->route('testimoni.index')->with('success', 'Testimoni berhasil dihapus.');
+{
+    if ($testimoni->gambar && \Storage::disk('public')->exists($testimoni->gambar)) {
+        \Storage::disk('public')->delete($testimoni->gambar);
     }
+
+    $testimoni->delete();
+
+    return redirect()->route('testimoni.index')->with('success', 'Testimoni berhasil dihapus.');
+}
 }

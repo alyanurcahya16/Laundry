@@ -744,26 +744,23 @@
                     <i class="fas fa-history"></i>History
                 </a>
             
-        <a href="/admin/testimoni"><i class="fas fa-comments"></i> Testimonials</a>
+        
 
-        <a href="/registrasi-hotel"><i class="fas fa-comments"></i> Registrasi Hotel</a>
+        <a href="/admin/registrasi-hotel"><i class="fas fa-comments"></i> Registrasi Hotel</a>
+
 
         <!-- Layout (dropdown) -->
        <a href="javascript:void(0)" onclick="toggleLayoutMenu()" class="{{ $layoutActive ? 'active' : '' }}">
-    <i class="fas fa-layer-group"></i> Layout <i class="fas fa-chevron-down float-end"></i>
+    <i class="fas fa-layer-group"></i> Layout Untuk Frontend<i class="fas fa-chevron-down float-end"></i>
 </a>
 
 
         <!-- Submenu: Layout children -->
         <div id="layoutSubmenu" style="display: '{{ $layoutActive ? 'block' : 'none' }}'; padding-left: 20px;">
-            <a href="/admin/settings"><i class="fas fa-sliders-h"></i> Settings</a>
+            <a href="/admin/testimoni"><i class="fas fa-comments"></i> Testimonials</a>
             <a href="/admin/banners"><i class="fas fa-image"></i> Banners</a>
             <a href="/admin/about"><i class="fas fa-info-circle"></i> About Us</a>
-            <a href="/admin/appointments"><i class="fas fa-calendar-check"></i> Appointments</a>
             <a href="/admin/services"><i class="fas fa-cog"></i> Services</a>
-            <a href="/admin/workingprocess"><i class="fas fa-tasks"></i> Working Process</a>
-            <a href="/admin/porto"><i class="fas fa-briefcase"></i> Portfolio</a>
-            
             <a href="/admin/sponsor"><i class="fas fa-handshake"></i> Sponsors</a>
         </div>
     </div>
@@ -783,7 +780,7 @@
         <div class="topbar-right">
         
 
-    <form method="GET" action="{{ route('admin.orders.index') }}" class="search-box">
+    <form method="GET" action="/admin/orders" class="search-box">
         <div class="input-group">
             <input type="text" name="q" class="form-control" placeholder="Cari pesanan..." value="{{ request('q') }}">
             <button class="btn btn-outline-light px-3 py-2" type="submit" style="backdrop-filter: blur(8px); background-color: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.3); color: white; font-weight: bold;">
