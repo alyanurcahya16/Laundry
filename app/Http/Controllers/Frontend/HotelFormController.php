@@ -14,22 +14,23 @@ class HotelFormController extends Controller
         return view('frontend.hotel_form');
     }
 
-    public function store(Request $request)
-    {
-        $request->validate([
-            'nama_perusahaan' => 'required',
-            'nama_hotel' => 'required',
-            'nama_pic' => 'required',
-            'nomor_pic' => 'required',
-            'nik_pic' => 'required',
-            'alamat_hotel' => 'required',
-            'jabatan_pic' => 'required',
-        ]);
+   public function store(Request $request)
+{
+    $validated = $request->validate([
+        'nama_perusahaan' => 'required',
+        'nama_hotel' => 'required',
+        'nama_pic' => 'required',
+        'nomor_pic' => 'required',
+        'nik_pic' => 'required',
+        'alamat_hotel' => 'required',
+        'jabatan_pic' => 'required',
+    ]);
 
-        RegistrasiHotel::create($request->all());
+    RegistrasiHotel::create($validated);
 
-        return redirect()->route('hotel.thankyou');
-    }
+    return redirect()->route('hotel.thankyou');
+}
+
 
     
     

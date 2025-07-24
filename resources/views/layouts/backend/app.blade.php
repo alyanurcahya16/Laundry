@@ -746,7 +746,7 @@
             
         
 
-        <a href="/registrasi-hotel"><i class="fas fa-comments"></i> Registrasi Hotel</a>
+        <a href="registrasi-hotel"><i class="fas fa-comments"></i> Registrasi Hotel</a>
 
         <!-- Layout (dropdown) -->
        <a href="javascript:void(0)" onclick="toggleLayoutMenu()" class="{{ $layoutActive ? 'active' : '' }}">

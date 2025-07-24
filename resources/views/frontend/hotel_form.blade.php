@@ -245,7 +245,8 @@
             Data berhasil dikirim! Terima kasih atas registrasi Anda.
         </div>
 
-        <form action="/submit-hotel" method="POST" id="hotelForm">
+            <form action="{{ route('hotel.form.submit') }}" method="POST" id="hotelForm">
+            @csrf
             <div class="form-group">
                 <label for="nama_perusahaan">Nama Perusahaan</label>
                 <div class="input-wrapper">
@@ -296,8 +297,8 @@
             </div>
 
             <button type="submit" class="submit-btn">
-                Kirim Registrasi
-            </button>
+        Kirim Registrasi
+    </button>
         </form>
     </div>
 
@@ -325,27 +326,7 @@
             });
         });
 
-        // Form submission handling (demo)
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-
-            // Add loading state
-            form.classList.add('loading');
-            submitBtn.textContent = 'Mengirim...';
-
-            // Simulate form submission
-            setTimeout(() => {
-                form.classList.remove('loading');
-                successMessage.style.display = 'block';
-                submitBtn.textContent = 'Kirim Registrasi';
-                form.reset();
-
-                // Hide success message after 5 seconds
-                setTimeout(() => {
-                    successMessage.style.display = 'none';
-                }, 5000);
-            }, 2000);
-        });
+       
     </script>
 </body>
 </html>
