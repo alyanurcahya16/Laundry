@@ -31,7 +31,6 @@
 28. Cleeny service details css
 29. Cleeny Scrollup Section
 30. Cleeny Loader Css
-31. Cleeny Search Popup
 
 =======================*/
 
@@ -416,7 +415,7 @@ nav.cleeny_menu span {
 } */
 
 .cleeny-btn {
-    margin-left: 60px;
+    margin-left: 3.75em; /* 60px jika 1em = 16px */
 }
 
 .cleeny-btn a {
@@ -425,14 +424,14 @@ nav.cleeny_menu span {
     background: #FFC703;
     transition: all 0.5s ease 0s;
     z-index: 1;
-    padding: 13px 30px 13px;
+    padding: 0.8125em 1.875em; /* 13px 30px */
     text-decoration: none;
     position: relative;
-    border-radius: 30px;
-    font-size: 15px;
+    border-radius: 1.875em; /* 30px */
+    font-size: clamp(0.9em, 1.2vw, 1.05em); /* Responsif */
     color: #141840;
     font-weight: 500;
-    font-family: "Poppins";
+    font-family: "Poppins", sans-serif;
 }
 
 .cleeny-btn a::before {
@@ -449,24 +448,20 @@ nav.cleeny_menu span {
 }
 
 .cleeny-btn a::after {
-	content: "";
-	background: #2F6EFF;
-	height: 50%;
-	width: 0;
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	left: auto;
-	transition: .5s;
-	z-index: -1;
+    content: "";
+    background: #2F6EFF;
+    height: 50%;
+    width: 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: auto;
+    transition: .5s;
+    z-index: -1;
 }
 
-.sticky .cleeny-btn a::before {
-    background: #FFC703;
-    border-radius: 0;
-}
-
-.sticky .cleeny-btn a:after {
+.sticky .cleeny-btn a::before,
+.sticky .cleeny-btn a::after {
     background: #FFC703;
     border-radius: 0;
 }
@@ -489,16 +484,17 @@ nav.cleeny_menu span {
 }
 
 .cleeny-btn a:hover::before {
-	width: 100%;
-	right: 0;
-	left: auto;
+    width: 100%;
+    right: 0;
+    left: auto;
 }
 
 .cleeny-btn a:hover::after {
-	width: 100%;
-	left: 0;
-	right: auto;
+    width: 100%;
+    left: 0;
+    right: auto;
 }
+
 .cleeny-btn a:hover {
     color: #fff;
 }
@@ -506,9 +502,8 @@ nav.cleeny_menu span {
 /*=====================================
 <--  Cleeny hero Area Css -->
 =======================================*/
-
 .hero-area {
-    height: 814px;
+    height: 51em; /* ≈ 814px */
     background: url("/frontend/assets/images/hero-bg.png");
     background-repeat: no-repeat;
     background-position: center;
@@ -520,26 +515,26 @@ nav.cleeny_menu span {
 
 .hero-thumb {
     text-align: right;
-    margin-right: -75px;
-    margin-top: -20px;
+    margin-right: -4.7em; /* -75px */
+    margin-top: -1.25em;  /* -20px */
 }
 
 .hero-contant h5 {
-    font-size: 18px;
+    font-size: clamp(1em, 1.4vw, 1.125em); /* 18px */
     text-transform: uppercase;
     color: #ffc804;
     font-weight: 500;
-    font-family: "Poppins";
-    margin-bottom: 10px;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 0.625em; /* 10px */
 }
 
 .hero-contant h1 {
-    font-size: 65px;
-    line-height: 72px;
+    font-size: clamp(2.5em, 5vw, 4.063em); /* 65px */
+    line-height: 1.1em;
     text-transform: uppercase;
     color: #ffffff;
     font-weight: 800;
-    font-family: "Poppins";
+    font-family: "Poppins", sans-serif;
 }
 
 .hero-contant span {
@@ -547,20 +542,20 @@ nav.cleeny_menu span {
 }
 
 .hero-contant p {
-    opacity: 0.800;
-    font-size: 16px;
-    line-height: 28px;
+    opacity: 0.8;
+    font-size: clamp(0.95em, 1.2vw, 1em); /* 16px */
+    line-height: 1.75em;
     color: #ffffff;
     font-weight: 300;
-    font-family: "Poppins";
+    font-family: "Poppins", sans-serif;
     width: 84%;
     margin: 0;
-    padding: 12px 0 34px;
+    padding: 0.75em 0 2.125em; /* 12px 0 34px */
 }
+
 .cleeny-btn {
     margin-left: 80%;
-    padding : 0;
-
+    padding: 0;
 }
 
 .hero-area .cleeny-btn {
@@ -569,28 +564,24 @@ nav.cleeny_menu span {
 
 .hero-area .cleeny-btn a i {
     display: inline-block;
-    font-size: 18px;
+    font-size: 1.125em; /* 18px */
     position: relative;
-    top: 2px;
-    margin-left: 4px;
+    top: 0.125em; /* 2px */
+    margin-left: 0.25em; /* 4px */
 }
 
 .hero-area .cleeny-btn a {
     background: #FFC703;
-    padding: 16px 36px 16px;
+    padding: 1em 2.25em; /* 16px 36px */
     color: #fff;
+    font-size: clamp(0.9em, 1.1vw, 1em);
 }
 
 .hero-shape {
     position: absolute;
     left: 47%;
     top: 70%;
-    -webkit-animation-name: rotateme;
-    -webkit-animation-duration: 15s;
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
-    -webkit-animation-timing-function: linear;
-    animation-timing-function: linear;
+    animation: rotateme 15s linear infinite;
 }
 
 .hero-shape2 {
@@ -607,8 +598,6 @@ nav.cleeny_menu span {
 
 .hero-shape2 img {
     animation: dance 3s alternate infinite;
-    -webkit-animation: dance 2s alternate infinite;
-    animation: dance 3s alternate infinite;
 }
 
 .hero-contact {
@@ -624,29 +613,29 @@ nav.cleeny_menu span {
 }
 
 .hero-text h1 {
-    font-size: 16px;
+    font-size: clamp(0.9em, 1vw, 1em); /* 16px */
     font-weight: 600;
-    font-family: "Poppins";
+    font-family: "Poppins", sans-serif;
     margin-bottom: 0;
     display: inline-block;
-    line-height: 34px;
+    line-height: 2.125em; /* 34px */
 }
 
 h3.hero-title {
-    font-size: 15px;
+    font-size: clamp(0.85em, 1vw, 0.95em); /* 15px */
     color: #ffffff;
-    /* font-weight: 600; */
-    font-family: "Poppins";
-    line-height: 28px;
+    font-family: "Poppins", sans-serif;
+    line-height: 1.75em;
     align-items: center;
 }
 
 h3.hero-title i {
     display: inline-block;
     color: #FFC703;
-    font-size: 20px;
-    margin-right: 4px;
+    font-size: 1.25em; /* 20px */
+    margin-right: 0.25em; /* 4px */
 }
+
 
 /*=====================================
 <--  end cleeny hero Area Css -->
@@ -658,35 +647,34 @@ h3.hero-title i {
 /*=====================================
 <--  Cleeny section-title Area Css -->
 =======================================*/
-
 h5.section-sub-title {
-    font-size: 16px;
+    font-size: clamp(0.95em, 1.1vw, 1em); /* ≈16px */
     text-transform: uppercase;
     color: #2f6eff;
     font-weight: 500;
-    font-family: "Poppins";
-    margin-bottom: 10px;
-    line-height: 28px;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 0.625em; /* 10px */
+    line-height: 1.75em; /* 28px */
 }
 
 h1.section-main-title {
-    font-size: 44px;
-    line-height: 54px;
+    font-size: clamp(2.2em, 4vw, 2.75em); /* 44px */
+    line-height: 1.23em; /* ≈54px */
     color: #00197e;
     font-weight: 700;
-    font-family: "Poppins";
+    font-family: "Poppins", sans-serif;
     margin: 0;
 }
 
 p.section-title-descr {
-    font-size: 16px;
-    line-height: 26px;
+    font-size: clamp(0.95em, 1vw, 1em); /* ≈16px */
+    line-height: 1.625em; /* ≈26px */
     color: #3a4268;
     font-weight: 300;
-    font-family: "Poppins";
+    font-family: "Poppins", sans-serif;
     width: 96%;
     margin: 0;
-    padding: 10px 0 24px;
+    padding: 0.625em 0 1.5em; /* 10px 0 24px */
 }
 
 .service-area h1.section-main-title {
@@ -694,7 +682,7 @@ p.section-title-descr {
 }
 
 .section-title.text-center {
-    margin-bottom: 57px;
+    margin-bottom: 3.56em; /* 57px */
 }
 
 .service-area h5.section-sub-title {
@@ -704,31 +692,31 @@ p.section-title-descr {
 .work-area p.section-title-descr {
     width: 51%;
     margin: auto;
-    padding: 18px 0 0;
+    padding: 1.125em 0 0; /* 18px */
 }
 
 .section-title.text-left {
-    margin-bottom: 58px;
+    margin-bottom: 3.625em; /* 58px */
 }
 
 .contact-area .section-title.text-left {
-    margin-bottom: 31px;
+    margin-bottom: 1.94em; /* 31px */
 }
 
 .portfolio-area .section-title.text-left {
-    padding: 0 0 0 301px;
+    padding: 0 0 0 18.8em; /* 301px */
 }
 
 .about-area .section-title.text-left {
     margin-bottom: 0;
 }
-/*
-.pricing-area .section-title.text-center {
-    margin-bottom: 81px;
+
+/* .pricing-area .section-title.text-center {
+    margin-bottom: 5.06em;
 } */
 
 .testimonial-area.style-four .section-title.text-center {
-    margin-bottom: 47px;
+    margin-bottom: 2.94em; /* 47px */
 }
 
 .testimonial-area h5.section-sub-title {
@@ -780,20 +768,20 @@ p.section-title-descr {
 }
 
 .team-area .section-title.text-center {
-    margin-bottom: 47px;
+    margin-bottom: 2.94em; /* 47px */
 }
 
 .section-title.style-two.text-left h1.section-main-title {
-    font-size: 50px;
-    line-height: 65px;
+    font-size: clamp(2.5em, 5vw, 3.125em); /* 50px */
+    line-height: 1.3em; /* 65px */
 }
 
 .section-title.style-two.text-left h5.section-sub-title {
-    font-size: 18px;
-    padding-left: 36px;
+    font-size: clamp(1em, 1.3vw, 1.125em); /* 18px */
+    padding-left: 2.25em; /* 36px */
     position: relative;
     z-index: 1;
-    margin-bottom: 14px;
+    margin-bottom: 0.875em; /* 14px */
     color: #FEC804;
 }
 
@@ -828,9 +816,9 @@ p.section-title-descr {
 }
 
 .section-title.style-two.text-left p.section-title-descr {
-    line-height: 28px;
+    line-height: 1.75em; /* 28px */
     width: 94%;
-    padding: 10px 0 18px;
+    padding: 0.625em 0 1.125em; /* 10px 0 18px */
 }
 
 .service-area.style-three .section-title.style-two.text-left p.section-title-descr {
@@ -839,11 +827,11 @@ p.section-title-descr {
 }
 
 .service-area.style-three .section-title.style-two.text-left {
-    margin-bottom: 37px;
+    margin-bottom: 2.31em; /* 37px */
 }
 
 h5.section-sub-title.style-two {
-    font-size: 18px;
+    font-size: clamp(1em, 1.3vw, 1.125em); /* 18px */
     color: #306EFF;
     position: relative;
     z-index: 1;
@@ -853,18 +841,7 @@ h5.section-sub-title.style-two {
     color: #FFC704;
 }
 
-h5.section-sub-title.style-two::before {
-    position: absolute;
-    content: "";
-    height: 100%;
-    width: 100%;
-    background: url("/frontend/assets/images/cleaning-shapes.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    left: 86px;
-    top: -1px;
-}
-
+h5.section-sub-title.style-two::before,
 h5.section-sub-title.style-two::after {
     position: absolute;
     content: "";
@@ -873,38 +850,34 @@ h5.section-sub-title.style-two::after {
     background: url("/frontend/assets/images/cleaning-shapes.png");
     background-repeat: no-repeat;
     background-position: center;
-    right: 86px;
-    top: -1px;
+    top: -0.0625em; /* -1px */
+}
+
+h5.section-sub-title.style-two::before {
+    left: 5.375em; /* 86px */
+}
+
+h5.section-sub-title.style-two::after {
+    right: 5.375em; /* 86px */
+}
+
+.portfolio-area.style-three h5.section-sub-title.style-two::before,
+.portfolio-area.style-three h5.section-sub-title.style-two::after {
+    background: url("/frontend/assets/images/cleaning-shapes2.png");
 }
 
 .portfolio-area.style-three h5.section-sub-title.style-two::before {
-    position: absolute;
-    content: "";
-    height: 100%;
-    width: 100%;
-    background: url("/frontend/assets/images/cleaning-shapes2.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    left: 86px;
-    top: -1px;
+    left: 5.375em;
 }
 
 .portfolio-area.style-three h5.section-sub-title.style-two::after {
-    position: absolute;
-    content: "";
-    height: 100%;
-    width: 100%;
-    background: url("/frontend/assets/images/cleaning-shapes2.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    right: 86px;
-    top: -1px;
+    right: 5.375em;
 }
 
 .section-title.style-two.text-center h1.section-main-title {
     color: #00197e;
-    font-size: 50px;
-    line-height: 71px;
+    font-size: clamp(2.5em, 5vw, 3.125em); /* 50px */
+    line-height: 1.42em; /* 71px */
 }
 
 .section-title.style-two.text-center h1.section-main-title span {
@@ -913,12 +886,12 @@ h5.section-sub-title.style-two::after {
 
 .section-title.style-two.text-center p.section-title-descr {
     width: 48%;
-    padding: 13px 0 24px;
+    padding: 0.8125em 0 1.5em; /* 13px 0 24px */
     margin: auto;
 }
 
 .section-title.style-two.text-center {
-    margin-bottom: 29px;
+    margin-bottom: 1.8125em; /* 29px */
 }
 
 .portfolio-area.style-three .section-title.style-two.text-center p.section-title-descr {
@@ -930,7 +903,7 @@ h5.section-sub-title.style-two::after {
 }
 
 .testimonial-area.style-three .section-title.style-two.text-left {
-    margin-bottom: 49px;
+    margin-bottom: 3.063em; /* 49px */
 }
 
 .service-area.style-two.upper h5.section-sub-title {
@@ -943,11 +916,17 @@ h5.section-sub-title.style-two::after {
 
 .service-area.style-two.upper .section-title.text-left p {
     margin: 0;
-    margin-top: 44px;
+    margin-top: 2.75em; /* 44px */
 }
 
 .faq-area .section-title.text-left {
-    margin-bottom: 41px;
+    margin-bottom: 2.563em; /* 41px */
+}
+@media (max-width: 768px) {
+    .section-title.style-two.text-center p.section-title-descr,
+    .portfolio-area.style-three .section-title.style-two.text-center p.section-title-descr {
+        width: 90%;
+    }
 }
 
 /*=====================================
@@ -960,7 +939,7 @@ h5.section-sub-title.style-two::after {
 <--  Cleeny feature Area Css -->
 =======================================*/
 .feature-section {
-    margin-top: -40px;
+    margin-top: -2.5em;
     position: relative;
     z-index: 1;
 }
@@ -968,17 +947,17 @@ h5.section-sub-title.style-two::after {
 .feature-single-box {
     background: #f3f4f8;
     border-radius: 5px;
-    padding: 21px 35px 32px;
+    padding: 1.3em 2.2em 2em;
     position: relative;
     z-index: 1;
     transition: .5s;
-    margin-bottom: 30px;
+    margin-bottom: 1.875em;
 }
 
 .feature-single-box::before {
     position: absolute;
     content: "";
-    height: 5px;
+    height: 0.3125em;
     width: 100%;
     background: #2F6DFF;
     left: 0;
@@ -990,11 +969,11 @@ h5.section-sub-title.style-two::after {
 }
 
 .feature-icon {
-    margin: 19px 27px 0 0;
+    margin: 1.2em 1.7em 0 0;
 }
 
 h3.feature-title {
-    font-size: 22px;
+    font-size: 1.375em;
     color: #00197e;
     font-weight: 600;
     font-family: "Poppins";
@@ -1003,8 +982,8 @@ h3.feature-title {
 }
 
 p.feature-text {
-    font-size: 15px;
-    line-height: 26px;
+    font-size: 0.9375em;
+    line-height: 1.625em;
     color: #3a4268;
     font-weight: 400;
     font-family: "Poppins";
@@ -1016,42 +995,76 @@ p.feature-text {
     transform: scale(1);
 }
 
-.feature-single-box:hover{
+.feature-single-box:hover {
     background: #fff;
-    margin-top: -10px;
+    margin-top: -0.625em;
 }
 
-/*=====================================
-<--  end cleeny feature Area Css -->
-=======================================*/
+/* Patnership Area */
 .patnership-area {
     background: url("/frontend/assets/images/testi-bg.png");
-    padding: 111px 0 109px;
+    padding: 6.9em 0 6.8em;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
-/*=====================================
-<--  Cleeny about Area Css -->
-=======================================*/
+.patnership-area .cleeny-btn {
+    margin-left: -0.625em;
+}
 
+.patnership-area .cleeny-btn a::before,
+.patnership-area .cleeny-btn a::after {
+    background: #FFC704;
+}
+.patnership-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.patnership-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.625em;
+    color: #ffffff;
+    font-size: 0.9375em;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 0.625em;
+    line-height: 1.4;
+    position: relative;
+    padding-left: 1.25em;
+}
+
+.patnership-list li::before {
+    content: "•";
+    color: #FFC704;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+
+/* About Area */
 .about-area {
-    padding: 88px 0 120px;
+    padding: 5.5em 0 7.5em;
     position: relative;
 }
 
 .about-thumb {
-    margin-left: -41px;
+    margin-left: -2.56em;
     position: relative;
     z-index: 1;
 }
+
 .about-thumb .bg-image {
     width: 100%;
     display: block;
     position: relative;
     z-index: 1;
 }
+
 .about-shape {
     position: absolute;
     top: 19%;
@@ -1062,12 +1075,7 @@ p.feature-text {
     position: absolute;
     top: 13%;
     right: 13%;
-    -webkit-animation-name: rotateme;
-    -webkit-animation-duration: 15s;
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
-    -webkit-animation-timing-function: linear;
-    animation-timing-function: linear;
+    animation: ripple-blue 15s linear infinite;
 }
 
 .video-icon {
@@ -1079,86 +1087,75 @@ p.feature-text {
 .video-icon a i {
     display: inline-block;
     color: #fff;
-    font-size: 30px;
+    font-size: 1.2em;
     background: #2f6eff;
-    height: 90px;
-    width: 90px;
-    line-height: 82px;
+    height: 4.5em;
+    width: 4.5em;
+    line-height: 4.2em;
     text-align: center;
     border-radius: 50%;
-    -webkit-animation: ripple-white 1s linear infinite;
     animation: ripple-blue 1s linear infinite;
-    -webkit-transition: .5s;
-    border: 4px solid #fff;
+    transition: .5s;
+    border: 0.25em solid #fff;
 }
 
 .slider10 .video-icon2 a {
     border-radius: 0;
 }
-@-webkit-keyframes ripple-blue {
-    0% {
-        -webkit-box-shadow: 0 0 0 0 rgba(48,110,255,0.2), 0 0 0 10px rgba(48,110,255,0.2), 0 0 0 20px rgba(48,110,255,0.2);
-        box-shadow: 0 0 0 0 rgba(48,110,255,0.2), 0 0 0 10px rgba(48,110,255,0.2), 0 0 0 20px rgba(48,110,255,0.2)
-    }
-    100% {
-        -webkit-box-shadow: 0 0 0 10px rgba(48,110,255,0.2), 0 0 0 20px rgba(48,110,255,0.2), 0 0 0 30px rgba(48,110,255,0.2);
-        box-shadow: 0 0 0 10px rgba(48,110,255,0.2), 0 0 0 20px rgba(48,110,255,0.2), 0 0 0 30px rgba(48,110,255,0.2)
-    }
-}
 
 @keyframes ripple-blue {
     0% {
-        -webkit-box-shadow: 0 0 0 0 rgba(48,110,255,0.2), 0 0 0 10px rgba(48,110,255,0.2), 0 0 0 20px rgba(48,110,255,0.2);
-        box-shadow: 0 0 0 0 rgba(48,110,255,0.2), 0 0 0 10px rgba(48,110,255,0.2), 0 0 0 20px rgba(48,110,255,0.2)
+        box-shadow: 0 0 0 0 rgba(48,110,255,0.2), 0 0 0 0.625em rgba(48,110,255,0.2), 0 0 0 1.25em rgba(48,110,255,0.2);
     }
     100% {
-        -webkit-box-shadow: 0 0 0 10px rgba(48,110,255,0.2), 0 0 0 20px rgba(48,110,255,0.2), 0 0 0 30px rgba(48,110,255,0.2);
-        box-shadow: 0 0 0 10px rgba(48,110,255,0.2), 0 0 0 20px rgba(48,110,255,0.2), 0 0 0 30px rgba(48,110,255,0.2)
+        box-shadow: 0 0 0 0.625em rgba(48,110,255,0.2), 0 0 0 1.25em rgba(48,110,255,0.2), 0 0 0 1.875em rgba(48,110,255,0.2);
     }
 }
 
-
 ul.about-list {
     margin-right: 18%;
+    padding: 0;
 }
 
 ul.about-list li {
     list-style: none;
-    padding: 0 0 13px;
-    font-size: 16px;
+    display: flex;
+    align-items: flex-start; /* sejajarkan ikon dan teks atasnya */
+    gap: 0.75em;
+    margin-bottom: 0.625em; /* spasi antar item */
+    font-size: 0.9375em; /* sedikit lebih kecil dari 1em */
     color: #00197e;
     font-weight: 400;
-    font-family: "Poppins";
+    font-family: "Poppins", sans-serif;
+    line-height: 1.4;
 }
 
 ul.about-list li i {
-    display: inline-block;
     color: #2F6DFF;
-    font-size: 20px;
-    position: relative;
-    top: 2px;
-    margin-right: 14px;
+    font-size: 1em;
+    line-height: 1.2;
+    margin-top: 0.1em; /* supaya lebih sejajar */
 }
 
 .counter-single-box {
     text-align: center;
     background: #FFC704;
-    padding: 30px 28px 25px;
-    border-radius: 10px;
+    padding: 1.875em 1.75em 1.5625em;
+    border-radius: 0.625em;
 }
 
 .counter-number h1 {
-    font-size: 36px;
+    font-size: 2.25em;
     color: #00197e;
     font-weight: 700;
     font-family: "Poppins";
     margin: 0;
-    padding: 12px 0 0;
+    padding: 0.75em 0 0;
     display: inline-block;
 }
 
 p.counter-text {
-    font-size: 16px;
+    font-size: 1em;
     color: #3a4268;
     font-weight: 300;
     font-family: "Poppins";
@@ -1167,29 +1164,25 @@ p.counter-text {
 
 .about-area .cleeny-btn {
     margin-left: 0;
-    margin-top: -48px;
-    padding: 20px 0;
+    margin-top: -3em;
+    padding: 1.25em 0;
 }
 
 .about-area .cleeny-btn a i {
     display: inline-block;
-    font-size: 18px;
+    font-size: 1.125em;
     position: relative;
-    top: 2px;
-    margin-left: 4px;
-
+    top: 0.125em;
+    margin-left: 0.25em;
 }
 
 .about-area .cleeny-btn a {
     background: #2F6EFF;
-    padding: 14px 35px 15px;
+    padding: 0.875em 2.2em 0.9375em;
     color: #fff;
 }
 
-.about-area .cleeny-btn a::before {
-    background: #FFC704;
-}
-
+.about-area .cleeny-btn a::before,
 .about-area .cleeny-btn a::after {
     background: #FFC704;
 }
@@ -1198,176 +1191,91 @@ p.counter-text {
 <--  end cleeny about Area Css -->
 =======================================*/
 
+.floating-icons {
+    position: fixed;
+    right: 2em;
+    top: 80%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 0.625em;
+}
 
- .floating-icons {
-            position: fixed;
-            right: 30px;
-            top: 80%;
-            transform: translateY(-50%);
-            z-index: 1000;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
+.floating-icon {
+    width: 3.125em;
+    height: 3.125em;
+    border-radius: 50%;
+    background: #306EFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2em;
+    box-shadow: 0 0.25em 0.9375em rgba(102, 126, 234, 0.4);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
 
-        .floating-icon {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: #306EFF;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.2rem;
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-
-        .floating-icon:hover {
-            transform: scale(1.1);
-            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
-        }
-/*=====================================
-<--  Cleeny service Area Css -->
-=======================================*/
+.floating-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0.5em 1.5625em rgba(102, 126, 234, 0.6);
+}
 
 .service-area {
-    background: url("/frontend/assets/images/service-bg.png");
-    background-repeat: no-repeat;
+    background: url("/frontend/assets/images/service-bg.png") no-repeat;
     background-size: cover;
-    padding: 108px 0 111px;
+    padding: 6.75em 0 6.9375em;
     position: relative;
     z-index: 1;
 }
+
 .service-area .row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-}
-.service-single-box {
-  flex: 1 1 calc(33.333% - 30px); /* untuk 3 kolom */
-  display: flex;
-  flex-direction: column;
-}
-
-.contact-from {
-    padding: 0 0 110px;
-}
-
-.form_box input {
-    width: 100%;
-    font-size: 15px;
-    color: #3a4268;
-    font-weight: 300;
-    font-family: "Poppins";
-    outline: 0;
-    border-radius: 5px;
-    border: 1px solid #fff !important;
-    height: 60px;
-    padding: 0 25px 0;
-}
-
-.form_box input::placeholder {
-	font-size: 15px;
-    line-height: 80px;
-    color: #3a4268;
-    font-weight: 300;
-}
-
-.form_field_inner {
-    margin-top: -26px;
-}
-
-.form_field_inner.style-two {
-    margin: 0;
-}
-
-.form_field_inner select {
-    width: 100%;
-    height: 60px;
-    border-radius: 5px;
-    outline: 0;
-    padding: 0 22px 0;
-    margin-top: 0;
-    font-size: 15px;
-    line-height: 80px;
-    color: #3a4268;
-    font-weight: 300;
-    font-family: "Poppins";
-}
-
-.contact-form-button button {
-    width: 100%;
-    height: 60px;
-    outline: 0;
-    border: none;
-    border-radius: 5px;
-    background: #FFC704;
-    font-size: 15px;
-    line-height: 42px;
-    color: #141840;
-    font-weight: 500;
-    font-family: "Poppins";
-    position: relative;
-    z-index: 1;
-    transition: .5s;
-}
-
-.contact-form-button button::before {
-    position: absolute;
-    content: "";
-    height: 100%;
-    width: 100%;
-    background: #306EFF;
-    left: 0;
-    top: 0;
-    border-radius: 5px;
-    z-index: -1;
-    transition: .5s;
-    transform: scale(.2, 1);
-    opacity: 0;
-}
-
-.contact-form-button button i {
-    display: inline-block;
-    font-size: 18px;
-    margin-left: 7px;
-    position: relative;
-    top: 2px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.875em;
 }
 
 .service-single-box {
-    margin-bottom: 30px;
+    flex: 1 1 calc(33.333% - 1.875em);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.875em;
+}
+
+.service-thumb {
+    height: 16.25em;
+    overflow: hidden;
+    border-top-left-radius: 0.3125em;
+    border-top-right-radius: 0.3125em;
 }
 
 .service-thumb img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
 }
 
 .service-content {
     background: #0A2A99;
-    width: 100%; /* Ubah dari 90% ke 100% */
-    padding: 56px 31px 21px;
+    width: 100%;
+    padding: 3.5em 1.9375em 1.3125em;
     position: relative;
     z-index: 1;
-    border-radius: 0 0 5px 5px; /* Ubah untuk melengkung di bawah saja */
-    margin-top: 0; /* Hapus -30px agar sejajar dengan gambar */
+    border-radius: 0 0 0.3125em 0.3125em;
+    margin-top: 0;
 }
-
 
 .service-content::before {
     position: absolute;
     content: "";
     height: 100%;
     width: 100%;
-    background: url("/frontend/assets/images/service-shape.png");
-    background-position: center;
-    background-repeat: no-repeat;
+    background: url("/frontend/assets/images/service-shape.png") center no-repeat;
     right: -30%;
     transform: scale(0);
-    transition: .5s;
+    transition: 0.5s;
 }
 
 .service-content:after {
@@ -1379,22 +1287,22 @@ p.counter-text {
     z-index: -1;
     top: 0;
     right: 0;
-    border-radius: 0 5px 5px 5px;
-    transition: .5s;
+    border-radius: 0 0.3125em 0.3125em 0.3125em;
+    transition: 0.5s;
 }
 
 h3.service-title {
-    font-size: 24px;
+    font-size: 1.5em;
     color: #ffffff;
     font-weight: 600;
     font-family: "Poppins";
     margin: 0;
-    transition: .5s;
+    transition: 0.5s;
     text-transform: capitalize;
 }
 
 ul.service-list {
-    padding: 8px 0 38px;
+    padding: 0.5em 0 2.375em;
     position: relative;
     z-index: 1;
 }
@@ -1405,45 +1313,44 @@ ul.service-list::before {
     height: 1px;
     width: 100%;
     background: #223FA2;
-    bottom: 21px;
-    transition: .5s;
+    bottom: 1.3125em;
+    transition: 0.5s;
 }
 
 ul.service-list li {
     list-style: none;
-    font-size: 16px;
-    line-height: 28px;
+    font-size: 1em;
+    line-height: 1.75em;
     font-weight: 400;
     font-family: "Poppins";
-    padding-bottom: 8px;
+    padding-bottom: 0.5em;
     color: #B8B9D5;
-    transition: .5s;
+    transition: 0.5s;
     text-transform: capitalize;
 }
 
 ul.service-list li i {
-    display: inline-block;
-    font-size: 20px;
+    font-size: 1.25em;
     color: #FFC606;
     position: relative;
-    top: 2px;
-    margin-right: 3px;
+    top: 0.125em;
+    margin-right: 0.1875em;
 }
 
 .service-icon {
     position: absolute;
-    top: -42px;
-    background: #ffff;
-    height: 80px;
-    width: 80px;
-    line-height: 80px;
+    top: -2.625em;
+    background: #fff;
+    height: 5em;
+    width: 5em;
+    line-height: 5em;
     text-align: center;
     border-radius: 50%;
-    transition: .5s;
+    transition: 0.5s;
 }
 
 .service-btn a {
-    font-size: 16px;
+    font-size: 1em;
     color: #ffffff;
     font-weight: 500;
     font-family: "Poppins";
@@ -1451,37 +1358,19 @@ ul.service-list li i {
 }
 
 .service-btn a i {
-    display: inline-block;
-    font-size: 18px;
+    font-size: 1.125em;
+    margin-left: 0.25em;
+    transition: 0.5s;
     position: relative;
-    top: 2px;
-    margin-left: 4px;
-    transition: .5s;
-}
-
-.service-thumb {
-    height: 260px; /* Sesuaikan tinggi gambar di sini */
-    overflow: hidden;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-}
-
-.service-thumb img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Potong bagian yang tidak muat, agar proporsional */
-    border-radius: inherit;
+    top: 0.125em;
 }
 
 .service-single-box:hover .service-icon {
     background: #FFC704;
-}
-
-.service-single-box:hover .service-icon {
     transform: rotate(360deg);
 }
 
-.service-single-box:hover .service-content::before{
+.service-single-box:hover .service-content::before {
     transform: scale(1);
 }
 
@@ -1494,7 +1383,7 @@ ul.service-list li i {
     background: #447CFF;
 }
 
-.service-single-box:hover ul.service-list li{
+.service-single-box:hover ul.service-list li {
     color: #fff;
 }
 
@@ -1503,38 +1392,68 @@ ul.service-list li i {
 }
 
 .service-single-box:hover .service-btn i {
-    padding-left: 5px;
+    padding-left: 0.3125em;
 }
 
 .service-single-box:hover h3.service-title {
     color: #FFC704;
 }
 
+.contact-form-button button,
+.contact-form-button button:hover {
+    width: 100%;
+    height: 3.75em;
+    font-size: 0.9375em;
+    font-weight: 500;
+    font-family: "Poppins";
+    color: #141840;
+    border: none;
+    border-radius: 0.3125em;
+    background: #FFC704;
+    position: relative;
+    z-index: 1;
+    transition: 0.5s;
+}
+
 .contact-form-button button:hover::before {
     opacity: 1;
     transform: scale(1);
-    color: #fff;
+    background: #00197E;
 }
 
-.contact-from.style-two .contact-form-button button:hover::before {
-   background: #00197E;
+.contact-form-button button::before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: #306EFF;
+    left: 0;
+    top: 0;
+    border-radius: 0.3125em;
+    z-index: -1;
+    transition: 0.5s;
+    transform: scale(0.2, 1);
+    opacity: 0;
 }
 
-.contact-form-button button:hover{
-    color: #fff;
+.contact-form-button button i {
+    font-size: 1.125em;
+    margin-left: 0.4375em;
+    position: relative;
+    top: 0.125em;
 }
 
 .owl-dots {
     text-align: center;
-    padding-top: 20px;
+    padding-top: 1.25em;
 }
 
 .owl-dot {
-    width: 10px;
-    height: 10px;
+    width: 0.625em;
+    height: 0.625em;
     background: #306EFF;
     display: inline-block;
-    margin-right: 11px;
+    margin-right: 0.6875em;
     border-radius: 50%;
 }
 
@@ -1553,41 +1472,288 @@ ul.service-list li i {
 
 .service-shape img {
     animation: dance 3s alternate infinite;
-    -webkit-animation: dance 2s alternate infinite;
-    animation: dance 3s alternate infinite;
 }
 
+
+
 /*=====================================
-<--  end cleeny service Area Css -->
+<--  Cleeny pricing-area Css -->
 =======================================*/
+.pricing-area {
+    padding: 6.875em 0 5.5em;
+}
+
+.pricing-single-box {
+    background: #F3F4F8;
+    padding: 1.25em 1.5em 1.9375em;
+    border-radius: 0.625em;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 1.875em;
+}
+
+.pricing-single-box.active {
+    background: #2F6EFF;
+}
+
+.pricing-single-box.active .pricing-head:after {
+    background: #FFC704;
+    transform: scale(1);
+}
+
+.pricing-single-box.active .pricing-head::before {
+    border-bottom: 1.5em solid #BB9010;
+}
+
+.pricing-single-box.active h1.pricing-dollar {
+    color: #00197D;
+}
+
+.pricing-single-box.active h1.pricing-dollar span {
+    color: #00197D;
+}
+
+.pricing-single-box.active p.pricing-monthly {
+    color: #01177D;
+}
+
+.pricing-single-box.active .pricing-list ul li i {
+    color: #FFC704;
+}
+
+.pricing-single-box.active .cleeny-btn a {
+    background: #FFC703;
+    color: #01177D;
+}
+
+.pricing-single-box.active .cleeny-btn a::after,
+.pricing-single-box.active .cleeny-btn a::before {
+    background: transparent;
+}
+
+.pricing-single-box:after {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: url(assets/images/pricing-shape.png);
+    background-position: center;
+    top: 0;
+    background-repeat: no-repeat;
+    left: 0;
+}
+
+.pricing-single-box::before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 0;
+    background: #306EFF;
+    z-index: -1;
+    right: 0;
+    top: 0;
+    border-radius: 0.625em;
+    transition: .5s;
+    opacity: 0;
+}
+
+.pricing-head {
+    text-align: center;
+    background: #2F6DFF;
+    height: 6.25em;
+    width: 11.25em;
+    margin: auto;
+    border-radius: 0 0.5em 0.5em 0;
+    padding: 1.875em 0 0;
+    margin-top: -2.75em;
+    position: relative;
+    z-index: 1;
+}
+
+.pricing-head:after {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: #FFC704;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    border-radius: 0 0.5em 0.5em 0;
+    transform: scale(0);
+    transition: .5s;
+}
+
+.pricing-head::before {
+    position: absolute;
+    content: "";
+    transform: translateX(-50%);
+    border-top: 1.625em solid transparent;
+    border-left: 1.5em solid transparent;
+    border-right: 0 solid transparent;
+    background: radial-gradient(black, transparent);
+    transition: .5s;
+    left: -0.75em;
+    top: -1.625em;
+    border-bottom: 1.5em solid #0740C1;
+}
+
+h1.pricing-dollar {
+    font-size: 1.25em;
+    color: #ffffff;
+    font-weight: 600;
+    font-family: "Inter";
+    line-height: 0.9375em;
+    margin-bottom: 0.625em;
+    transition: .5s;
+    text-align: center;
+    margin-top: 0.9375em;
+}
+
+.pricing-body {
+    padding: 2.1875em 0 0;
+}
+
+.pricing-list {
+    margin-top: -0.3125em;
+}
+
+.pricing-list ul {
+    padding: 0;
+    margin: 0;
+}
+
+.pricing-list ul li {
+    display: flex;
+    align-items: center;
+    font-size: 0.8125em;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    color: #3a4268;
+    list-style: none;
+    padding-bottom: 0.375em;
+}
+
+.pricing-list ul li i {
+    font-size: 1.125em;
+    color: #2F6DFF;
+    margin-right: 0.375em;
+    flex-shrink: 0;
+}
+
+.pricing-list ul li .label {
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.pricing-list ul li .price {
+    font-weight: 600;
+    margin-left: 0.625em;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.pricing-area .cleeny-btn {
+    margin-left: 0;
+}
+
+.pricing-area .cleeny-btn a i {
+    display: inline-block;
+    font-size: 1.125em;
+    position: relative;
+    top: 0.125em;
+    margin-left: 0.3125em;
+}
+
+.pricing-area .cleeny-btn a {
+    background: #2F6EFF;
+    padding: 0.6875em 1.9375em 0.6875em;
+    color: #fff;
+}
+
+.pricing-area .cleeny-btn a:hover {
+    color: #01177D;
+}
+
+.pricing-single-box:hover .cleeny-btn a:before,
+.pricing-single-box:hover .cleeny-btn a:after {
+    background: #FFC703 !important;
+    width: 100%;
+}
+
+.pricing-single-box:hover .pricing-head:after {
+    transform: scale(1);
+}
+
+.pricing-single-box:hover .pricing-head::before {
+    border-bottom: 1.5em solid #BB9010;
+}
+
+.pricing-single-box:hover h1.pricing-dollar,
+.pricing-single-box:hover h1.pricing-dollar span {
+    color: #01177D;
+}
+
+.pricing-single-box:hover::before {
+    opacity: 1;
+    left: 0;
+    width: 100%;
+}
+
+.pricing-single-box:hover h3.pricing-title {
+    background: #fff;
+    border-left: 0.1875em solid #fff;
+}
+
+.pricing-single-box:hover .pricing-list ul li {
+    color: #fff;
+}
+
+.pricing-single-box:hover .pricing-list ul li i {
+    color: #FFC704;
+}
+
+
+/* .row > div[class*='col-'] {
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-bottom: 30px;
+} */
+
+/*=====================================
+<--  end cleeny pricing-area Css -->
+=======================================*/
+
 /* daftar harga */
 .price-section {
     background: white;
-    border-radius: 20px;
-    padding: 30px;
-    margin-top: 30px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border-radius: 1.25em;
+    padding: 1.875em;
+    margin-top: 1.875em;
+    box-shadow: 0 1.25em 2.5em rgba(0, 0, 0, 0.1);
 }
 
 .price-section h3 {
     text-align: center;
     color: #495057;
-    margin-bottom: 30px;
+    margin-bottom: 1.875em;
     font-size: 1.8rem;
     font-weight: 700;
 }
 
 .accordion-item {
-    border-radius: 15px !important;
-    border: 2px solid #e9ecef !important;
-    margin-bottom: 20px;
+    border-radius: 0.9375em !important;
+    border: 0.125em solid #e9ecef !important;
+    margin-bottom: 1.25em;
     overflow: hidden;
     transition: all 0.3s ease;
 }
 
 .accordion-item:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transform: translateY(-0.125em);
+    box-shadow: 0 0.625em 1.875em rgba(0, 0, 0, 0.1);
 }
 
 .accordion-button {
@@ -1595,9 +1761,9 @@ ul.service-list li i {
     border: none !important;
     font-weight: 600 !important;
     font-size: 1rem !important;
-    padding: 20px !important;
+    padding: 1.25em !important;
     color: #495057 !important;
-    border-radius: 15px !important;
+    border-radius: 0.9375em !important;
 }
 
 .accordion-button:not(.collapsed) {
@@ -1607,8 +1773,8 @@ ul.service-list li i {
 
 .accordion-body {
     background: #f8f9fa;
-    padding: 20px;
-    text-align: center; /* isi teks di tengah */
+    padding: 1.25em;
+    text-align: center;
 }
 
 .accordion-body ul {
@@ -1618,9 +1784,9 @@ ul.service-list li i {
 }
 
 .accordion-body li {
-    padding: 8px 0;
-    border-bottom: 1px solid #dee2e6;
-    display: block; /* ubah dari flex menjadi block */
+    padding: 0.5em 0;
+    border-bottom: 0.0625em solid #dee2e6;
+    display: block;
     font-weight: 500;
     font-size: 1rem;
 }
@@ -1968,153 +2134,9 @@ h4.portfolio-top-title:hover {
 =======================================*/
 
 
-
-/*=====================================
-<-- Cleeny address-area Css -->
-=======================================*/
-/* .address-area {
-    margin-top: -132px;
-    position: relative;
-    z-index: 1;
-}
-
-.row.address {
-    background: url("/frontend/assets/images/address-bg.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    padding: 0 48px 0;
-    border-radius: 5px;
-}
-
-h1.address-title {
-    font-size: 36px;
-    line-height: 48px;
-    color: #ffffff;
-    font-weight: 700;
-    font-family: "Poppins";
-    margin: 0;
-}
-
-.address-area .cleeny-btn {
-    margin-left: 0;
-    text-align: right;
-    margin-bottom: -7px;
-}
-
-.address-thumb {
-    text-align: right;
-    margin-top: -58px;
-}
-
-.address-area .cleeny-btn a i {
-    display: inline-block;
-    font-size: 16px;
-    margin-right: 5px;
-}
-
-.address-area .cleeny-btn a {
-    padding: 15px 31px 15px;
-} */
-
-/*=====================================
-<--  end cleeny address-area Css -->
-=======================================*/
-
-
-
-/*=====================================
-<--  Cleeny couter-area Css -->
-=======================================*/
-/*
-.counter-area {
-    position: relative;
-    z-index: 1;
-}
-
-.counter-area::before {
-    position: absolute;
-    content: "";
-    height: 100%;
-    width: 87%;
-    background: url("/frontend/assets/images/counter-bg.html");
-    z-index: -1;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    right: 0;
-}
-
-h3.counter-title {
-    font-size: 30px;
-    line-height: 35px;
-    color: #ffffff;
-    font-weight: 600;
-    font-family: "Work Sans";
-    margin-bottom: 19px;
-}
-
-span.counter-call {
-    font-size: 26px;
-    line-height: 35px;
-    color: #012549;
-    font-weight: 600;
-    font-family: "Work Sans";
-    display: inline-block;
-}
-
-span.counter-call i {
-    display: inline-block;
-    font-size: 23px;
-    margin-right: 12px;
-}
-
-.single-counter-box {
-    text-align: center;
-    margin-bottom: 50px;
-    margin-top: 70px;
-}
-
-.counter-number h2 {
-    display: inline-block;
-    font-size: 55px;
-    line-height: 30px;
-    color: #ffffff;
-    font-weight: 600;
-    margin-bottom: 19px;
-}
-
-.counter-text2 span {
-    display: inline-block;
-    font-size: 16px;
-    line-height: 30px;
-    color: #ffffff;
-    font-weight: 500;
-    font-family: "Arimo";
-    text-align: center;
-} */
-
-/*=====================================
-<--  end cleeny couter-area Css -->
-=======================================*/
-
 /*=====================================
 <--  Cleeny testimonial-area Css -->
 =======================================*/
-.testi-single-box {
-    background-color: #fff;
-    padding: 24px;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
-    min-height: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.testi-rating i {
-    color: #fbbf24; /* warna kuning */
-}
-
 .testimonial-area {
     background: url("/frontend/assets/images/testi-bg.png");
     padding: 111px 0 109px;
@@ -2131,6 +2153,10 @@ span.counter-call i {
     z-index: 1;
     overflow: hidden;
     margin-bottom: 30px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .testi-single-box::before {
@@ -2160,16 +2186,34 @@ span.counter-call i {
     opacity: 0;
 }
 
+.testi-single-box:hover:after {
+    transform: scale(1);
+    opacity: 1;
+}
+
 .testi-thumb {
     margin-right: 20px;
+     border-radius: 50%;
+    display: inline-block;
+}
+.testi-thumb img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border: 3px solid #ffffff;
+    border-radius: 50%;
 }
 
 ul.testi-rating li {
     list-style: none;
     display: inline-block;
     color: #FFAA16;
-    padding: 0 2px 0;
+    padding: 0 2px;
     font-size: 15px;
+}
+
+.testi-rating i {
+    color: #fbbf24;
 }
 
 h4.testi-title {
@@ -2210,13 +2254,78 @@ p.testi-description {
     margin: 0;
 }
 
-.testi-single-box:hover:after {
-    transform: scale(1);
-    opacity: 1;
-}
-
 .testi-single-box:hover p.testi-text {
     color: #fff;
+}
+
+
+/* ===================
+   Responsive Section
+=================== */
+@media (max-width: 992px) {
+    .testi-single-box {
+        padding: 30px 25px;
+    }
+
+    h4.testi-title {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    p.testi-description {
+        font-size: 15px;
+        line-height: 28px;
+    }
+
+    .testi-thumb img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+}
+}
+
+@media (max-width: 480px) {
+    .testimonial-area {
+        padding: 60px 0;
+    }
+
+    .testi-single-box {
+        padding: 20px 16px;
+        margin: 16px auto;
+        border-radius: 12px;
+        width: 90%;
+        max-width: 360px;
+    }
+
+    h4.testi-title {
+        font-size: 16px;
+    }
+
+    h3.testi-title2 {
+        font-size: 15px;
+    }
+
+    p.testi-text,
+    p.testi-description {
+        font-size: 13px;
+        line-height: 24px;
+    }
+
+    ul.testi-rating li {
+        font-size: 14px;
+    }
+
+    .testi-thumb img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+        aspect-ratio: 1 / 1;
+        display: block;
+    }
 }
 
 /*=====================================
@@ -7230,184 +7339,6 @@ p.project-det-team-text {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
   }
-}
-
-
-
-
-
-/***
-====================================================================
-   Cleeny Search Popup
-====================================================================
-***/
-.search-popup{
-    position: fixed;
-    left: 0;
-    top: 0;
-    height: 100vh;
-    width: 100%;
-    z-index: 99999;
-    margin-top: -540px;
-    transform: translateY(-100%);
-    background-color: rgba(0,0,0,0.90);
-    -webkit-transition: all 500ms cubic-bezier(0.860, 0.000, 0.070, 1.000);
-    -moz-transition: all 500ms cubic-bezier(0.860, 0.000, 0.070, 1.000);
-    -o-transition: all 500ms cubic-bezier(0.860, 0.000, 0.070, 1.000);
-    transition: all 1500ms cubic-bezier(0.860, 0.000, 0.070, 1.000); /* easeInOutQuint */
-    -webkit-transition-timing-function: cubic-bezier(0.860, 0.000, 0.070, 1.000);
-    -moz-transition-timing-function: cubic-bezier(0.860, 0.000, 0.070, 1.000);
-    -o-transition-timing-function: cubic-bezier(0.860, 0.000, 0.070, 1.000);
-    transition-timing-function: cubic-bezier(0.860, 0.000, 0.070, 1.000); /* easeInOutQuint */
-}
-.search-popup{
-    width: 100%;
-}
-.search-active .search-popup{
-    transform: translateY(0%);
-    margin-top: 0;
-}
-.search-popup .close-search {
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    margin-top: -200px;
-    border-radius: 50%;
-    text-align: center;
-    background-color: #306EFF;
-    width: 70px;
-    cursor: pointer;
-    box-shadow: 0 0 10px rgba(0,0,0,0.05);
-    border-bottom: 3px solid #ffffff;
-    -webkit-transition: all 500ms ease;
-    height: 70px;
-    line-height: 70px;
-    text-align: center;
-}
-.search-active .search-popup .close-search{
-    visibility: visible;
-    opacity: 1;
-    top: 50%;
-    -webkit-transition-delay: 1500ms;
-    -moz-transition-delay: 1500ms;
-    -ms-transition-delay: 1500ms;
-    -o-transition-delay: 1500ms;
-    transition-delay: 1500ms;
-}
-.search-popup form{
-    position: absolute;
-    max-width: 700px;
-    top: 50%;
-    left: 15px;
-    right: 15px;
-    margin:-35px auto 0;
-    transform: scaleX(0);
-    transform-origin: center;
-    background-color: #111111;
-    -webkit-transition: all 300ms ease;
-    -moz-transition: all 300ms ease;
-    -ms-transition: all 300ms ease;
-    -o-transition: all 300ms ease;
-    transition: all 300ms ease;
-}
-.search-active .search-popup form{
-    transform: scaleX(1);
-    -webkit-transition-delay: 1200ms;
-    -moz-transition-delay: 1200ms;
-    -ms-transition-delay: 1200ms;
-    -o-transition-delay: 1200ms;
-    transition-delay: 1200ms;
-}
-.search-popup .form-group{
-    position:relative;
-    margin:0px;
-    overflow: hidden;
-}
-.search-popup .form-group input[type="text"], .search-popup .form-group input[type="search"] {
-    position: relative;
-    display: block;
-    font-size: 18px;
-    line-height: 50px;
-    color: #000000;
-    height: 70px;
-    width: 100%;
-    padding: 10px 30px;
-    background-color: #ffffff;
-    -webkit-transition: all 500ms ease;
-    -moz-transition: all 500ms ease;
-    -ms-transition: all 500ms ease;
-    -o-transition: all 500ms ease;
-    transition: all 500ms ease;
-    font-weight: 500;
-    text-transform: capitalize;
-    outline: 0;
-}
-.search-popup .form-group input[type="submit"], .search-popup .form-group button {
-    position: absolute;
-    right: 30px;
-    top: 0px;
-    height: 70px;
-    line-height: 70px;
-    background: transparent;
-    text-align: center;
-    font-size: 24px;
-    color: #306EFF;
-    padding: 0;
-    cursor: pointer;
-    -webkit-transition: all 500ms ease;
-    border: none;
-}
-.search-popup .form-group input[type="submit"]:hover,
-.search-popup .form-group button:hover{
-    color: #000000;
-}
-
-.search-popup input::placeholder,
-.search-popup textarea::placeholder{
-    color:#000000;
-}
-.search-popup .close-search.style-two{
-    position: absolute;
-    right: 25px;
-    left: auto;
-    color:#ffffff;
-    width:auto;
-    height:auto;
-    top:25px;
-    margin:0px;
-    border:none;
-    background:none !important;
-    box-shadow:none !important;
-    -webkit-transition:all 500ms ease;
-    -moz-transition:all 500ms ease;
-    -ms-transition:all 500ms ease;
-    -o-transition:all 500ms ease;
-    transition:all 500ms ease;
-}
-
-.flaticon-multiply:before {
-    content: inherit;
-}
-button.close-search i {
-    font-size: 40px;
-    color: #fff;
-    display: inline-block;
-}
-span.flaticon-multiply i {
-    display: inline-block;
-    color: #306EFF;
-}
-.header-search-btn {
-    position: relative;
-    display: inline-block;
-    right: -30px;
-}
-
-.header-search-btn i {
-    font-size: 18px;
-    color: #306EFF;
-    transition: .5s;
 }
 
 

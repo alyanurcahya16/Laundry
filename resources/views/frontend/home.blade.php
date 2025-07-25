@@ -8,8 +8,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CDN -->
-    <link rel="icon" type="{{ asset('image/png') }}" sizes="56x56"
-        href="{{ asset('frontend/public/frontend/assets/images/fav-icon/icon.png') }}">
+    <link rel="icon" type="image/png" sizes="56x56" href="{{ asset('frontend/assets/images/fav-icon/icon.png') }}">
     <!-- bootstrap CSS -->
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/bootstrap.min.css') }}" type="text/css" media="all">
     <!-- carousel CSS -->
@@ -89,7 +88,7 @@
         <div class="container py-5">
             <div class="row text-center mb-4">
                 <div class="col-lg-12 ">
-                    <h2 class="section-main-title fw-bold fs-3">Mengapa Royal Laundress?</h2>
+                    <h2 class="section-main-title price fs-3">Mengapa Royal Laundress?</h2>
                     <p class="text-muted fs-6 mx-auto" style="max-width: 700px;">
                         Royal Laundress adalah solusi laundry terpercaya yang mengutamakan kualitas, kebersihan, dan
                         kenyamanan. Kami hadir dengan pelayanan profesional dan ramah lingkungan.
@@ -157,43 +156,43 @@
 
 
     <!-- End cleeny feature Area -->
-<!-- Start patnership Area -->
-    <section class="patnership-area py-20 bg-blue-900">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold mb-4 text-white">Kerja Sama dengan Hotel</h2>
-                <p class="text-white text-lg">
-                    Royal Laundress siap menjadi mitra terpercaya bagi hotel Anda. Kami menawarkan layanan laundry
-                    profesional,
-                    cepat, dan higienis untuk memenuhi kebutuhan linen, seragam, hingga kebutuhan laundry tamu hotel.
-                </p>
-                <div class="w-24 h-1 bg-gradient-to-r from-blue-300 to-purple-400 mx-auto mt-4 rounded-full"></div>
-            </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                <div>
-                    <img src="{{ asset('frontend/assets/images/royal-laundry8.png') }}" alt="Kerja Sama Hotel"
-                        class="rounded-xl shadow-lg">
-                </div>
-                <div>
-                    <h3 class="text-2xl font-semibold text-white mb-4">Mengapa Hotel Memilih Royal Laundress?</h3>
-                    <ul class="list-disc list-inside text-white space-y-2">
-                        <li>Pelayanan cepat dan tepat waktu</li>
-                        <li>Standar kebersihan dan higienitas tinggi</li>
-                        <li>Harga kerja sama yang kompetitif</li>
-                        <li>Layanan antar jemput linen hotel</li>
-                        <li>Dukungan CS responsif dan profesional</li>
-                    </ul>
-                    <div class="mt-6">
-                        <a href="/form-registrasi-hotel"
-                            class="inline-block bg-blue-600 text-white px-6 py-3 rounded-full shadow hover:bg-blue-700 transition">
-                            Ajukan Kerja Sama Sekarang
-                        </a>
-                    </div>
+<!-- Start patnership Area -->
+   <section class="patnership-area py-20 bg-blue-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold mb-4 text-white">Kerja Sama dengan Hotel</h2>
+            <p class="text-white text-lg max-w-2xl mx-auto">
+                Royal Laundress siap menjadi mitra terpercaya bagi hotel Anda. Kami menawarkan layanan laundry
+                profesional, cepat, dan higienis untuk memenuhi kebutuhan linen, seragam, hingga kebutuhan laundry tamu hotel.
+            </p>
+            <div class="w-24 h-1 bg-gradient-to-r from-blue-300 to-purple-400 mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div>
+                <img src="{{ asset('frontend/assets/images/royal-laundry8.png') }}" alt="Kerja Sama Hotel"
+                    class="rounded-xl shadow-lg w-full h-auto max-h-[500px] object-cover">
+            </div>
+            <div>
+                <h3 class="text-2xl md:text-3xl font-semibold text-white mb-4">Mengapa Hotel Memilih Royal Laundress?</h3>
+                <ul class="patnership-list">
+                    <li>Pelayanan cepat dan tepat waktu</li>
+                    <li>Standar kebersihan dan higienitas tinggi</li>
+                    <li>Harga kerja sama yang kompetitif</li>
+                    <li>Layanan antar jemput linen hotel</li>
+                    <li>Dukungan CS responsif dan profesional</li>
+                </ul>
+                <div class="cleeny-btn mt-6">
+                    <a href="/form-registrasi-hotel" class="inline-block bg-white text-blue-900 font-semibold px-6 py-3 rounded-full shadow-md hover:bg-blue-100 transition-all duration-300">
+                        Ajukan Kerja Sama Sekarang <i class="bi bi-arrow-right"></i>
+                    </a>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
 <!-- End patnership Area -->
 
 
@@ -303,7 +302,7 @@
                                     <li><i class="bi bi-check-lg"></i> Luaran / Jaket</li>
                                     <li><i class="bi bi-check-lg"></i> Jas / Jas Setelan</li>
                                     <li><i class="bi bi-check-lg"></i> Dress / Gown</li>
-                                    <li><i class="bi bi-check-lg"></i> Alat Ibadah</li>
+                                    <li><i class="bi bi-check-lg"></i> Alat Ibadah</li><br><br>
                                 </ul>
                             </div>
                         </div>
@@ -322,7 +321,7 @@
                                     <li><i class="bi bi-check-lg"></i> Pillowcase / Sarung</li>
                                     <li><i class="bi bi-check-lg"></i> Sprei Single/Double</li>
                                     <li><i class="bi bi-check-lg"></i> Selimut / Bed Cover</li>
-                                    <li><i class="bi bi-check-lg"></i> Paket Bedding</li>
+                                    <li><i class="bi bi-check-lg"></i> Paket Bedding</li><br><br><br>
                                 </ul>
                             </div>
                         </div>
@@ -341,7 +340,7 @@
                                     <li><i class="bi bi-check-lg"></i> Dompet Non Leather Kecil</li>
                                     <li><i class="bi bi-check-lg"></i> Dompet Non Leather Besar</li>
                                     <li><i class="bi bi-check-lg"></i> Dompet Leather Kecil</li>
-                                    <li><i class="bi bi-check-lg"></i> Dompet Leather Besar</li>
+                                    <li><i class="bi bi-check-lg"></i> Dompet Leather Besar</li><br><br><br>
                                 </ul>
                             </div>
                         </div>
@@ -359,7 +358,7 @@
                                     <li><i class="bi bi-check-lg"></i> Sepatu Putih / Kanvas / Wanita</li>
                                     <li><i class="bi bi-check-lg"></i> Sepatu Suede / Leather</li>
                                     <li><i class="bi bi-check-lg"></i> Tas Non Leather Kecil / Sedang</li>
-                                    <li><i class="bi bi-check-lg"></i> Tas Leather Kecil / Besar</li>
+                                    <li><i class="bi bi-check-lg"></i> Tas Leather Kecil / Besar</li><br><br><br><br><br>
                                 </ul>
                             </div>
                         </div>
@@ -373,230 +372,211 @@
     </div>
 <!-- end cleeny service Area -->
 
-    <!-- Daftar Harga -->
-    <div class="price-section">
-        <h3><i class="fas fa-tags"></i> Daftar Harga & Layanan</h3>
-        <div class="row g-4">
-            <!-- LINEN -->
-            <div class="col-md-6 col-lg-4">
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#linenCollapse">
-                            🛏️ Linen
-                        </button>
-                    </h2>
-                    <div id="linenCollapse" class="accordion-collapse collapse show">
-                        <div class="accordion-body">
-                            <ul>
-                                <li>Bed Sheet Double <span class="fw-bold">Rp 2.500</span></li>
-                                <li>Bed Sheet Single <span class="fw-bold">Rp 2.400</span></li>
-                                <li>Duvet Cover Double <span class="fw-bold">Rp 5.000</span></li>
-                                <li>Duvet Cover Single <span class="fw-bold">Rp 4.700</span></li>
-                                <li>Pillow Case <span class="fw-bold">Rp 1.200</span></li>
-                                <li>Bath Towel <span class="fw-bold">Rp 2.500</span></li>
-                                <li>Hand Towel <span class="fw-bold">Rp 1.500</span></li>
-                                <li>Face Towel <span class="fw-bold">Rp 1.200</span></li>
-                                <li>Pool Towel <span class="fw-bold">Rp 3.000</span></li>
-                                <li>Blanket Double <span class="fw-bold">Rp 7.000</span></li>
-                            </ul>
+
+<!-- Start cleeny pricing Area -->
+    <div class="pricing-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title text-center">
+                        <h1 class="section-main-title"><i class="fas fa-tags"></i> Daftar Harga & Layanan</h1>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="pricing-single-box">
+                        <div class="pricing-head">
+                            <h1 class="pricing-dollar">Linen</h1>
+                        </div>
+                        <div class="pricing-body">
+                            <div class="pricing-list">
+                                <ul>
+                                    <li><i class="bi bi-check-lg"></i> Sheet Double <span class="price">Rp 2.500</span></li>
+                                    <li><i class="bi bi-check-lg"></i> Sheet Single <span class="price">Rp 2.400</span></li>
+                                    <li><i class="bi bi-check-lg"></i> Duvet Cover Double <span class="price">Rp 5.000</span></li>
+                                    <li><i class="bi bi-check-lg"></i> Duvet Cover Single <span class="price">Rp 4.700</span></li>
+                                    <li><i class="bi bi-check-lg"></i> Pillow Case <span class="price">Rp 1.200</span></li>
+                                    <li><i class="bi bi-check-lg"></i> Bath Towel <span class="price">Rp 2.500</span></li>
+                                    <li><i class="bi bi-check-lg"></i> Hand Towel <span class="price">Rp 1.500</span></li>
+                                    <li><i class="bi bi-check-lg"></i> Face Towel <span class="price">Rp 1.200</span></li>
+                                    <li><i class="bi bi-check-lg"></i> Pool Towel <span class="price">Rp 3.000</span></li>
+                                    <li><i class="bi bi-check-lg"></i> Blanket Double <span class="price">Rp 7.000</span></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- UNIFORM -->
-            <div class="col-md-6 col-lg-4">
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#uniformCollapse">
-                            👔 Uniform
-                        </button>
-                    </h2>
-                    <div id="uniformCollapse" class="accordion-collapse collapse">
-                        <div class="accordion-body">
-                            <ul>
-                                <li>Shrt <span class="fw-bold">Rp 7.000</span></li>
-                                <li>Trouser <span class="fw-bold">Rp 7.000</span></li>
-                                <li>Jas / Jacket <span class="fw-bold">Rp 9.000</span></li>
-                                <li>Skirt (Short) <span class="fw-bold">Rp 5.100</span></li>
-                                <li>Skirt (Long) <span class="fw-bold">Rp 5.600</span></li>
-                                <li>Cook Jacket <span class="fw-bold">Rp 7.300</span></li>
-                                <li>Apron Kitchen <span class="fw-bold">Rp 3.000</span></li>
-                                <li>T-shirt <span class="fw-bold">Rp 7.000</span></li>
-                                <li>Neck Tie <span class="fw-bold">Rp 4.500</span></li>
-                                <li>Safari Shirt <span class="fw-bold">Rp 13.000</span></li>
-                            </ul>
+                <div class="col-lg-4 col-md-6">
+                    <div class="pricing-single-box">
+                        <div class="pricing-head">
+                            <h1 class="pricing-dollar">Uniform</h1>
+                        </div>
+                        <div class="pricing-body">
+                            <div class="pricing-list">
+                                <ul>
+                                    <li><i class="bi bi-check-lg"></i> Shrt <span class="price">Rp 7.000</span></li>
+                                    <li><i class="bi bi-check-lg"></i> Trouser <span class="price">Rp 7.000</span></li>
+                                    <li><i class="bi bi-check-lg"></i> Jas / Jacket <span class="price">Rp 9.000</span></li>
+                                    <li><i class="bi bi-check-lg"></i> Skirt (Short) <span class="price">Rp 5.100</span></li>
+                                    <li><i class="bi bi-check-lg"></i> Skirt (Long) <span class="price">Rp 5.600</span></li>
+                                    <li><i class="bi bi-check-lg"></i> Cook Jacket <span class="price">Rp 7.300</span></li>
+                                    <li><i class="bi bi-check-lg"></i> Apron Kitchen <span class="price">Rp 3.000</span></li>
+                                    <li><i class="bi bi-check-lg"></i> T-shirt <span class="price">Rp 7.000</span></li>
+                                    <li><i class="bi bi-check-lg"></i> Neck Tie <span class="price">Rp 4.500</span></li>
+                                    <li><i class="bi bi-check-lg"></i> Safari Shirt <span class="price">Rp 13.000</span></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- SATUAN -->
-            <div class="col-md-6 col-lg-4">
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#satuanCollapse">
-                            👗 Satuan
-                        </button>
-                    </h2>
-                    <div id="satuanCollapse" class="accordion-collapse collapse">
-                        <div class="accordion-body">
-                            <ul>
-                                <li>Atasan (Kemeja/Blouse/Batik) <span class="fw-bold">Rp 25.000</span></li>
-                                <li>Bawahan (Rok/Jeans/Celana) <span class="fw-bold">Rp 18.000</span></li>
-                                <li>Luaran (Jaket/Hoodie) <span class="fw-bold">Rp 30.000</span></li>
-                                <li>Jas (Blazer/Mantel) <span class="fw-bold">Rp 50.000</span></li>
-                                <li>Jas Setelan <span class="fw-bold">Rp 70.000</span></li>
-                                <li>Dress <span class="fw-bold">Rp 25.000</span></li>
-                                <li>Gaun Panjang <span class="fw-bold">Rp 50.000</span></li>
-                                <li>Kebaya <span class="fw-bold">Rp 30.000</span></li>
-                                <li>Alat Ibadah <span class="fw-bold">Rp 25.000</span></li>
-                            </ul>
+                <div class="col-lg-4 col-md-6">
+                    <div class="pricing-single-box">
+                        <div class="pricing-head">
+                            <h1 class="pricing-dollar">Satuan</h1>
+                        </div>
+                        <div class="pricing-body">
+                            <div class="pricing-list">
+                                <ul>
+                                    <li><i class="bi bi-check-lg"></i> Atasan <span class="price">Rp 25.000</span></li>
+                                    <li><i class="bi bi-check-lg"></i> Jas Setelan <span class="price">Rp 70.000</span></li>
+                                    <li><i class="bi bi-check-lg"></i> Dress <span class="price">Rp 25.000</span></li>
+                                    <li><i class="bi bi-check-lg"></i> Gaun Panjang <span class="price">Rp 50.000</span></li>
+                                    <li><i class="bi bi-check-lg"></i> Kebaya <span class="price">Rp 30.000</span></li>
+                                    <li><i class="bi bi-check-lg"></i> Alat Ibadah <span class="price">Rp 25.000</span></li>
+                                    <li><i class="bi bi-check-lg"></i> Rok / Celana <span class="price">Rp 18.000</span></li>
+                                    <li><i class="bi bi-check-lg"></i> Jaket / Hoodie <span class="price">Rp 30.000</span></li>
+                                    <li><i class="bi bi-check-lg"></i> Blazer / Mantel <span class="price">Rp 50.000</span></li>
+                                    <br>
+                                    <br>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="pricing-single-box">
+                        <div class="pricing-head">
+                            <h1 class="pricing-dollar">Daily Kiloan</h1>
+                        </div>
+                        <div class="pricing-body">
+                            <div class="pricing-list">
+                                <ul>
+                                    <li><i class="bi bi-check-lg"></i> Cuci kering lipat <span class="price">Rp 7.000</span></li>
+                                    <li><i class="bi bi-check-lg"></i> Cuci kering gosok 3 hari <span class="price">Rp 9.000</span></li>
+                                    <li><i class="bi bi-check-lg"></i> Cuci kering gosok 1 hari <span class="price">Rp 12.000</span></li>
+                                    <li><i class="bi bi-check-lg"></i> Cuci kering gosok 12 jam<span class="price">Rp 18.000</span></li>
+                                    <li><i class="bi bi-check-lg"></i> Cuci kering gosok 6 jam<span class="price">Rp 22.000</span></li>
+                                    <li><i class="bi bi-check-lg"></i> Setrika reguler 2 hari <span class="price">Rp 7.000</span></li>
+                                    <li><i class="bi bi-check-lg"></i> Setrika express 1 hari <span class="price">Rp 9.000</span></li>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
 
-            <!-- BEDDINGS -->
-            <div class="col-md-6 col-lg-4">
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#beddingsCollapse">
-                            🛏️ Beddings
-                        </button>
-                    </h2>
-                    <div id="beddingsCollapse" class="accordion-collapse collapse">
-                        <div class="accordion-body">
-                            <ul>
-                                <li>Pillow (Bantal/Guling) <span class="fw-bold">Rp 20.000</span></li>
-                                <li>Pillowcase (Sarung Bantal/Guling) <span class="fw-bold">Rp 25.000</span></li>
-                                <li>Sprei Single <span class="fw-bold">Rp 15.000</span></li>
-                                <li>Sprei Double <span class="fw-bold">Rp 25.000</span></li>
-                                <li>Selimut Single <span class="fw-bold">Rp 15.000</span></li>
-                                <li>Selimut Double <span class="fw-bold">Rp 25.000</span></li>
-                                <li>Bed Cover Single <span class="fw-bold">Rp 23.000</span></li>
-                                <li>Bed Cover Double <span class="fw-bold">Rp 32.000</span></li>
-                                <li>Paket Bedding Single <span class="fw-bold">Rp 35.000</span></li>
-                                <li>Paket Bedding Double <span class="fw-bold">Rp 50.000</span></li>
-                            </ul>
-
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- OTHER ITEMS -->
-            <div class="col-md-6 col-lg-4">
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#otherCollapse">
-                            🧸 Other Items
-                        </button>
-                    </h2>
-                    <div id="otherCollapse" class="accordion-collapse collapse">
-                        <div class="accordion-body">
-                            <ul>
-                                <li>Handuk <span class="fw-bold">Rp 15.000</span></li>
-                                <li>Dompet (Non-Leather) Kecil <span class="fw-bold">Rp 25.000</span></li>
-                                <li>Dompet (Non-Leather) Besar <span class="fw-bold">Rp 40.000</span></li>
-                                <li>Dompet Leather Kecil <span class="fw-bold">Rp 30.000</span></li>
-                                <li>Dompet Leather Besar <span class="fw-bold">Rp 45.000</span></li>
-                            </ul>
-
+                <div class="col-lg-4 col-md-6">
+                    <div class="pricing-single-box">
+                        <div class="pricing-head">
+                            <h1 class="pricing-dollar">Beddings</h1>
+                        </div>
+                        <div class="pricing-body">
+                            <div class="pricing-list">
+                                <ul>
+                                    <li><i class="bi bi-check-lg"></i> Bantal / Guling <span class="price">Rp 20.000</span></li>
+                                    <li><i class="bi bi-check-lg"></i> Sarung Bantal / Guling <span class="price">Rp 25.000</span></li>
+                                    <li><i class="bi bi-check-lg"></i> Sprei Single <span class="price">Rp 15.000</span></li>
+                                    <li><i class="bi bi-check-lg"></i> Sprei Double <span class="price">Rp 25.000</span></li>
+                                    <li><i class="bi bi-check-lg"></i> Selimut Single <span class="price">Rp 15.000</span></li>
+                                    <li><i class="bi bi-check-lg"></i> Selimut Double <span class="price">Rp 25.000</span></li>
+                                    <li><i class="bi bi-check-lg"></i> Bed Cover Single <span class="price">Rp 23.000</span></li>
+                                    <li><i class="bi bi-check-lg"></i> Bed Cover Double <span class="price">Rp 32.000</span></li>
+                                    <li><i class="bi bi-check-lg"></i> Paket Bedding Single <span class="price">Rp 35.000</span></li>
+                                    <li><i class="bi bi-check-lg"></i> Paket Bedding Double <span class="price">Rp 50.000</span></li>
+                                    <br>
+                                    <br>
+                                    <br>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- DAILY KILOAN -->
-            <div class="col-md-6 col-lg-4">
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#kiloanCollapse">
-                            ⚖️ Daily Kiloan
-                        </button>
-                    </h2>
-                    <div id="kiloanCollapse" class="accordion-collapse collapse">
-                        <div class="accordion-body">
-                            <ul>
-                                <li>Cuci Kering Lipat <span class="fw-bold">Rp 7.000</span></li>
-                                <li>Cuci Kering Gosok (3 Hari) <span class="fw-bold">Rp 9.000</span></li>
-                                <li>Cuci Kering Gosok (1 Hari) <span class="fw-bold">Rp 12.000</span></li>
-                                <li>Cuci Kering Gosok (12 Jam) <span class="fw-bold">Rp 18.000</span></li>
-                                <li>Cuci Kering Gosok (6 Jam) <span class="fw-bold">Rp 22.000</span></li>
-                                <li>Setrika Kiloan Reguler (2 Hari) <span class="fw-bold">Rp 7.000</span></li>
-                                <li>Setrika Kiloan Express (1 Hari) <span class="fw-bold">Rp 9.000</span></li>
-                            </ul>
-
+                <div class="col-lg-4 col-md-6">
+                    <div class="pricing-single-box">
+                        <div class="pricing-head">
+                            <h1 class="pricing-dollar">Sepatu & Tas</h1>
+                        </div>
+                        <div class="pricing-body">
+                            <div class="pricing-list">
+                                <ul>
+                                    <li><i class="bi bi-check-lg"></i> Nylon, Canvas, Rubber <span class="price">Rp 45.000</span></li>
+                                    <li><i class="bi bi-check-lg"></i> Sepatu Putih <span class="price">Rp 55.000</span></li>
+                                    <li><i class="bi bi-check-lg"></i> Sepatu Wanita <span class="price">Rp 45.000</span></li>
+                                    <li><i class="bi bi-check-lg"></i> Suede & Leather <span class="price">Rp 100.000</span></li>
+                                    <li><i class="bi bi-check-lg"></i> Sandal <span class="price">Rp 25.000</span></li>
+                                    <li><i class="bi bi-check-lg"></i> Unyellowing <span class="price">Rp 120.000</span></li>
+                                    <li><i class="bi bi-check-lg"></i> Tas Non Leather Kecil <span class="price">Rp 30.000</span></li>
+                                    <li><i class="bi bi-check-lg"></i> Tas Non Leather Sedang <span class="price">Rp 40.000</span></li>
+                                    <li><i class="bi bi-check-lg"></i> Tas Non Leather Besar <span class="price">Rp 50.000</span></li>
+                                    <li><i class="bi bi-check-lg"></i> Tas Leather Kecil <span class="price">Rp 75.000</span></li>
+                                    <li><i class="bi bi-check-lg"></i> Tas Leather Sedang <span class="price">Rp 100.000</span></li>
+                                    <li><i class="bi bi-check-lg"></i> Tas Leather Besar <span class="price">Rp 150.000</span></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- TAS & SEPATU -->
-            <div class="col-md-6 col-lg-4">
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#tasCollapse">
-                            👜 Tas & Sepatu
-                        </button>
-                    </h2>
-                    <div id="tasCollapse" class="accordion-collapse collapse">
-                        <div class="accordion-body">
-                            <ul>
-                                <li>Sepatu (Nylon, Canvas, Rubber) <span class="fw-bold">Rp 45.000</span></li>
-                                <li>Sepatu Putih <span class="fw-bold">Rp 55.000</span></li>
-                                <li>Sepatu Wanita <span class="fw-bold">Rp 45.000</span></li>
-                                <li>Sepatu Suede & Leather <span class="fw-bold">Rp 100.000</span></li>
-                                <li>Sandal <span class="fw-bold">Rp 25.000</span></li>
-                                <li>Unyellowing <span class="fw-bold">Rp 120.000</span></li>
-                                <li>Tas (Non Leather) Kecil <span class="fw-bold">Rp 30.000</span></li>
-                                <li>Tas (Non Leather) Sedang <span class="fw-bold">Rp 40.000</span></li>
-                                <li>Tas (Non Leather) Besar <span class="fw-bold">Rp 50.000</span></li>
-                                <li>Tas Leather Kecil <span class="fw-bold">Rp 75.000</span></li>
-                                <li>Tas Leather Sedang <span class="fw-bold">Rp 100.000</span></li>
-                                <li>Tas Leather Besar <span class="fw-bold">Rp 150.000</span></li>
-                            </ul>
-
+                <div class="col-lg-4 col-md-6">
+                    <div class="pricing-single-box">
+                        <div class="pricing-head">
+                            <h1 class="pricing-dollar">Other Item</h1>
+                        </div>
+                        <div class="pricing-body">
+                            <div class="pricing-list">
+                                <ul>
+                                    <li><i class="bi bi-check-lg"></i> Handuk <span class="price">Rp 15.000</span></li>
+                                    <li><i class="bi bi-check-lg"></i> Dompet NonLeather Kecil <span class="price">Rp 25.000</span></li>
+                                    <li><i class="bi bi-check-lg"></i> Dompet NonLeather Besar <span class="price">Rp 40.000</span></li>
+                                    <li><i class="bi bi-check-lg"></i> Dompet Leather Kecil <span class="price">Rp 30.000</span></li>
+                                    <li><i class="bi bi-check-lg"></i> Dompet Leather Besar <span class="price">Rp 45.000</span></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="pricing-single-box">
+                        <div class="pricing-head">
+                            <h1 class="pricing-dollar">Membership</h1>
+                        </div>
+                        <div class="pricing-body">
 
-            <!-- MEMBERSHIP -->
-            <div class="col-md-6 col-lg-4">
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#membershipCollapse">
-                            ⭐ Membership
-                        </button>
-                    </h2>
-                    <div id="membershipCollapse" class="accordion-collapse collapse">
-                        <div class="accordion-body">
-                            <ul>
-                                <li>Marquis <span class="fw-bold">Rp 150.000</span></li>
-                                <li>Prince <span class="fw-bold">Rp 250.000</span></li>
-                                <li>Duke <span class="fw-bold">Rp 375.000</span></li>
-                                <li>King <span class="fw-bold">Rp 500.000</span></li>
-                            </ul>
+                            <div class="pricing-list">
+                                <ul>
+                                    <li><i class="bi bi-check-lg"></i> Marquis <span class="price">Rp 150.000</span></li>
+                                    <li><i class="bi bi-check-lg"></i> Prince <span class="price">Rp 250.000</span></li>
+                                    <li><i class="bi bi-check-lg"></i> Duke <span class="price">Rp 375.000</span></li>
+                                    <li><i class="bi bi-check-lg"></i> King <span class="price">Rp 500.000</span></li>
+                                    <br>
+
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+<!-- end cleeny pricing Area -->
 
-    <!-- end Daftar Harga -->
-
-    <!-- start cleeny work Area - Proses Laundry -->
+<!-- start cleeny work Area - Proses Laundry -->
     <div class="work-area">
         <div class="container">
             <div class="row work">
@@ -697,7 +677,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="work-single-box">
                         <div class="work-icon">
-                            <i class="bi bi-steam fs-1 text-primary"></i>
+                            <i class="fa-solid fa-shirt fs-1 text-primary"></i>
                             <div class="work-number"><span>7</span></div>
                         </div>
                         <div class="work-content">
@@ -777,7 +757,7 @@
             </div>
         </div>
     </div>
-    <!-- end cleeny work Area -->
+<!-- end cleeny work Area -->
 
 
     <!-- Start cleeny portfolio Area -->
@@ -859,69 +839,97 @@
     <!-- end cleeny portfolio Area -->
 
     <!-- Start Testimonial Area -->
-    <div class="testimonial-area py-20">
-        <div class="container">
-            <div class="text-center mb-10">
-                <h5 class="text-blue-500 text-sm uppercase tracking-wider">Testimoni</h5>
-                <h1 class="text-3xl font-bold">Pendapat Pelanggan Kami</h1>
-            </div>
-            <div class="row testimonial_list owl-carousel">
-                @php
-                    $testimonials = [
-                        [
-                            'name' => 'Siti Nurhaliza',
-                            'role' => 'Ibu Rumah Tangga',
-                            'title' => 'Layanan Berkualitas',
-                            'desc' =>
-                                'Saya sangat puas dengan hasil laundry dari Royal Laundress. Pakaian bersih, wangi, dan disetrika rapi. Pelayanan ramah dan cepat!',
-                        ],
-                        [
-                            'name' => 'Andi Saputra',
-                            'role' => 'Karyawan Swasta',
-                            'title' => 'Harga Terjangkau',
-                            'desc' =>
-                                'Harga laundry-nya sangat terjangkau dan hasilnya memuaskan. Cocok banget untuk anak kos seperti saya.',
-                        ],
-                        [
-                            'name' => 'Budi Santoso',
-                            'role' => 'Pemilik Toko',
-                            'title' => 'Pelayanan Cepat',
-                            'desc' =>
-                                'Saya suka karena proses laundry-nya cepat dan hasilnya tetap bersih. Cocok untuk kebutuhan harian saya.',
-                        ],
-                        [
-                            'name' => 'Desi Anggraini',
-                            'role' => 'Mahasiswi',
-                            'title' => 'Rekomendasi Teman',
-                            'desc' =>
-                                'Awalnya coba karena direkomendasikan teman. Sekarang malah jadi langganan. Pakaian jadi bersih dan wangi!',
-                        ],
-                    ];
-                @endphp
-
-                @foreach ($testimonials as $testi)
-                    <div class="col-lg-12">
-                        <div
-                            class="testi-single-box p-6 bg-white rounded-xl shadow-md h-full flex flex-col justify-between min-h-[300px]">
-                            <div class="testi-degicnation mb-4">
-                                <ul class="testi-rating flex space-x-1 text-yellow-400 mb-2">
-                                    @for ($i = 0; $i < 5; $i++)
-                                        <li><i class="bi bi-star-fill"></i></li>
-                                    @endfor
-                                </ul>
-                                <h4 class="text-lg font-semibold">{{ $testi['name'] }}</h4>
-                                <p class="text-sm text-gray-500">{{ $testi['role'] }}</p>
-                            </div>
-                            <div class="testi-content">
-                                <h3 class="text-blue-600 text-md font-bold">{{ $testi['title'] }}</h3>
-                                <p class="text-gray-700 text-sm mt-2">“{{ $testi['desc'] }}”</p>
-                            </div>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
+<div class="testimonial-area">
+  <div class="container" style="max-width: 100%; padding: 0 15px;">
+    <div class="row testi">
+      <div class="col-lg-12">
+        <div class="section-title text-center">
+          <h5 class="section-sub-title">Testimoni</h5>
+          <h1 class="section-main-title">Pendapat Pelanggan Kami</h1>
         </div>
+      </div>
+      <div class="testimonial_list owl-carousel">
+
+        <div class="col-lg-12">
+          <div class="testi-single-box">
+            <div class="testi-author d-flex align-items-center">
+              <div class="testi-thumb">
+                <img src="{{ asset('frontend/assets/images/profile1.png') }}">
+              </div>
+              <div class="testi-degicnation">
+                <ul class="testi-rating">
+                  <li><i class="bi bi-star-fill"></i></li>
+                  <li><i class="bi bi-star-fill"></i></li>
+                  <li><i class="bi bi-star-fill"></i></li>
+                  <li><i class="bi bi-star-fill"></i></li>
+                  <li><i class="bi bi-star-fill"></i></li>
+                </ul>
+                <h4 class="testi-title">Sari Wahyuni</h4>
+                <p class="testi-text">Ibu Rumah Tangga</p>
+              </div>
+            </div>
+            <div class="testi-content">
+              <h3 class="testi-title2">Pelayanan Cepat & Ramah</h3>
+              <p class="testi-description">"Saya sangat puas laundry di sini, hasil setrikanya rapi banget dan wanginya tahan lama. Pelayanannya juga ramah dan cepat."</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-12">
+          <div class="testi-single-box">
+            <div class="testi-author d-flex align-items-center">
+              <div class="testi-thumb">
+                <img src="{{ asset('frontend/assets/images/profile2.png') }}" >
+              </div>
+              <div class="testi-degicnation">
+                <ul class="testi-rating">
+                  <li><i class="bi bi-star-fill"></i></li>
+                  <li><i class="bi bi-star-fill"></i></li>
+                  <li><i class="bi bi-star-fill"></i></li>
+                  <li><i class="bi bi-star-fill"></i></li>
+                  <li><i class="bi bi-star-fill"></i></li>
+                </ul>
+                <h4 class="testi-title">Rizky Pratama</h4>
+                <p class="testi-text">Karyawan Swasta</p>
+              </div>
+            </div>
+            <div class="testi-content">
+              <h3 class="testi-title2">Pakaian Jadi Seperti Baru</h3>
+              <p class="testi-description">"Awalnya coba-coba, eh ternyata hasilnya bagus banget. Baju kerja jadi seperti baru, bersih dan wangi. Langganan deh sekarang!"</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-12">
+          <div class="testi-single-box">
+            <div class="testi-author d-flex align-items-center">
+              <div class="testi-thumb">
+                <img src="{{ asset('frontend/assets/images/profile3.png') }}" >
+              </div>
+              <div class="testi-degicnation">
+                <ul class="testi-rating">
+                  <li><i class="bi bi-star-fill"></i></li>
+                  <li><i class="bi bi-star-fill"></i></li>
+                  <li><i class="bi bi-star-fill"></i></li>
+                  <li><i class="bi bi-star-fill"></i></li>
+                  <li><i class="bi bi-star-fill"></i></li>
+                </ul>
+                <h4 class="testi-title">Dewi Lestari</h4>
+                <p class="testi-text">Mahasiswi</p>
+              </div>
+            </div>
+            <div class="testi-content">
+              <h3 class="testi-title2">Harga Terjangkau</h3>
+              <p class="testi-description">"Sebagai anak kos, saya senang banget ada laundry yang hasilnya bagus tapi harganya ramah di kantong. Terbaik pokoknya!"</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
+  </div>
+</div>
+
     <!-- End Testimonial Area -->
 
 
@@ -971,7 +979,7 @@
     </div>
     <!-- end cleeny-brand Area -->
 
-    <!-- Start cleeny Footer Area -->
+<!-- Start cleeny Footer Area -->
     <div class="footer-area">
         <div class="container">
             <div class="row">
@@ -985,10 +993,8 @@
                             profesional untuk mendukung gaya hidup modern Anda.</p>
                         <div class="footer-social">
                             <div class="footer-widget-social">
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-whatsapp"></i></a>
                             </div>
                         </div>
                     </div>
@@ -1001,8 +1007,8 @@
                         <ul>
                             <li><a href="/"> <i class="bi bi-chevron-right"></i> Home</a></li>
                             <li><a href="aboutus"> <i class="bi bi-chevron-right"></i> About Us</a></li>
-                            <li><a href="pesanan"> <i class="bi bi-chevron-right"></i>Services</a></li>
-                            <li><a href="team.html"> <i class="bi bi-chevron-right"></i> Meet Our Team</a></li>
+                            <li><a href="pesanan"> <i class="bi bi-chevron-right"></i> Services</a></li>
+                            <li><a href="https://wa.me/6281292204477" target="_blank"> <i class="bi bi-chevron-right"></i> Meet Our Team</a></li>
                         </ul>
                     </div>
                 </div>
@@ -1013,7 +1019,7 @@
                         </div>
                         <div class="footer-contact-box d-flex">
                             <div class="footer-contact-icon">
-                                <a href="#"><i class="bi bi-geo-alt"></i></a>
+                                  <a href="https://maps.app.goo.gl/NFxojcj6UAMLfYNo9" target="_blank"><i class="bi bi-geo-alt"></i></a>
                             </div>
                             <div class="footer-content">
                                 <h3 class="footer-title">Address</h3>
@@ -1022,11 +1028,11 @@
                         </div>
                         <div class="footer-contact-box d-flex">
                             <div class="footer-contact-icon">
-                                <a href="#"><i class="bi bi-telephone"></i></a>
+                                <a href="https://wa.me/6281292204477" target="_blank"> <i class="bi bi-telephone"></i></a>
                             </div>
                             <div class="footer-content">
                                 <h3 class="footer-title">Call Us</h3>
-                                <p class="footer-title">+880 123 (4567) 890</p>
+                                <p class="footer-title">+6281292204477</p>
                             </div>
                         </div>
                         <div class="footer-contact-box d-flex">
@@ -1047,7 +1053,7 @@
         </div>
     </div>
 
-    <!-- end cleeny Footer Area -->
+<!-- end cleeny Footer Area -->
 
     <!-- Start cleeny copyright Area -->
     <div class="copyright-area">
