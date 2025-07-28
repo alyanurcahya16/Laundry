@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.frontend')
 
 @section('content')
 <style>
@@ -294,7 +294,7 @@
           </div>
           <div class="info-value">
             <span class="badge" style="background: linear-gradient(135deg, #2F6EFF, #F16722); color: white; padding: 0.25rem 0.75rem; border-radius: 12px;">
-              {{ ucfirst($order->layanan) }}
+              {{ ucfirst($order->layanan ?? $order->kategori) }}
             </span>
           </div>
         </div>
@@ -310,11 +310,11 @@
         @php
           preg_match('/Rp\s?([\d.,]+)/', $order->item, $match);
           $harga = isset($match[1]) ? (int) str_replace(['.', ','], '', $match[1]) : 0;
-          $qty = $order->quantity ?? 1;
+          $qty = $order->quantity ?? $order->jumlah ?? 1;
           $total = $harga * $qty;
         @endphp
 
-        @if ($order->quantity)
+        @if ($qty)
         <div class="info-item">
           <div class="info-label">
             <i class="fas fa-hashtag icon"></i>

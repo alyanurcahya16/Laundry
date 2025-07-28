@@ -60,7 +60,7 @@
                         <p>Royal Laundress adalah UMKM yang bergerak di bidang jasa laundry, dry cleaning, dan pencucian
                             spring bed dengan moto: <strong>"Menyelesaikan Masalah Tanpa Lelah"</strong>.</p>
                         <div class="cleeny-btn">
-                            <a href="pesanan">Pesan Sekarang <i class="bi bi-arrow-right"></i></a>
+                            <a href="{{ route('order.create') }}">Pesan Sekarang <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>

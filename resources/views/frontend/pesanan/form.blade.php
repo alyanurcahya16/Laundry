@@ -397,7 +397,8 @@
                 Pesanan berhasil dikirim! Terima kasih atas kepercayaan Anda.
             </div>
 
-            <form id="laundryForm">
+            <form action="{{ route('order.store') }}" method="POST">
+    @csrf
                 <!-- Data Pelanggan -->
                 <div class="section-card">
                     <h3 class="section-title">
@@ -433,7 +434,7 @@
                             <div class="row">
                                 <div class="mb-3">
                                     <label for="layanan" class="form-label">Pilih Layanan</label>
-                                    <select class="form-select" name="layanan" id="category" required>
+                                    <select class="form-select" name="orders[0][layanan]" id="category" required>
                                         <option value="">-- Pilih --</option>
                                         <option value="linen">Linen</option>
                                         <option value="uniform">Uniform</option>
@@ -448,15 +449,14 @@
 
                                 <div class="mb-3">
                                     <label for="item" class="form-label">Pilih Item</label>
-                                    <select class="form-select" id="item" name="item" required>
+                                    <select class="form-select" id="item" name="orders[0][item]" required>
                                         <option value="">-- Pilih kategori dulu --</option>
                                     </select>
                                 </div>
 
                                 <div class="mb-3 d-none" id="quantity-group">
                                     <label for="quantity" class="form-label">Jumlah</label>
-                                    <input type="number" class="form-control" name="quantity" id="quantity"
-                                        min="1" value="1">
+                                    <input type="number" class="form-control" name="orders[0][quantity]" id="quantity">
                                 </div>
                                 <div class="col-md-8 mb-3">
                                     <label class="form-label">Catatan (Opsional)</label>
