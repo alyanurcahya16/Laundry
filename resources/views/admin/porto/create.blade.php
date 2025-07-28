@@ -4,7 +4,7 @@
 
 <div class="container mt-4">
     <h3>Tambah Porto</h3>
-    <form action="{{ route('porto.store') }}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('admin.porto.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="mb-3">
             <label>Type</label>

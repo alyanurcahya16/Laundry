@@ -6,7 +6,7 @@
     <div class="card">
         <div class="card-header"><h4>Edit Data About Us</h4></div>
         <div class="card-body">
-            <form action="{{ route('about.update', $about->id) }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('admin.about.update', $about->id) }}" method="POST" enctype="multipart/form-data">
                 @csrf @method('PUT')
 
                 <div class="mb-3">

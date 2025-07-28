@@ -4,7 +4,7 @@
 
 <div class="container mt-4">
     <h3>Edit Porto</h3>
-    <form action="{{ route('porto.update', $porto->id) }}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('admin.porto.update', $porto->id) }}" method="POST" enctype="multipart/form-data">
         @csrf @method('PUT')
         <div class="mb-3">
             <label>Type</label>

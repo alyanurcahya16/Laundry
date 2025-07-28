@@ -6,7 +6,7 @@
     <div class="card">
         <div class="card-header"><h4>Tambah Data About Us</h4></div>
         <div class="card-body">
-            <form action="{{ route('about.store') }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('admin.about.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
 
                 <div class="mb-3">

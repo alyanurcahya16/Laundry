@@ -6,7 +6,7 @@
     <div class="card">
         <div class="card-header d-flex justify-content-between align-items-center">
             <h4 class="card-title">Tentang Kami</h4>
-            <a href="{{ route('about.create') }}" class="btn btn-primary btn-sm">+ Tambah</a>
+            <a href="{{ route('admin.about.create') }}" class="btn btn-primary btn-sm">+ Tambah</a>
         </div>
         <div class="card-body">
             @if(session('success'))
@@ -30,8 +30,8 @@
                         <td>{{ $item->tittle }}</td>
                         <td>{{ $item->experience }}</td>
                         <td>
-                            <a href="{{ route('about.edit', $item->id) }}" class="btn btn-sm btn-warning">Edit</a>
-                            <form action="{{ route('about.destroy', $item->id) }}" method="POST" style="display:inline;">
+                            <a href="{{ route('admin.about.edit', $item->id) }}" class="btn btn-sm btn-warning">Edit</a>
+                            <form action="{{ route('admin.about.destroy', $item->id) }}" method="POST" style="display:inline;">
                                 @csrf @method('DELETE')
                                 <button class="btn btn-sm btn-danger" onclick="return confirm('Yakin?')">Hapus</button>
                             </form>

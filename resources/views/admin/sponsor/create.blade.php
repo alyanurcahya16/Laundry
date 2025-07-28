@@ -4,7 +4,7 @@
 
 <div class="container mt-4">
     <h3>Tambah Sponsor</h3>
-    <form action="{{ route('sponsor.store') }}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('admin.sponsor.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="mb-3">
             <label>Gambar</label>

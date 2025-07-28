@@ -4,7 +4,7 @@
 
 <div class="container mt-4">
     <h3>Edit Service</h3>
-    <form action="{{ route('services.update', $service->id) }}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('admin.services.update', $service->id) }}" method="POST" enctype="multipart/form-data">
         @csrf @method('PUT')
         <div class="mb-3">
             <label>Gambar Saat Ini</label><br>

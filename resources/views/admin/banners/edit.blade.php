@@ -6,7 +6,7 @@
     <div class="card">
         <div class="card-header"><h4>Edit Data Banner</h4></div>
         <div class="card-body">
-            <form action="{{ route('banners.update', $banner->id) }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('admin.banners.update', $banner->id) }}" method="POST" enctype="multipart/form-data">
                 @csrf @method('PUT')
 
                 <div class="mb-3">

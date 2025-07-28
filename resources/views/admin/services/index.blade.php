@@ -4,7 +4,7 @@
 
 <div class="container mt-4">
     <h3>Data Services</h3>
-    <a href="{{ route('services.create') }}" class="btn btn-primary mb-3">+ Tambah Data</a>
+    <a href="{{ route('admin.services.create') }}" class="btn btn-primary mb-3">+ Tambah Data</a>
 
     @if(session('success'))
         <div class="alert alert-success">{{ session('success') }}</div>
@@ -30,8 +30,8 @@
                 <td>{{ $item->description }}</td>
                 <td><a href="{{ $item->link }}" target="_blank">Link</a></td>
                 <td>
-                    <a href="{{ route('services.edit', $item->id) }}" class="btn btn-warning btn-sm">Edit</a>
-                    <form action="{{ route('services.destroy', $item->id) }}" method="POST" style="display:inline;">
+                    <a href="{{ route('admin.services.edit', $item->id) }}" class="btn btn-warning btn-sm">Edit</a>
+                    <form action="{{ route('admin.services.destroy', $item->id) }}" method="POST" style="display:inline;">
                         @csrf @method('DELETE')
                         <button onclick="return confirm('Yakin?')" class="btn btn-danger btn-sm">Hapus</button>
                     </form>

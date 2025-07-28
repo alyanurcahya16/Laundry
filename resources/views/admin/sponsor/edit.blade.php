@@ -4,7 +4,7 @@
 
 <div class="container mt-4">
     <h3>Edit Sponsor</h3>
-    <form action="{{ route('sponsor.update', $sponsor->id) }}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('admin.sponsor.update', $sponsor->id) }}" method="POST" enctype="multipart/form-data">
         @csrf @method('PUT')
         <div class="mb-3">
             <label>Gambar Lama</label><br>
