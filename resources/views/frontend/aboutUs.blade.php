@@ -14,7 +14,7 @@
                 --secondary-color: #0A2A99; /* Disamakan dengan primary agar senada */
                 --accent-color: #FFAA16;
                 --text-dark: #1a1a1a; /* Hitam pekat */
-                --text-light: #ffffff; /* Putih untuk kontras tinggi */
+                --text-light: #000000; /* Putih untuk kontras tinggi */
                 --bg-light: #f0f4ff; /* Biru sangat muda sebagai latar lembut */
                 --bg-section: #ffffff;
                 --shadow-light: rgba(0, 0, 0, 0.08);

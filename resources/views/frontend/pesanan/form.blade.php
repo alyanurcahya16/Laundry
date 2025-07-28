@@ -398,6 +398,7 @@
             </div>
 
             <form id="laundryForm">
+                @csrf
                 <!-- Data Pelanggan -->
                 <div class="section-card">
                     <h3 class="section-title">

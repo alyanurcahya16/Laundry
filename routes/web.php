@@ -28,7 +28,7 @@ Route::get('/pesanan', [PesananController::class, 'create'])->name('pesanan.crea
 Route::post('/pesanan', [PesananController::class, 'store'])->name('pesanan.store');
 Route::get('/pesanan/success', fn () => view('frontend.success'))->name('pesanan.success');
 
-// 🛠️ Admin + Auth Routes
+// 🛠 Admin + Auth Routes
 Route::middleware('auth')->group(function () {
     Route::get('/dashboard', fn () => view('dashboard'))->name('dashboard');
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -83,4 +83,3 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(fun
 });
 
 require __DIR__.'/auth.php';
-

@@ -443,7 +443,7 @@
                                     <li><i class="bi bi-check-lg"></i> Jaket / Hoodie <span class="price">Rp 30.000</span></li>
                                     <li><i class="bi bi-check-lg"></i> Blazer / Mantel <span class="price">Rp 50.000</span></li>
                                     <br>
-                                    <br>
+                                    
                                 </ul>
                             </div>
                         </div>

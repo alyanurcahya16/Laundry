@@ -12,19 +12,20 @@ return new class extends Migration
   public function up()
 {
     Schema::create('orders', function (Blueprint $table) {
-        $table->id();
-        $table->string('nama');
-        $table->string('telepon');
-        $table->text('alamat');
-        $table->string('layanan');
-        $table->json('items_json');
-        $table->string('item');
-        $table->integer('quantity')->nullable();
-        $table->text('catatan')->nullable();
-        $table->timestamps();
-        $table->softDeletes();
+    $table->id();
+    $table->string('nama');
+    $table->string('telepon');
+    $table->text('alamat');
+    $table->string('layanan');
+    $table->text('item');
+    $table->integer('quantity');
+    $table->text('catatan')->nullable();
+    $table->string('status');
+    $table->boolean('is_history')->default(false);
+    $table->softDeletes();
+    $table->timestamps();
+});
 
-    });
 }
 
 
@@ -35,5 +36,5 @@ return new class extends Migration
     {
         Schema::dropIfExists('orders');
     }
-    
+
 };

@@ -6,7 +6,7 @@ use App\Models\Order;
 use Illuminate\Http\Request;
 
 class OrderController extends Controller
-{   
+{
     public function index()
 {
     $orders = Order::where('is_history', false)->get();
@@ -21,7 +21,7 @@ class OrderController extends Controller
 {
     $order = Order::findOrFail($id);
     $order->update(['is_history' => true]); // atau flag lain yang Anda gunakan
-    
+
     return redirect()->route('admin.orders.index')
         ->with('success', 'Pesanan berhasil dipindahkan ke history');
 }
@@ -42,13 +42,13 @@ class OrderController extends Controller
         // Format data items untuk disimpan dalam satu kolom text
         $itemsDescription = "";
         foreach ($validated['orders'] as $item) {
-            $itemsDescription .= "• " . ($item['quantity'] ?? 1) . "x " . 
+            $itemsDescription .= "• " . ($item['quantity'] ?? 1) . "x " .
                                $item['item'] . " (" . $item['layanan'] . ")";
-            
+
             if (!empty($item['catatan'])) {
                 $itemsDescription .= " - Catatan: " . $item['catatan'];
             }
-            
+
             $itemsDescription .= "\n"; // New line untuk item berikutnya
         }
 
@@ -63,7 +63,7 @@ class OrderController extends Controller
             'catatan' => 'Lihat detail item', // Catatan umum
             'status' => 'pending',
             'is_history' => false,
-            
+
         ]);
 
         return redirect()->route('order.success', $order->id)

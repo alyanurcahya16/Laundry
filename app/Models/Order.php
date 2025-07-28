@@ -19,7 +19,8 @@ class Order extends Model
         'item',
         'quantity',
         'catatan',
+        'status',
         'is_history'
     ];
-    
+
 }
