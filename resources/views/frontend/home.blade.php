@@ -231,9 +231,6 @@
 
                         </ul>
                         <div class="counter-single-box">
-                            <div class="counter-icon">
-                                <img src="{{ asset('frontend/assets/images/counter-icon.png') }}" alt="">
-                            </div>
                             <div class="counter-number">
                                 <h1 class="counter">6</h1>
                                 <h1>+</h1>
@@ -774,62 +771,46 @@
             </div>
             <div class="row">
                 <div class="portfolio_list owl-carousel">
-                    <div class="col-lg-12 col-md-12">
-                        <div class="portfolio-single-box">
-                            <div class="portfolio-thumb">
-                                <img src="{{ asset('frontend/assets/images/royal-laundry7.png') }}"
-                                    alt="portfolio-img">
-                                <div class="portfolio-content">
-                                    <div class="portfolio-content2">
-                                        <p class="portfolio-text"><i class="bi bi-geo-alt-fill"></i>Jl. Raya Tajur No
-                                            58 Kota Bogor</p>
-                                        <h3 class="portfolio-title"><a href="project-details.html">Royal
-                                                Laundress</a></h3>
-                                    </div>
-
-                                </div>
-                                <h4 class="portfolio-top-title">royal</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-12 col-md-12">
-                        <div class="portfolio-single-box">
-                            <div class="portfolio-thumb">
-                                <img src="{{ asset('frontend/assets/images/royal-laundry5.png') }}"
-                                    alt="portfolio-img">
-                                <div class="portfolio-content">
-                                    <div class="portfolio-content2">
-                                        <p class="portfolio-text"><i class="bi bi-geo-alt-fill"></i>Jl. Raya Tajur No
-                                            58 Kota Bogor</p>
-                                        <h3 class="portfolio-title"><a href="project-details.html">Royal
-                                                Laundress</a></h3>
-                                    </div>
-
-                                </div>
-                                <h4 class="portfolio-top-title">royal</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-12 col-md-12">
-                        <div class="portfolio-single-box">
-                            <div class="portfolio-thumb">
-                                <img src="{{ asset('frontend/assets/images/royal-laundry6.png') }}"
-                                    alt="portfolio-img">
-                                <div class="portfolio-content">
-                                    <div class="portfolio-content2">
-                                        <p class="portfolio-text"><i class="bi bi-geo-alt-fill"></i> Jl. Raya Tajur No
-                                            58 Kota Bogor
-                                        </p>
-                                        <h3 class="portfolio-title"><a href="project-details.html">Royal Laundress</a>
-                                        </h3>
-                                    </div>
-
-                                </div>
-                                <h4 class="portfolio-top-title">royal</h4>
-                            </div>
-                        </div>
-                    </div>
+    <div class="portfolio-single-box">
+        <div class="portfolio-thumb">
+            <img src="{{ asset('frontend/assets/images/royal-laundry7.png') }}" alt="portfolio-img">
+            <div class="portfolio-content">
+                <div class="portfolio-content2">
+                    <p class="portfolio-text"><i class="bi bi-geo-alt-fill"></i>Jl. Raya Tajur No 58 Kota Bogor</p>
+                    <h3 class="portfolio-title"><a href="project-details.html">Royal Laundress</a></h3>
                 </div>
+            </div>
+            <h4 class="portfolio-top-title">royal</h4>
+        </div>
+    </div>
+
+    <div class="portfolio-single-box">
+        <div class="portfolio-thumb">
+            <img src="{{ asset('frontend/assets/images/royal-laundry5.png') }}" alt="portfolio-img">
+            <div class="portfolio-content">
+                <div class="portfolio-content2">
+                    <p class="portfolio-text"><i class="bi bi-geo-alt-fill"></i>Jl. Raya Tajur No 58 Kota Bogor</p>
+                    <h3 class="portfolio-title"><a href="project-details.html">Royal Laundress</a></h3>
+                </div>
+            </div>
+            <h4 class="portfolio-top-title">royal</h4>
+        </div>
+    </div>
+
+    <div class="portfolio-single-box">
+        <div class="portfolio-thumb">
+            <img src="{{ asset('frontend/assets/images/royal-laundry6.png') }}" alt="portfolio-img">
+            <div class="portfolio-content">
+                <div class="portfolio-content2">
+                    <p class="portfolio-text"><i class="bi bi-geo-alt-fill"></i> Jl. Raya Tajur No 58 Kota Bogor</p>
+                    <h3 class="portfolio-title"><a href="project-details.html">Royal Laundress</a></h3>
+                </div>
+            </div>
+            <h4 class="portfolio-top-title">royal</h4>
+        </div>
+    </div>
+</div>
+
             </div>
             <div class="portfolio-shape">
                 <img src="frontend/assets/images/portfolio-shape-1.png" alt="portfolio-shape-1">
@@ -1086,44 +1067,40 @@
             <i class="fab fa-whatsapp"></i>
         </div>
     </div>
+<!-- jQuery (harus paling atas) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <!-- jquery js -->
-    <script src="{{ asset('frontend/assets/js/vendor/jquery-3.6.2.min.js') }}"></script>
-    <!-- bootstrap js -->
-    <script src="{{ asset('frontend/assets/js/bootstrap.min.js') }}"></script>
-    <!-- carousel js -->
-    <script src="{{ asset('frontend/assets/js/owl.carousel.min.js') }}"></script>
-    <!-- counterup js -->
-    <script src="{{ asset('frontend/assets/js/jquery.counterup.min.js') }}"></script>
-    <!-- waypoints js -->
-    <script src="{{ asset('frontend/assets/js/waypoints.min.js') }}"></script>
-    <!-- wow js -->
-    <script src="{{ asset('frontend/assets/js/wow.js') }}"></script>
-    <!-- imagesloaded js -->
-    <script src="{{ asset('frontend/assets/js/imagesloaded.pkgd.min.js') }}"></script>
-    <!-- venobox js -->
-    <script src="{{ asset('frontend/venobox/venobox.js') }}"></script>
-    <!--  animated-text js -->
-    <script src="{{ asset('frontend/assets/js/animated-text.js') }}"></script>
-    <!-- venobox min js -->
-    <script src="{{ asset('frontend/venobox/venobox.min.js') }}"></script>
-    <!-- isotope js -->
-    <script src="{{ asset('frontend/assets/js/isotope.pkgd.min.js') }}"></script>
-    <!-- jquery meanmenu js -->
-    <script src="{{ asset('frontend/assets/js/jquery.meanmenu.js') }}"></script>
-    <!-- jquery scrollup js -->
-    <script src="{{ asset('frontend/assets/js/jquery.scrollUp.js') }}"></script>
-    <!-- theme js -->
-    <script src="{{ asset('frontend/assets/js/theme.js') }}"></script>
-    <script src="{{ asset('frontend/assets/js/jquery.barfiller.js') }}"></script>
-    <script src="{{ asset('frontend/assets/js/typed.js') }}"></script>
-    <!-- jquery js -->
-    <script src="https://unpkg.com/aos@3.0.0-beta.6/dist/aos.js"></script>
-    <script src="{{ asset('frontend/assets/js/vanilla-tilt.min.js') }}"></script>
-    <!-- partial -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Plugin jQuery -->
+<script src="{{ asset('frontend/assets/js/jquery.meanmenu.js') }}"></script>
+<script src="{{ asset('frontend/assets/js/owl.carousel.min.js') }}"></script>
+<script src="{{ asset('frontend/assets/js/jquery.counterup.min.js') }}"></script>
+<script src="{{ asset('frontend/assets/js/waypoints.min.js') }}"></script>
+<script src="{{ asset('frontend/assets/js/jquery.scrollUp.js') }}"></script>
+<script src="{{ asset('frontend/assets/js/jquery.barfiller.js') }}"></script>
+<script src="{{ asset('frontend/assets/js/typed.js') }}"></script>
+<script src="{{ asset('frontend/assets/js/wow.js') }}"></script>
+<script src="{{ asset('frontend/assets/js/imagesloaded.pkgd.min.js') }}"></script>
+<script src="{{ asset('frontend/assets/js/isotope.pkgd.min.js') }}"></script>
+<script src="{{ asset('frontend/assets/js/animated-text.js') }}"></script>
+
+<!-- Venobox -->
+<script src="{{ asset('frontend/venobox/venobox.js') }}"></script>
+<script src="{{ asset('frontend/venobox/venobox.min.js') }}"></script>
+
+<!-- Bootstrap (cukup 1, pakai versi CDN terbaru) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- AOS (Scroll Animation Library, opsional jika dipakai) -->
+<script src="https://unpkg.com/aos@3.0.0-beta.6/dist/aos.js"></script>
+
+<!-- Vanilla Tilt (opsional) -->
+<script src="{{ asset('frontend/assets/js/vanilla-tilt.min.js') }}"></script>
+
+<!-- Particles JS (opsional jika dipakai di halaman) -->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+<!-- Theme.js (paling akhir) -->
+<script src="{{ asset('frontend/assets/js/theme.js') }}"></script>
 
     <!--type-js-->
     {{-- <script>
