@@ -774,62 +774,46 @@
             </div>
             <div class="row">
                 <div class="portfolio_list owl-carousel">
-                    <div class="col-lg-12 col-md-12">
-                        <div class="portfolio-single-box">
-                            <div class="portfolio-thumb">
-                                <img src="{{ asset('frontend/assets/images/royal-laundry7.png') }}"
-                                    alt="portfolio-img">
-                                <div class="portfolio-content">
-                                    <div class="portfolio-content2">
-                                        <p class="portfolio-text"><i class="bi bi-geo-alt-fill"></i>Jl. Raya Tajur No
-                                            58 Kota Bogor</p>
-                                        <h3 class="portfolio-title"><a href="project-details.html">Royal
-                                                Laundress</a></h3>
-                                    </div>
-
-                                </div>
-                                <h4 class="portfolio-top-title">royal</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-12 col-md-12">
-                        <div class="portfolio-single-box">
-                            <div class="portfolio-thumb">
-                                <img src="{{ asset('frontend/assets/images/royal-laundry5.png') }}"
-                                    alt="portfolio-img">
-                                <div class="portfolio-content">
-                                    <div class="portfolio-content2">
-                                        <p class="portfolio-text"><i class="bi bi-geo-alt-fill"></i>Jl. Raya Tajur No
-                                            58 Kota Bogor</p>
-                                        <h3 class="portfolio-title"><a href="project-details.html">Royal
-                                                Laundress</a></h3>
-                                    </div>
-
-                                </div>
-                                <h4 class="portfolio-top-title">royal</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-12 col-md-12">
-                        <div class="portfolio-single-box">
-                            <div class="portfolio-thumb">
-                                <img src="{{ asset('frontend/assets/images/royal-laundry6.png') }}"
-                                    alt="portfolio-img">
-                                <div class="portfolio-content">
-                                    <div class="portfolio-content2">
-                                        <p class="portfolio-text"><i class="bi bi-geo-alt-fill"></i> Jl. Raya Tajur No
-                                            58 Kota Bogor
-                                        </p>
-                                        <h3 class="portfolio-title"><a href="project-details.html">Royal Laundress</a>
-                                        </h3>
-                                    </div>
-
-                                </div>
-                                <h4 class="portfolio-top-title">royal</h4>
-                            </div>
-                        </div>
-                    </div>
+    <div class="portfolio-single-box">
+        <div class="portfolio-thumb">
+            <img src="{{ asset('frontend/assets/images/royal-laundry7.png') }}" alt="portfolio-img">
+            <div class="portfolio-content">
+                <div class="portfolio-content2">
+                    <p class="portfolio-text"><i class="bi bi-geo-alt-fill"></i>Jl. Raya Tajur No 58 Kota Bogor</p>
+                    <h3 class="portfolio-title"><a href="project-details.html">Royal Laundress</a></h3>
                 </div>
+            </div>
+            <h4 class="portfolio-top-title">royal</h4>
+        </div>
+    </div>
+
+    <div class="portfolio-single-box">
+        <div class="portfolio-thumb">
+            <img src="{{ asset('frontend/assets/images/royal-laundry5.png') }}" alt="portfolio-img">
+            <div class="portfolio-content">
+                <div class="portfolio-content2">
+                    <p class="portfolio-text"><i class="bi bi-geo-alt-fill"></i>Jl. Raya Tajur No 58 Kota Bogor</p>
+                    <h3 class="portfolio-title"><a href="project-details.html">Royal Laundress</a></h3>
+                </div>
+            </div>
+            <h4 class="portfolio-top-title">royal</h4>
+        </div>
+    </div>
+
+    <div class="portfolio-single-box">
+        <div class="portfolio-thumb">
+            <img src="{{ asset('frontend/assets/images/royal-laundry6.png') }}" alt="portfolio-img">
+            <div class="portfolio-content">
+                <div class="portfolio-content2">
+                    <p class="portfolio-text"><i class="bi bi-geo-alt-fill"></i> Jl. Raya Tajur No 58 Kota Bogor</p>
+                    <h3 class="portfolio-title"><a href="project-details.html">Royal Laundress</a></h3>
+                </div>
+            </div>
+            <h4 class="portfolio-top-title">royal</h4>
+        </div>
+    </div>
+</div>
+
             </div>
             <div class="portfolio-shape">
                 <img src="frontend/assets/images/portfolio-shape-1.png" alt="portfolio-shape-1">

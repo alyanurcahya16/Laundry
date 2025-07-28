@@ -2058,6 +2058,17 @@ p.work-description {
     z-index: 1;
     overflow: hidden;
 }
+.portfolio-single-box {
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.portfolio-thumb img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
 
 .portfolio-content {
     position: absolute;
