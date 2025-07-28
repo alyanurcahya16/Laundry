@@ -5,7 +5,8 @@
     <div class="card">
         <div class="card-header"><h4>Edit Registrasi Hotel</h4></div>
         <div class="card-body">
-            <form action="{{ route('admin.registrasi.update', $registrasi->id) }}" method="POST">
+            <form action="{{ route('admin.registrasi-hotel.update', $registrasi->id) }}" method="POST">
+
                 @csrf
                 @method('PUT')
                 
@@ -55,7 +56,7 @@
                 </div>
                 
                 <div class="d-flex justify-content-end gap-2">
-                    <a href="{{ route('admin.registrasi.index') }}" class="btn btn-secondary">Kembali</a>
+                    <a href="{{ route('admin.registrasi-hotel.index') }}" class="btn btn-secondary">Kembali</a>
                     <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
                 </div>
             </form>

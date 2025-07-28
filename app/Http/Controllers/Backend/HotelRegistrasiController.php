@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\RegistrasiHotel;
 use Illuminate\Http\Request;
 
+
 class HotelRegistrasiController extends Controller
 {
     public function index()
@@ -23,8 +24,8 @@ class HotelRegistrasiController extends Controller
 }
 public function edit($id)
 {
-    $registrasi = Registrasi::findOrFail($id);
-    return view('admin.registrasi.edit', compact('registrasi'));
+     $registrasi = RegistrasiHotel::findOrFail($id);
+    return view('backend.registrasi_hotel.edit', compact('registrasi'));
 }
 
 public function update(Request $request, $id)
@@ -39,10 +40,10 @@ public function update(Request $request, $id)
         'alamat_hotel' => 'required',
     ]);
 
-    $registrasi = Registrasi::findOrFail($id);
+    $registrasi = RegistrasiHotel::findOrFail($id);
     $registrasi->update($validated);
 
-    return redirect()->route('admin.registrasi_hotel.index')
+    return redirect()->route('admin.registrasi-hotel.index')
         ->with('success', 'Data registrasi berhasil diperbarui');
 }
 }
