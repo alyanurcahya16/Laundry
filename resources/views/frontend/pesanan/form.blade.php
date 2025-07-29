@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Pemesanan Laundry</title>
-    <link rel="icon" type="image/png" sizes="56x56" href="{{ asset('frontend/assets/images/fav-icon/icon.png') }}">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -16,260 +13,207 @@
             box-sizing: border-box;
         }
 
+        html, body {
+            height: 100%;
+            overflow-x: hidden;
+        }
+
         body {
-            font-family: 'Inter', sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background-attachment: fixed;
             min-height: 100vh;
-            padding: 0;
-            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            position: relative;
+        }
+
+        /* Overlay pattern untuk depth */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image:
+                radial-gradient(circle at 25% 25%, rgba(255,255,255,0.1) 0%, transparent 50%),
+                radial-gradient(circle at 75% 75%, rgba(255,255,255,0.05) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: -1;
         }
 
         .main-container {
             min-height: 100vh;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
+            padding: 2rem 0;
+            position: relative;
+            z-index: 1;
         }
 
-        .header-section {
-            text-align: center;
-            margin-bottom: 30px;
-            color: white;
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
         }
 
-        .header-section h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        .header-section p {
-            font-size: 1.1rem;
-            opacity: 0.9;
-            font-weight: 300;
-        }
-
-        .form-container {
-            background: white;
+        /* Card styling with glassmorphism effect */
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             border-radius: 20px;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-            padding: 40px;
-            margin-bottom: 30px;
-            backdrop-filter: blur(10px);
-        }
-
-        .section-card {
-            background: #f8f9fa;
-            border-radius: 15px;
-            padding: 30px;
-            margin-bottom: 30px;
-            border: 1px solid #e9ecef;
             transition: all 0.3s ease;
         }
 
-        .section-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
         }
 
-        .section-title {
-            font-size: 1.4rem;
-            font-weight: 600;
-            color: #495057;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #667eea;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+        .card-header {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 20px 20px 0 0 !important;
+            padding: 1.5rem;
         }
 
-        .form-control,
-        .form-select {
+        .card-body {
+            padding: 2rem;
+        }
+
+        /* Form styling */
+        .form-control, .form-select {
+            border: 2px solid rgba(102, 126, 234, 0.2);
             border-radius: 10px;
-            border: 2px solid #e9ecef;
-            padding: 12px 15px;
-            font-size: 0.95rem;
+            padding: 12px 16px;
             transition: all 0.3s ease;
-            background: white;
+            background: rgba(255, 255, 255, 0.9);
         }
 
-        .form-control:focus,
-        .form-select:focus {
+        .form-control:focus, .form-select:focus {
             border-color: #667eea;
             box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
-            background: white;
+            background: rgba(255, 255, 255, 1);
         }
 
         .form-label {
-            font-weight: 500;
+            font-weight: 600;
             color: #495057;
             margin-bottom: 8px;
-            font-size: 0.9rem;
         }
 
-        .order-item {
-            background: white;
-            border-radius: 15px;
-            padding: 25px;
-            margin-bottom: 20px;
-            border: 2px solid #e9ecef;
+        /* Button styling */
+        .btn {
+            border-radius: 10px;
+            padding: 12px 24px;
+            font-weight: 600;
             transition: all 0.3s ease;
-            position: relative;
-        }
-
-        .order-item:hover {
-            border-color: #667eea;
-            transform: translateY(-1px);
-        }
-
-        .order-item::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            border-radius: 15px 15px 0 0;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         .btn-primary {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             border: none;
-            border-radius: 10px;
-            padding: 12px 25px;
-            font-weight: 600;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+            color: white;
         }
 
         .btn-primary:hover {
+            background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
         }
 
         .btn-outline-primary {
             border: 2px solid #667eea;
             color: #667eea;
-            border-radius: 10px;
-            padding: 10px 20px;
-            font-weight: 500;
-            transition: all 0.3s ease;
+            background: transparent;
         }
 
         .btn-outline-primary:hover {
             background: #667eea;
-            transform: translateY(-1px);
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+            color: white;
+            transform: translateY(-2px);
         }
 
         .btn-outline-danger {
             border: 2px solid #dc3545;
             color: #dc3545;
-            border-radius: 8px;
-            padding: 8px 15px;
-            font-size: 0.85rem;
-            transition: all 0.3s ease;
+            background: transparent;
         }
 
         .btn-outline-danger:hover {
             background: #dc3545;
-            transform: translateY(-1px);
-        }
-
-        .quantity-group {
-            transition: all 0.3s ease;
-        }
-
-        .accordion-item {
-            border-radius: 15px !important;
-            border: 2px solid #e9ecef !important;
-            margin-bottom: 20px;
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
-
-        .accordion-item:hover {
+            color: white;
             transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Order item styling */
+        .order-item {
+            background: rgba(255, 255, 255, 0.5);
+            border: 2px solid rgba(102, 126, 234, 0.2);
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .order-item:hover {
+            background: rgba(255, 255, 255, 0.7);
+            border-color: rgba(102, 126, 234, 0.4);
+        }
+
+        /* Title styling */
+        h2 {
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            font-weight: 700;
+            margin-bottom: 2rem;
+        }
+
+        h5 {
+            color: #495057;
+            font-weight: 600;
+        }
+
+        /* Accordion styling */
+        .accordion-item {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px !important;
+            margin-bottom: 1rem;
+            overflow: hidden;
         }
 
         .accordion-button {
-            background: white !important;
-            border: none !important;
-            font-weight: 600 !important;
-            font-size: 1rem !important;
-            padding: 20px !important;
-            color: #495057 !important;
-            border-radius: 15px !important;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border: none;
+            border-radius: 15px 15px 0 0;
+            font-weight: 600;
+            color: #495057;
         }
 
         .accordion-button:not(.collapsed) {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
-            color: white !important;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
         }
 
         .accordion-body {
-            background: #f8f9fa;
-            padding: 20px;
+            background: rgba(255, 255, 255, 0.95);
         }
 
-        .accordion-body ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .accordion-body li {
-            padding: 8px 0;
-            border-bottom: 1px solid #dee2e6;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .accordion-body li:last-child {
-            border-bottom: none;
-        }
-
-        .accordion-body li::before {
-            content: '🧺';
-            margin-right: 10px;
-        }
-
-        .price-section {
-            background: white;
-            border-radius: 20px;
-            padding: 30px;
-            margin-top: 30px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-        }
-
-        .price-section h3 {
-            text-align: center;
-            color: #495057;
-            margin-bottom: 30px;
-            font-size: 1.8rem;
-            font-weight: 700;
-        }
-
+        /* Alert styling */
         .alert-success {
-            background: linear-gradient(135deg, #28a745, #20c997);
-            color: white;
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
             border: none;
-            border-radius: 10px;
-            padding: 15px 20px;
-            margin-bottom: 20px;
-            font-weight: 500;
+            border-radius: 15px;
+            color: white;
+            font-weight: 600;
         }
-
-        .submit-section {
+      .submit-section {
             text-align: center;
             margin-top: 40px;
             padding: 30px;
-            background: #f8f9fa;
             border-radius: 15px;
         }
 
@@ -289,194 +233,135 @@
             transform: translateY(-3px);
             box-shadow: 0 12px 35px rgba(102, 126, 234, 0.6);
         }
-
-        .floating-icons {
-            position: fixed;
-            right: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 1000;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .floating-icon {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.2rem;
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-
-        .floating-icon:hover {
-            transform: scale(1.1);
-            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
-        }
-
+        /* Responsive adjustments */
         @media (max-width: 768px) {
             .main-container {
-                padding: 10px;
+                padding: 1rem 0;
             }
 
-            .form-container {
-                padding: 20px;
+            .card-body {
+                padding: 1.5rem;
             }
 
-            .header-section h1 {
-                font-size: 2rem;
+            .order-item {
+                padding: 1rem;
             }
 
-            .section-card {
-                padding: 20px;
-            }
-
-            .floating-icons {
-                display: none;
+            h2 {
+                font-size: 1.5rem;
             }
         }
 
-        .fade-in {
-            animation: fadeIn 0.6s ease-in;
-        }
-
-        @keyframes fadeIn {
+        /* Animation for form elements */
+        @keyframes fadeInUp {
             from {
                 opacity: 0;
-                transform: translateY(20px);
+                transform: translateY(30px);
             }
-
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
 
-        .order-counter {
-            position: absolute;
-            top: -10px;
-            right: -10px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            border-radius: 50%;
-            width: 30px;
-            height: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.8rem;
-            font-weight: 600;
-            box-shadow: 0 2px 8px rgba(102, 126, 234, 0.4);
+        .card {
+            animation: fadeInUp 0.6s ease forwards;
         }
 
+        .card:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .card:nth-child(3) {
+            animation-delay: 0.4s;
+        }
     </style>
 </head>
-
 <body>
     <div class="main-container">
-        <!-- Header Section -->
-        <div class="header-section fade-in text-center">
+        <div class="container py-5">
+            <h2 class="text-center mb-4">Form Pemesanan Laundry</h2>
 
-    <h1><img src="{{ asset('frontend/assets/images/royal-logo1.png') }}" alt="Logo Royal Laundry" class="header-logo mb-3" style="height: 100px;"></i> Premium Laundry Service</h1>
-    <p>Layanan laundry terpercaya dengan kualitas terbaik</p>
-</div>
-
-
-        <!-- Form Container -->
-        <div class="form-container fade-in">
-            <!-- Success Alert -->
             <div class="alert alert-success d-none" id="successAlert">
-                <i class="fas fa-check-circle me-2"></i>
-                Pesanan berhasil dikirim! Terima kasih atas kepercayaan Anda.
+                Pesanan berhasil dikirim!
             </div>
+ <form id="laundryForm" action="{{ route('order.store') }}" method="POST">
+    @csrf
 
-            <form id="laundryForm">
-                @csrf
+            <form id="orderForm">
                 <!-- Data Pelanggan -->
-                <div class="section-card">
-                    <h3 class="section-title">
-                        <i class="fas fa-user"></i>
-                        Data Pelanggan
-                    </h3>
-                    <div class="row">
-                        <div class="col-md-6 mb-3">
-                            <label for="nama" class="form-label">Nama Lengkap</label>
-                            <input type="text" class="form-control" name="nama" id="nama" required>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <label for="telepon" class="form-label">Nomor WhatsApp</label>
-                            <input type="tel" class="form-control" name="telepon" id="telepon" required>
-                        </div>
-                        <div class="col-12 mb-3">
-                            <label for="alamat" class="form-label">Alamat Lengkap</label>
-                            <textarea class="form-control" name="alamat" id="alamat" rows="3" required></textarea>
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5><i class="fas fa-user me-2"></i>Data Pelanggan</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="nama" class="form-label">Nama Lengkap</label>
+                                <input type="text" class="form-control" name="nama" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="telepon" class="form-label">Nomor HP</label>
+                                <input type="text" class="form-control" name="telepon" required>
+                            </div>
+                            <div class="col-12 mb-3">
+                                <label for="alamat" class="form-label">Alamat Lengkap</label>
+                                <textarea class="form-control" name="alamat" rows="2" required></textarea>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Daftar Pesanan -->
-                <div class="section-card">
-                    <h3 class="section-title">
-                        <i class="fas fa-shopping-cart"></i>
-                        Daftar Pesanan
-                    </h3>
-                    <div id="orders-container">
-                        <!-- Pesanan Pertama -->
-                        <div class="order-item">
-                            <div class="order-counter">1</div>
-                            <div class="row">
-                                <div class="mb-3">
-                                    <label for="layanan" class="form-label">Pilih Layanan</label>
-                                    <select class="form-select" name="layanan" id="category" required>
-                                        <option value="">-- Pilih --</option>
-                                        <option value="linen">Linen</option>
-                                        <option value="uniform">Uniform</option>
-                                        <option value="satuan">Satuan</option>
-                                        <option value="beddings">Beddings</option>
-                                        <option value="other">Other Items</option>
-                                        <option value="kiloan">Daily Kiloan</option>
-                                        <option value="tas_sepatu">Tas & Sepatu</option>
-                                        <option value="membership">Membership Packages</option>
-                                    </select>
-                                </div>
-
-                                <div class="mb-3">
-                                    <label for="item" class="form-label">Pilih Item</label>
-                                    <select class="form-select" id="item" name="item" required>
-                                        <option value="">-- Pilih kategori dulu --</option>
-                                    </select>
-                                </div>
-
-                                <div class="mb-3 d-none" id="quantity-group">
-                                    <label for="quantity" class="form-label">Jumlah</label>
-                                    <input type="number" class="form-control" name="quantity" id="quantity"
-                                        min="1" value="1">
-                                </div>
-                                <div class="col-md-8 mb-3">
-                                    <label class="form-label">Catatan (Opsional)</label>
-                                    <input type="text" class="form-control" name="orders[0][catatan]"
-                                        placeholder="Contoh: Jangan pakai pewangi, cuci terpisah">
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5><i class="fas fa-shopping-cart me-2"></i>Daftar Pesanan</h5>
+                    </div>
+                    <div class="card-body">
+                        <div id="orders-container">
+                            <!-- Pesanan Pertama -->
+                            <div class="order-item mb-4">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Pilih Layanan</label>
+                                        <select class="form-select" name="orders[0][layanan]" required onchange="updateItems(this)">
+                                            <option value="">-- Pilih --</option>
+                                            <option value="Linen">Linen</option>
+                                            <option value="Uniform">Uniform</option>
+                                            <option value="Satuan">Satuan</option>
+                                            <option value="Beddings">Beddings</option>
+                                            <option value="Other Items">Other Items</option>
+                                            <option value="Daily Kiloan">Daily Kiloan</option>
+                                            <option value="Tas & Sepatu">Tas & Sepatu</option>
+                                            <option value="Membership Packages">Membership Packages</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Pilih Item</label>
+                                        <select class="form-select item-select" name="orders[0][item]" required>
+                                            <option value="">-- Pilih kategori dulu --</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4 mb-3 quantity-group d-none">
+                                        <label class="form-label">Jumlah</label>
+                                        <input type="number" class="form-control" name="orders[0][quantity]" min="1" value="1">
+                                    </div>
+                                    <div class="col-md-8 mb-3">
+                                        <label class="form-label">Catatan (Opsional)</label>
+                                        <input type="text" class="form-control" name="orders[0][catatan]" placeholder="Contoh: Jangan pakai pewangi">
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Tombol Tambah Pesanan -->
-                    <div class="text-center">
+                        <!-- Tombol Tambah Pesanan -->
                         <button type="button" class="btn btn-outline-primary" onclick="addOrderField()">
                             <i class="fas fa-plus"></i> Tambah Pesanan Lain
                         </button>
                     </div>
                 </div>
 
-                <!-- Submit Section -->
+                <!-- Submit Button -->
                 <div class="submit-section">
                     <button type="submit" class="submit-btn">
                         <i class="fas fa-paper-plane me-2"></i>
@@ -490,18 +375,12 @@
                     </div>
                 </div>
             </form>
-        </div>
+
     </div>
 
-    <!-- Floating Icons -->
-    <div class="floating-icons">
-        <div class="floating-icon" onclick="window.open('https://wa.me/+6281292204477', '_blank')">
-            <i class="fab fa-whatsapp"></i>
-        </div>
-    </div>
-
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script>
+        // Data item laundry
         const itemOptions = {
             linen: [
                 'Bed Sheet Double - Rp 2.500',
@@ -511,7 +390,7 @@
                 'Pillow Case - Rp 1.200',
                 'Bath Towel - Rp 2.500',
                 'Hand Towel - Rp 1.500',
-                'Face Towel - Rp 1.100',
+                'Face Towel - Rp 1.200',
                 'Pool Towel - Rp 3.000',
                 'Blanket Double - Rp 7.000',
                 'Treatment/Spotting (2x harga)'
@@ -552,7 +431,7 @@
                 'Paket Bedding Single - Rp 35.000',
                 'Paket Bedding Double - Rp 50.000'
             ],
-            other: [
+            'other items': [
                 'Handuk - Rp 15.000',
                 'Dompet Non Leather Kecil - Rp 25.000',
                 'Dompet Non Leather Besar - Rp 40.000',
@@ -568,7 +447,7 @@
                 'Kebaya - Rp 30.000',
                 'Alat Ibadah - Rp 25.000'
             ],
-            kiloan: [
+            'daily kiloan': [
                 'Cuci Kering Lipat - Rp 7.000/kg',
                 'Cuci Kering Gosok (3 Hari) - Rp 9.000/kg',
                 'Cuci Kering Gosok (1 Hari) - Rp 12.000/kg',
@@ -577,7 +456,7 @@
                 'Setrika Kiloan Reguler (2 Hari) - Rp 7.000/kg',
                 'Setrika Kiloan Express (1 Hari) - Rp 9.000/kg'
             ],
-            tas_sepatu: [
+            'tas & sepatu': [
                 'Sepatu Nylon / Canvas - Rp 45.000',
                 'Sepatu Putih - Rp 55.000',
                 'Sepatu Wanita - Rp 45.000',
@@ -591,7 +470,7 @@
                 'Tas Leather Sedang - Rp 100.000',
                 'Tas Leather Besar - Rp 150.000'
             ],
-            membership: [
+            'membership packages': [
                 'Marquis - Rp 150.000',
                 'Prince - Rp 250.000',
                 'Duke - Rp 375.000',
@@ -599,19 +478,77 @@
             ]
         };
 
+        // Item yang membutuhkan jumlah
         const itemsNeedQuantity = [
-            'Bed Sheet', 'Duvet Cover', 'Pillow Case', 'Bath Towel', 'Hand Towel', 'Face Towel', 'Pool Towel',
-            'Blanket',
+            'Bed Sheet', 'Duvet Cover', 'Pillow Case', 'Bath Towel', 'Hand Towel', 'Face Towel', 'Pool Towel', 'Blanket',
             'Shirt', 'Trouser', 'Jas', 'Skirt', 'Cook Jacket', 'Apron Kitchen', 'T-shirt', 'Neck Tie', 'Safari Shirt',
             'Cuci Kering', 'Setrika Kiloan', 'Sepatu', 'Tas', 'Marquis', 'Prince', 'Duke', 'King'
         ];
 
-        function updateItems() {
-            const category = document.getElementById('category').value;
-            const itemSelect = document.getElementById('item');
-            const quantityGroup = document.getElementById('quantity-group');
+        // Counter untuk pesanan
+        let orderCounter = 1;
 
-            // Reset item select
+        // Fungsi untuk menambah field pesanan baru
+        function addOrderField() {
+            const container = document.getElementById('orders-container');
+            const newOrder = document.createElement('div');
+            newOrder.className = 'order-item mb-4';
+            newOrder.innerHTML = `
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">Pilih Layanan</label>
+                        <select class="form-select" name="orders[${orderCounter}][layanan]" required onchange="updateItems(this)">
+                            <option value="">-- Pilih --</option>
+                            <option value="Linen">Linen</option>
+                            <option value="Uniform">Uniform</option>
+                            <option value="Satuan">Satuan</option>
+                            <option value="Beddings">Beddings</option>
+                            <option value="Other Items">Other Items</option>
+                            <option value="Daily Kiloan">Daily Kiloan</option>
+                            <option value="Tas & Sepatu">Tas & Sepatu</option>
+                            <option value="Membership Packages">Membership Packages</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">Pilih Item</label>
+                        <select class="form-select item-select" name="orders[${orderCounter}][item]" required>
+                            <option value="">-- Pilih kategori dulu --</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4 mb-3 quantity-group d-none">
+                        <label class="form-label">Jumlah</label>
+                        <input type="number" class="form-control" name="orders[${orderCounter}][quantity]" min="1" value="1">
+                    </div>
+                    <div class="col-md-8 mb-3">
+                        <label class="form-label">Catatan (Opsional)</label>
+                        <input type="text" class="form-control" name="orders[${orderCounter}][catatan]" placeholder="Contoh: Jangan pakai pewangi">
+                    </div>
+                    <div class="col-12 text-end">
+                        <button type="button" class="btn btn-sm btn-outline-danger" onclick="removeOrderField(this)">
+                            <i class="fas fa-trash"></i> Hapus Pesanan
+                        </button>
+                    </div>
+                </div>
+            `;
+            container.appendChild(newOrder);
+            orderCounter++;
+        }
+
+        // Fungsi untuk menghapus field pesanan
+        function removeOrderField(button) {
+            if (document.querySelectorAll('.order-item').length > 1) {
+                button.closest('.order-item').remove();
+            } else {
+                alert('Minimal harus ada satu pesanan');
+            }
+        }
+
+        // Fungsi untuk update item berdasarkan kategori
+        function updateItems(selectElement) {
+            const category = selectElement.value.toLowerCase();
+            const itemSelect = selectElement.closest('.row').querySelector('.item-select');
+            const quantityGroup = selectElement.closest('.row').querySelector('.quantity-group');
+
             itemSelect.innerHTML = '<option value="">-- Pilih Item --</option>';
             quantityGroup.classList.add('d-none');
 
@@ -619,33 +556,58 @@
                 itemOptions[category].forEach(item => {
                     const option = document.createElement('option');
                     option.value = item;
-                    option.textContent = item;
+                    option.text = item;
                     itemSelect.appendChild(option);
                 });
             }
+
+            // Event listener ketika item berubah
+            itemSelect.onchange = function() {
+                const selectedItem = this.value;
+                const showQty = itemsNeedQuantity.some(keyword => selectedItem.includes(keyword));
+                if (showQty) {
+                    quantityGroup.classList.remove('d-none');
+                } else {
+                    quantityGroup.classList.add('d-none');
+                }
+            };
         }
 
-        function checkQuantityRequired() {
-            const itemSelect = document.getElementById('item');
-            const quantityGroup = document.getElementById('quantity-group');
-            const selectedItem = itemSelect.value;
+        // Form submission handler
+        document.getElementById('orderForm').addEventListener('submit', function(e) {
+            e.preventDefault();
 
-            const showQty = itemsNeedQuantity.some(keyword => selectedItem.includes(keyword));
-            if (showQty) {
-                quantityGroup.classList.remove('d-none');
-            } else {
-                quantityGroup.classList.add('d-none');
-            }
-        }
+            // Show success message
+            const successAlert = document.getElementById('successAlert');
+            successAlert.classList.remove('d-none');
 
-        document.addEventListener('DOMContentLoaded', function() {
-            // Initialize category change event
-            document.getElementById('category').addEventListener('change', updateItems);
+            // Scroll to top to show success message
+            window.scrollTo({ top: 0, behavior: 'smooth' });
 
-            // Initialize item change event
-            document.getElementById('item').addEventListener('change', checkQuantityRequired);
+            // Reset form after 2 seconds
+            setTimeout(() => {
+                this.reset();
+                successAlert.classList.add('d-none');
+
+                // Reset all order items except the first one
+                const orderItems = document.querySelectorAll('.order-item');
+                for (let i = 1; i < orderItems.length; i++) {
+                    orderItems[i].remove();
+                }
+
+                // Reset counter
+                orderCounter = 1;
+            }, 2000);
+        });
+
+        // Add smooth scrolling to accordion items
+        document.querySelectorAll('.accordion-button').forEach(button => {
+            button.addEventListener('click', function() {
+                setTimeout(() => {
+                    this.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }, 350);
+            });
         });
     </script>
-
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

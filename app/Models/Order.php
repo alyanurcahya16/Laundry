@@ -12,15 +12,16 @@ class Order extends Model
     use SoftDeletes;
 
     protected $fillable = [
-        'nama',
-        'telepon',
-        'alamat',
-        'layanan',
-        'item',
-        'quantity',
-        'catatan',
-        'status',
-        'is_history'
-    ];
+    'nama',
+    'telepon',
+    'alamat',
+    'layanan',
+    'item',
+    'quantity',
+    'catatan',
+    'status',
+    'is_history',
+];
+
 
 }

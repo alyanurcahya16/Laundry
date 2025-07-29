@@ -11,6 +11,7 @@ use App\Http\Controllers\Frontend\TestimoniController as FrontendTestimoniContro
 use App\Http\Controllers\Frontend\TestimoniController;
 use App\Http\Controllers\Frontend\HotelFormController;
 use App\Http\Controllers\Backend\HotelRegistrasiController;
+use App\Models\Pesanan;
 
 
 // 🏠 Halaman utama
@@ -22,11 +23,6 @@ Route::get('/form-pemesanan', [OrderController::class, 'create'])->name('order.c
 Route::post('/form-pemesanan', [OrderController::class, 'store'])->name('order.store');
 Route::get('/order/success/{id}', [OrderController::class, 'success'])->name('order.success');
 Route::get('/order/receipt/{id}', [OrderController::class, 'receipt'])->name('order.receipt');
-
-// 📝 Pesanan (pakai model Pesanan)
-Route::get('/pesanan', [PesananController::class, 'create'])->name('pesanan.create');
-Route::post('/pesanan', [PesananController::class, 'store'])->name('pesanan.store');
-Route::get('/pesanan/success', fn () => view('frontend.success'))->name('pesanan.success');
 
 // 🛠 Admin + Auth Routes
 Route::middleware('auth')->group(function () {
@@ -68,7 +64,6 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(fun
     Route::get('/dashboard', [\App\Http\Controllers\DashboardController::class, 'index'])->name('admin.dashboard');
     Route::get('/order', [OrderController::class, 'index'])->name('admin.order.index');
     Route::get('/orders', [\App\Http\Controllers\Admin\OrderAdminController::class, 'index'])->name('admin.orders.index');
-    Route::get('/pesanan', [PesananController::class, 'index'])->name('admin.pesanan.index');
     Route::put('/orders/{id}/status', [OrderController::class, 'updateStatus'])->name('admin.orders.updateStatus');
 
     Route::resource('settings', SettingController::class);

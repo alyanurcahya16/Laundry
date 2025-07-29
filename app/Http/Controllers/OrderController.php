@@ -12,11 +12,16 @@ class OrderController extends Controller
     $orders = Order::where('is_history', false)->get();
     return view('backend.orders.index', compact('orders'));
 }
+
+
+
     public function history()
 {
    $orders = Order::onlyTrashed()->latest()->get(); // ini penting
     return view('backend.orders.history', compact('orders'));
 }
+
+
     public function moveToHistory($id)
 {
     $order = Order::findOrFail($id);
@@ -25,6 +30,8 @@ class OrderController extends Controller
     return redirect()->route('admin.orders.index')
         ->with('success', 'Pesanan berhasil dipindahkan ke history');
 }
+
+
     public function store(Request $request)
     {
         // Validasi data
@@ -74,7 +81,7 @@ class OrderController extends Controller
     public function success($id)
     {
         $order = Order::findOrFail($id);
-        return view('frontend.success', compact('order'));
+        return view('frontend.pesanan.success', compact('order'));
     }
 
     public function receipt($id)
@@ -102,5 +109,10 @@ class OrderController extends Controller
     }
 
     return back()->with('success', 'Pesanan berhasil dihapus.');
+}
+
+public function create()
+{
+    return view('frontend.pesanan.form');
 }
 }
